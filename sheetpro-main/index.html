@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SheetPro AI – L'Assistant IA gratuit pour Google Sheets</title>
+  <title>SheetPro AI – The Free AI Assistant for Google Sheets</title>
   <link rel="icon" href="logo.ico" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
-    /* Effets dégradé et glassmorphism */
+    /* Gradient & Glass Effects */
     .gradient {
       background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
     }
@@ -49,7 +49,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
-    /* Styles pour les tableaux de formules */
+    /* Custom Table Styles */
     .custom-table {
       width: 100%;
       border-collapse: collapse;
@@ -89,6 +89,12 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
+    /* Screenshots Section */
+    .screenshots-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -96,18 +102,19 @@
   <header class="fixed w-full z-50 header-blur bg-white/90">
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <img src="logo.svg" alt="Logo SheetPro" class="w-10 h-10" />
+        <img src="logo.svg" alt="SheetPro Logo" class="w-10 h-10" />
         <span class="text-2xl font-bold gradient-text">SheetPro AI</span>
       </div>
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#features" class="text-gray-600 hover:text-emerald-600 transition-colors">Fonctionnalités</a>
-        <a href="#formules" class="text-gray-600 hover:text-emerald-600 transition-colors">Formules</a>
-        <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Tarifs</a>
+        <a href="#features" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
+        <a href="#screenshots" class="text-gray-600 hover:text-emerald-600 transition-colors">Screenshots</a>
+        <a href="#formulas" class="text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
+        <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
         <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
         <a href="#contact" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
-        <a href="#privacy-policy" class="text-gray-600 hover:text-emerald-600 transition-colors">Politique</a>
+        <a href="#privacy-policy" class="text-gray-600 hover:text-emerald-600 transition-colors">Privacy Policy</a>
         <a href="#" class="gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
-          Installer Gratuitement
+          Install for Free
         </a>
       </div>
     </nav>
@@ -120,181 +127,197 @@
       <div class="absolute top-0 right-1/4 w-96 h-96 bg-emerald-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate__animated animate__fadeIn animate__delay-1s"></div>
       <div class="relative z-10">
         <h1 class="text-5xl md:text-7xl font-bold mb-8 animate__animated animate__fadeIn">
-          L'Assistant IA <br>
-          <span class="gradient-text">Gratuit pour Google Sheets</span>
+          SheetPro AI – The Free AI Assistant for Google Sheets
         </h1>
         <p class="text-lg md:text-xl text-gray-600 mb-12 max-w-2xl mx-auto animate__animated animate__fadeIn animate__delay-1s leading-relaxed">
-          Automatisez vos feuilles de calcul grâce à des modèles IA puissants (OpenAI, Google Gemini, DeepSeek, Perplexity) et utilisez vos propres clés API, sans frais supplémentaires.
+          SheetPro AI revolutionizes your spreadsheet experience by seamlessly integrating advanced AI functionalities into Google Sheets. Easily generate insights, lists, tables, and even analyze web content with simple formulas.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-6 animate__animated animate__fadeIn animate__delay-2s">
           <a href="#" class="gradient hover:gradient-hover text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Commencer
+            Get Started
           </a>
           <a href="#demo" class="glass-effect text-emerald-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/90 transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Voir la démo
+            Watch Demo
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Fonctionnalités -->
+  <!-- Features Section -->
   <section id="features" class="py-32 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-20 gradient-text">Fonctionnalités Clés</h2>
+      <h2 class="text-5xl font-bold text-center mb-20 gradient-text">Key Features</h2>
       <div class="features-grid">
-        <!-- Configuration & Paramétrage -->
+        <!-- Configuration & Settings -->
         <div class="glass-effect p-8 rounded-2xl card-hover">
           <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Configuration & Paramétrage</h3>
+          <h3 class="text-xl font-semibold mb-3 text-center">Configuration & Settings</h3>
           <p class="text-gray-600 text-center">
-            Choisissez votre fournisseur IA (OpenAI, Gemini, DeepSeek) et configurez vos clés API dans une barre latérale intuitive. Vos réglages sont sauvegardés automatiquement.
+            Choose your preferred AI provider (OpenAI, Gemini, DeepSeek) and configure your API keys using our intuitive sidebar. Settings are automatically saved.
           </p>
         </div>
-        <!-- Fonctions AI Génériques -->
+        <!-- Generic AI Functions -->
         <div class="glass-effect p-8 rounded-2xl card-hover">
           <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2l1 2h13l1-2h2" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Fonctions AI Génériques</h3>
+          <h3 class="text-xl font-semibold mb-3 text-center">Generic AI Functions</h3>
           <p class="text-gray-600 text-center">
-            Utilisez <code>AI()</code>, <code>AI_LIST()</code> ou <code>AI_TABLE()</code> pour envoyer vos prompts et obtenir des réponses sous forme de texte, listes ou tableaux directement dans Sheets.
+            Use <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> to process your prompts and receive responses as plain text, lists, or tables directly in Sheets.
           </p>
         </div>
-        <!-- Fonctions Spécifiques & Web/Scraping -->
+        <!-- Specific & Web Functions -->
         <div class="glass-effect p-8 rounded-2xl card-hover">
           <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
             </svg>
           </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Fonctions Spécifiques & Web</h3>
+          <h3 class="text-xl font-semibold mb-3 text-center">Specific & Web Functions</h3>
           <p class="text-gray-600 text-center">
-            Déclenchez directement des modèles spécifiques (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) ou récupérez du contenu Web via <code>SCRAPE()</code> et <code>ANALYZE_URL()</code>.
+            Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
           </p>
         </div>
       </div>
-      <!-- Avantages -->
+      <!-- Advantages -->
       <div class="mt-20 text-center">
-        <h3 class="text-3xl font-bold mb-4 text-emerald-600">Vos Avantages</h3>
+        <h3 class="text-3xl font-bold mb-4 text-emerald-600">Your Benefits</h3>
         <p class="text-gray-600 max-w-3xl mx-auto">
-          Multi-fournisseurs, formules adaptées, scraping et analyse avancée… Tout cela gratuitement. Vous payez uniquement les frais d’utilisation facturés par votre fournisseur IA.
+          Enjoy multi-provider flexibility, tailored formulas, advanced web scraping, and analysis—all for free. You only pay for your chosen AI provider’s usage.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Formules & Commandes -->
-  <section id="formules" class="py-32 bg-gray-50">
+  <!-- Screenshots Section -->
+  <section id="screenshots" class="py-32 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Les Formules & Commandes</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Extension Screenshots</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
-        SheetPro AI met à disposition un ensemble complet de formules pour exploiter pleinement l’IA dans vos Google Sheets.
+        See our extension in action with these screenshots.
       </p>
-      <!-- Tableaux récapitulatifs -->
-      <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">Fonctions de Base</h3>
+      <div class="screenshots-grid">
+        <img src="screenshot1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
+        <img src="screenshot2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
+        <img src="screenshot3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulas & Commands Section -->
+  <section id="formulas" class="py-32 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas & Commands</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
+        SheetPro AI provides a comprehensive set of formulas to harness the power of AI directly in your Google Sheets.
+      </p>
+      <!-- Basic Functions Table -->
+      <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">Core Functions</h3>
       <table class="custom-table">
         <thead>
           <tr>
-            <th>Formule</th>
+            <th>Formula</th>
             <th>Description</th>
-            <th>Exemple</th>
+            <th>Example</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>AI(prompt)</code></td>
-            <td>Utilise le fournisseur et le modèle configurés pour traiter votre prompt.</td>
-            <td><code>=AI("Expliquer la physique quantique en 3 points")</code></td>
+            <td>Uses your configured provider and model to process your prompt.</td>
+            <td><code>=AI("Explain quantum physics in 3 bullet points")</code></td>
           </tr>
           <tr>
             <td><code>AI_LIST(prompt)</code></td>
-            <td>Retourne la réponse sous forme de liste verticale (une ligne par élément).</td>
-            <td><code>=AI_LIST("5 conseils marketing")</code></td>
+            <td>Returns the response as a vertical list (one item per row).</td>
+            <td><code>=AI_LIST("Give me 5 marketing tips")</code></td>
           </tr>
           <tr>
             <td><code>AI_TABLE(prompt)</code></td>
-            <td>Analyse le texte pour générer un tableau (2D array) dans Sheets.</td>
-            <td><code>=AI_TABLE("Tableau des 5 villes les plus peuplées")</code></td>
+            <td>Attempts to parse the response into a 2D table within Sheets.</td>
+            <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
           </tr>
         </tbody>
       </table>
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Fonctions Avancées</h3>
+      <!-- Advanced Functions Table -->
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Functions</h3>
       <table class="custom-table">
         <thead>
           <tr>
-            <th>Formule</th>
-            <th>Modèle / Fournisseur</th>
-            <th>Exemple d'Usage</th>
+            <th>Formula</th>
+            <th>Provider / Model</th>
+            <th>Example Usage</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>GPT_4O(prompt)</code></td>
             <td>OpenAI – GPT-4o</td>
-            <td><code>=GPT_4O("Résumé de l'article :" & A1)</code></td>
+            <td><code>=GPT_4O("Summarize this article:" & A1)</code></td>
           </tr>
           <tr>
             <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
             <td>Google Gemini 2.0 Flash</td>
-            <td><code>=GEMINI_2_0_FLASH("Différences entre chats et chiens")</code></td>
+            <td><code>=GEMINI_2_0_FLASH("Describe the differences between cats and dogs")</code></td>
           </tr>
           <tr>
             <td><code>DEEPSEEK_CHAT(prompt)</code></td>
             <td>DeepSeek – Chat</td>
-            <td><code>=DEEPSEEK_CHAT("Expliquer la blockchain")</code></td>
+            <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
           </tr>
           <tr>
             <td><code>SEARCH_WEB(prompt)</code></td>
             <td>Perplexity – Web Search</td>
-            <td><code>=SEARCH_WEB("Meilleur laptop 2023")</code></td>
+            <td><code>=SEARCH_WEB("Who won the 2023 US Open Tennis?")</code></td>
           </tr>
         </tbody>
       </table>
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Fonctions de Scraping</h3>
+      <!-- Scraping Functions Table -->
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Scraping Functions</h3>
       <table class="custom-table">
         <thead>
           <tr>
-            <th>Formule</th>
+            <th>Formula</th>
             <th>Description</th>
-            <th>Exemple</th>
+            <th>Example</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><code>SCRAPE(url)</code></td>
-            <td>Extrait le texte d'une page Web en supprimant le HTML et scripts.</td>
-            <td><code>=SCRAPE("https://exemple.com/page")</code></td>
+            <td>Extracts text from a webpage by removing HTML and scripts.</td>
+            <td><code>=SCRAPE("https://example.com/page")</code></td>
           </tr>
           <tr>
             <td><code>ANALYZE_URL(url, instruction)</code></td>
-            <td>Combine SCRAPE + AI pour résumer ou analyser une page Web.</td>
-            <td><code>=ANALYZE_URL("https://exemple.com/article", "Résumé des points clés")</code></td>
+            <td>Combines SCRAPE and AI to summarize or analyze a webpage.</td>
+            <td><code>=ANALYZE_URL("https://example.com/article", "Summarize the key points")</code></td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Tarifs & Fournisseurs -->
+  <!-- Pricing Section -->
   <section id="pricing" class="py-32 bg-white hero-pattern">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Fournisseurs & Tarifs</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Providers & Pricing</h2>
       <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
-        SheetPro AI est entièrement gratuit. Vous apportez vos propres clés API et les frais sont directement facturés par votre fournisseur.
+        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider.
       </p>
       <table class="custom-table mx-auto max-w-4xl">
         <thead>
           <tr>
-            <th>Fournisseur</th>
-            <th>Modèles Supportés</th>
-            <th>Tarification Indicative</th>
+            <th>Provider</th>
+            <th>Supported Models</th>
+            <th>Typical Pricing</th>
           </tr>
         </thead>
         <tbody>
@@ -307,7 +330,7 @@
               </ul>
             </td>
             <td class="text-gray-600">
-              Ex. : $2.50 / 1M tokens (entrée) <br> $10.00 / 1M tokens (sortie)
+              Example: $2.50 / 1M tokens (input) <br> $10.00 / 1M tokens (output)
             </td>
           </tr>
           <tr>
@@ -320,7 +343,7 @@
               </ul>
             </td>
             <td class="text-gray-600">
-              En preview – tarification variable.
+              Free &amp; Recommended
             </td>
           </tr>
           <tr>
@@ -332,7 +355,7 @@
               </ul>
             </td>
             <td class="text-gray-600">
-              Ex. : $0.014 / 1M tokens (entrée) <br> $0.28 / 1M tokens (sortie)
+              Example: $0.014 / 1M tokens (input) <br> $0.28 / 1M tokens (output)
             </td>
           </tr>
           <tr>
@@ -343,61 +366,61 @@
               </ul>
             </td>
             <td class="text-gray-600">
-              Voir <a href="https://api.perplexity.ai/docs" class="text-emerald-500" target="_blank">la documentation</a>.
+              See <a href="https://api.perplexity.ai/docs" class="text-emerald-500" target="_blank">documentation</a>.
             </td>
           </tr>
         </tbody>
       </table>
       <p class="text-gray-600 text-center mt-8">
-        <strong>Note :</strong> Entrez vos clés API dans la barre latérale de SheetPro AI. Les frais sont déterminés par le fournisseur.
+        <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
       </p>
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ Section -->
   <section id="faq" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Questions Fréquentes</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Frequently Asked Questions</h2>
       <div class="max-w-2xl mx-auto space-y-6">
         <!-- FAQ Item 1 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Dois-je fournir mes propres clés API ?</span>
+            <span class="text-lg font-medium">Do I need to supply my own API keys?</span>
             <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Oui, SheetPro AI est gratuit mais vous devez renseigner vos clés API pour OpenAI, Gemini, DeepSeek ou Perplexity.
+              Yes. SheetPro AI is free, but you must provide your API keys for OpenAI, Gemini, DeepSeek, or Perplexity.
             </p>
           </div>
         </div>
         <!-- FAQ Item 2 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Y a-t-il une limite d'utilisation ?</span>
+            <span class="text-lg font-medium">Are there any usage limits?</span>
             <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              SheetPro AI ne limite pas vos requêtes au-delà des plafonds imposés par chaque fournisseur.
+              SheetPro AI does not impose additional limits beyond those set by your provider.
             </p>
           </div>
         </div>
         <!-- FAQ Item 3 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Mes données sont-elles conservées ?</span>
+            <span class="text-lg font-medium">Are my data safe?</span>
             <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Non, nous ne stockons pas vos données. Les requêtes sont transmises directement et en toute sécurité au fournisseur.
+              No, we do not store your data. Your requests are transmitted directly and securely to the provider.
             </p>
           </div>
         </div>
@@ -405,54 +428,54 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact" class="py-32 bg-gray-50 hero-pattern relative overflow-hidden">
     <div class="container mx-auto px-4 text-center relative z-10">
-      <h2 class="text-4xl font-bold mb-8 gradient-text">Besoin d'aide ?</h2>
+      <h2 class="text-4xl font-bold mb-8 gradient-text">Need Assistance?</h2>
       <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-        Notre équipe est à votre écoute pour vous aider à exploiter pleinement SheetPro AI.
+        Our team is here to help you get the most out of SheetPro AI.
       </p>
       <a href="mailto:contact@sheetpro.com" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
-        Contactez-nous
+        Contact Us
       </a>
     </div>
   </section>
 
-  <!-- Politique de Confidentialité -->
+  <!-- Privacy Policy Section -->
   <section id="privacy-policy" class="py-32 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Politique de Confidentialité</h2>
+      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Privacy Policy</h2>
       <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
-        <p><strong>Dernière mise à jour :</strong> 1er janvier 2025</p>
+        <p><strong>Last Updated:</strong> January 1, 2025</p>
         <p>
-          Chez SheetPro AI, nous nous engageons à protéger votre vie privée. Cette politique explique comment nous traitons vos informations lorsque vous utilisez notre add-on Google Sheets.
+          At SheetPro AI, we are committed to protecting your privacy. This Privacy Policy explains how we handle your information when you use our Google Sheets add-on (the "Service").
         </p>
         <p>
-          <strong>1. Collecte des données</strong><br>
-          Nous ne collectons ni ne stockons vos données de feuille de calcul. Les requêtes sont traitées en temps réel.
+          <strong>1. Data Collection</strong><br>
+          We do not collect or store your spreadsheet data. All requests are processed in real time.
         </p>
         <p>
-          <strong>2. Utilisation de vos informations</strong><br>
-          Vos prompts sont transmis en toute sécurité à nos partenaires IA (OpenAI, Google Gemini, DeepSeek, etc.) pour générer des réponses. Nous ne conservons pas ces données.
+          <strong>2. Use of Your Information</strong><br>
+          Your prompts are securely transmitted to our AI partners (OpenAI, Google Gemini, DeepSeek, etc.) for generating responses. We do not retain these prompts or the generated responses.
         </p>
         <p>
-          <strong>3. Sécurité</strong><br>
-          Les données sont transmises via des connexions sécurisées (HTTPS/TLS). Nous prenons toutes les mesures nécessaires pour protéger vos informations.
+          <strong>3. Data Security</strong><br>
+          Data is transmitted over secure connections (HTTPS/TLS). We take all necessary measures to protect your information.
         </p>
         <p>
-          <strong>4. Fournisseurs tiers</strong><br>
-          Nos partenaires peuvent avoir leurs propres politiques de confidentialité. Nous vous invitons à les consulter.
+          <strong>4. Third-Party Services</strong><br>
+          Our partners may have their own privacy policies. We encourage you to review them.
         </p>
         <p>
-          <strong>5. Modifications</strong><br>
-          Cette politique peut être mise à jour. La date de dernière mise à jour sera indiquée ci-dessus.
+          <strong>5. Changes</strong><br>
+          This Privacy Policy may be updated from time to time. The date of the last update will be indicated above.
         </p>
         <p>
-          <strong>6. Contact</strong><br>
-          Pour toute question, contactez-nous à <a href="mailto:privacy@sheetpro.com" class="text-emerald-500 font-semibold">privacy@sheetpro.com</a>.
+          <strong>6. Contact Us</strong><br>
+          If you have any questions, please contact us at <a href="mailto:privacy@sheetpro.com" class="text-emerald-500 font-semibold">privacy@sheetpro.com</a>.
         </p>
       </div>
     </div>
@@ -469,15 +492,15 @@
             </div>
             <span class="text-2xl font-bold">SheetPro AI</span>
           </div>
-          <p class="text-gray-400">L’IA pour optimiser vos feuilles de calcul.</p>
+          <p class="text-gray-400">Empowering your spreadsheets with free AI.</p>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-4">Produit</h3>
+          <h3 class="text-lg font-semibold mb-4">Product</h3>
           <ul class="space-y-2">
-            <li><a href="#features" class="text-gray-400 hover:text-emerald-400 transition-colors">Fonctionnalités</a></li>
-            <li><a href="#formules" class="text-gray-400 hover:text-emerald-400 transition-colors">Formules</a></li>
-            <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Tarifs</a></li>
-            <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Démo</a></li>
+            <li><a href="#features" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+            <li><a href="#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
+            <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
+            <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
           </ul>
         </div>
         <div>
@@ -489,22 +512,22 @@
           </ul>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-4">Légal</h3>
+          <h3 class="text-lg font-semibold mb-4">Legal</h3>
           <ul class="space-y-2">
-            <li><a href="#privacy-policy" class="text-gray-400 hover:text-emerald-400 transition-colors">Confidentialité</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Conditions d'utilisation</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookies</a></li>
+            <li><a href="#privacy-policy" class="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookie Policy</a></li>
           </ul>
         </div>
       </div>
       <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p class="text-gray-400">© 2025 SheetPro AI. Tous droits réservés.</p>
+        <p class="text-gray-400">© 2025 SheetPro AI. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Fonction de bascule pour la FAQ
+    // FAQ Toggle Function
     function toggleFAQ(button) {
       const faqItem = button.parentElement;
       faqItem.classList.toggle('active');
@@ -512,3 +535,4 @@
   </script>
 </body>
 </html>
+
