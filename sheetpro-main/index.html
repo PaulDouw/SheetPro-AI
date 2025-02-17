@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SheetPro ai (Free) – The Free AI Assistant for Google Sheets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SheetPro AI (Free) – The Free AI Assistant for Google Sheets</title>
   <link rel="icon" href="logo.ico" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
@@ -43,11 +43,6 @@
       backdrop-filter: blur(20px);
       border: 1px solid rgba(255, 255, 255, 0.4);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
     }
     /* Enhanced Table Styles */
     .custom-table {
@@ -94,12 +89,7 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-    /* Screenshots Section */
-    .screenshots-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
+    /* Screenshots */
     .screenshots-grid img {
       transition: transform 0.3s ease-in-out;
     }
@@ -112,12 +102,14 @@
   <!-- Header -->
   <header class="fixed w-full z-50 header-blur bg-white/90">
     <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo & Brand -->
       <div class="flex items-center space-x-3">
         <img src="logo.svg" alt="SheetPro Logo" class="w-10 h-10" />
         <span class="text-2xl font-bold gradient-text">
-          SheetPro ai <span class="text-green-500 text-sm">(Free)</span>
+          SheetPro AI <span class="text-green-500 text-sm">(Free)</span>
         </span>
       </div>
+
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
         <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
@@ -126,10 +118,10 @@
           </svg>
         </button>
       </div>
+
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#features" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
-        <a href="#screenshots" class="text-gray-600 hover:text-emerald-600 transition-colors">Screenshots</a>
+        <a href="#features-screenshots" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
         <a href="#formulas" class="text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
         <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
         <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
@@ -140,11 +132,11 @@
         </a>
       </div>
     </nav>
+
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden">
       <div class="px-6 pt-2 pb-4 space-y-1 bg-white">
-        <a href="#features" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
-        <a href="#screenshots" class="block text-gray-600 hover:text-emerald-600 transition-colors">Screenshots</a>
+        <a href="#features-screenshots" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
         <a href="#formulas" class="block text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
         <a href="#pricing" class="block text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
         <a href="#faq" class="block text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
@@ -157,98 +149,112 @@
     </div>
   </header>
 
-  <!-- Hero Section Inspired by GPT For Work -->
+  <!-- Hero Section -->
   <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 relative z-10">
+    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 relative z-10">
       <!-- Left Column: Text & CTA -->
-      <div class="w-full md:w-1/2">
-        <h1 class="text-5xl md:text-7xl font-bold mb-4 animate__animated animate__fadeIn">
-          SheetPro ai <span class="text-green-500 text-base">(Free)</span>
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-lg animate__animated animate__fadeIn animate__delay-1s">
-          Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
-        </p>
-        <div class="flex gap-6 animate__animated animate__fadeIn animate__delay-2s">
-          <a href="#" class="gradient hover:gradient-hover text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Get Started
-          </a>
-          <a href="#demo" class="glass-effect text-emerald-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/90 transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Watch Demo
-          </a>
-        </div>
-      </div>
-      <!-- Right Column: Video Placeholder -->
       <div class="w-full md:w-1/2 mt-8 md:mt-0">
-        <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
+        <!-- Presentation Video (Mobile: below the name, Desktop: to the right) -->
+        <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg flex items-center justify-center mb-8 md:mb-0">
           <!-- Replace with your presentation video embed code -->
           <span class="text-gray-500">Presentation Video Placeholder</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Features Section -->
-  <section id="features" class="py-32 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-20 gradient-text">Key Features</h2>
-      <div class="features-grid">
-        <!-- Configuration & Settings -->
-        <div class="glass-effect p-8 rounded-2xl card-hover">
-          <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Configuration & Settings</h3>
-          <p class="text-gray-600 text-center">
-            Choose your preferred AI provider (OpenAI, Gemini, DeepSeek) and configure your API keys using our intuitive sidebar. Settings are automatically saved.
-          </p>
+      <div class="w-full md:w-1/2 md:pl-8">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn">
+          SheetPro AI <span class="text-green-500 text-base">(Free)</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg animate__animated animate__fadeIn animate__delay-1s">
+          Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
+        </p>
+
+        <!-- Logos (OpenAI, Gemini, DeepSeek) -->
+        <div class="flex items-center space-x-6 mb-8 animate__animated animate__fadeIn animate__delay-1s">
+          <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
+          <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
+          <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
         </div>
-        <!-- Generic AI Functions -->
-        <div class="glass-effect p-8 rounded-2xl card-hover">
-          <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2l1 2h13l1-2h2" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Generic AI Functions</h3>
-          <p class="text-gray-600 text-center">
-            Use <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> to process your prompts and receive responses as plain text, lists, or tables directly in Sheets.
-          </p>
-        </div>
-        <!-- Specific & Web Functions -->
-        <div class="glass-effect p-8 rounded-2xl card-hover">
-          <div class="w-16 h-16 gradient rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
-            </svg>
-          </div>
-          <h3 class="text-xl font-semibold mb-3 text-center">Specific & Web Functions</h3>
-          <p class="text-gray-600 text-center">
-            Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
-          </p>
+
+        <div class="flex gap-4 animate__animated animate__fadeIn animate__delay-2s">
+          <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+            Get Started
+          </a>
+          <a href="#demo" class="glass-effect text-emerald-600 px-6 py-3 rounded-xl text-lg font-semibold hover:bg-white/90 transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+            Watch Demo
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Screenshots Section -->
-  <section id="screenshots" class="py-32 bg-gray-50">
+  <!-- Features & Screenshots Section -->
+  <section id="features-screenshots" class="py-32 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Extension Screenshots</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
-        See our extension in action with these screenshots.
+      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Features & Screenshots</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
+        Discover how SheetPro AI (Free) enhances your Google Sheets with powerful features, and take a look at some real examples.
       </p>
-      <div class="screenshots-grid">
-        <img src="screenshot1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
-        <img src="screenshot2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
-        <img src="screenshot3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
+      <!-- Two-column layout: Left = Features, Right = Screenshots -->
+      <div class="md:grid md:grid-cols-2 md:gap-16">
+        <!-- Key Features -->
+        <div>
+          <div class="space-y-8">
+            <!-- Feature 1 -->
+            <div class="glass-effect p-6 rounded-2xl card-hover">
+              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Configuration & Settings</h3>
+              <p class="text-gray-600">
+                Choose your preferred AI provider (OpenAI, Gemini, DeepSeek) and configure your API keys using our intuitive sidebar. Settings are automatically saved.
+              </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="glass-effect p-6 rounded-2xl card-hover">
+              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M3 10h2l1 2h13l1-2h2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Generic AI Functions</h3>
+              <p class="text-gray-600">
+                Use <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> to process your prompts and receive responses as plain text, lists, or tables directly in Sheets.
+              </p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="glass-effect p-6 rounded-2xl card-hover">
+              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Specific & Web Functions</h3>
+              <p class="text-gray-600">
+                Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Screenshots -->
+        <div class="mt-12 md:mt-0">
+          <div class="grid grid-cols-1 gap-8 screenshots-grid">
+            <img src="screenshot1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
+            <img src="screenshot2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
+            <img src="screenshot3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Formulas & Commands Section -->
-  <section id="formulas" class="py-32 bg-white">
+  <section id="formulas" class="py-32 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas & Commands</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
@@ -533,7 +539,7 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Product</h3>
           <ul class="space-y-2">
-            <li><a href="#features" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+            <li><a href="#features-screenshots" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
             <li><a href="#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
             <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
             <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
