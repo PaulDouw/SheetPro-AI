@@ -114,14 +114,15 @@
       <div class="md:hidden">
         <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                  d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
       </div>
 
       <!-- Desktop Menu -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#features-screenshots" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
+        <a href="#feature-examples" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
         <a href="#formulas" class="text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
         <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
         <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
@@ -136,7 +137,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden">
       <div class="px-6 pt-2 pb-4 space-y-1 bg-white">
-        <a href="#features-screenshots" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
+        <a href="#feature-examples" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
         <a href="#formulas" class="block text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
         <a href="#pricing" class="block text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
         <a href="#faq" class="block text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
@@ -151,31 +152,22 @@
 
   <!-- Hero Section -->
   <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 relative z-10">
-      <!-- Left Column: Text & CTA -->
-      <div class="w-full md:w-1/2 mt-8 md:mt-0">
-        <!-- Presentation Video (Mobile: below the name, Desktop: to the right) -->
-        <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg flex items-center justify-center mb-8 md:mb-0">
-          <!-- Replace with your presentation video embed code -->
-          <span class="text-gray-500">Presentation Video Placeholder</span>
-        </div>
-      </div>
-
-      <div class="w-full md:w-1/2 md:pl-8">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 relative z-10">
+      <!-- Left Column: Name, Text & Logos -->
+      <div class="w-full md:w-1/2 mb-8 md:mb-0">
         <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn">
           SheetPro AI <span class="text-green-500 text-base">(Free)</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg animate__animated animate__fadeIn animate__delay-1s">
           Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
         </p>
-
         <!-- Logos (OpenAI, Gemini, DeepSeek) -->
         <div class="flex items-center space-x-6 mb-8 animate__animated animate__fadeIn animate__delay-1s">
           <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
         </div>
-
+        <!-- CTA Buttons -->
         <div class="flex gap-4 animate__animated animate__fadeIn animate__delay-2s">
           <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
             Get Started
@@ -185,13 +177,21 @@
           </a>
         </div>
       </div>
+
+      <!-- Right Column: Video Placeholder -->
+      <div class="w-full md:w-1/2 md:pl-8">
+        <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg flex items-center justify-center">
+          <!-- Replace with your presentation video embed code -->
+          <span class="text-gray-500">Presentation Video Placeholder</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Features & Screenshots Section -->
-  <section id="features-screenshots" class="py-32 bg-white">
+  <!-- Feature Examples Section -->
+  <section id="feature-examples" class="py-32 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Features & Screenshots</h2>
+      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Feature Examples</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
         Discover how SheetPro AI (Free) enhances your Google Sheets with powerful features, and take a look at some real examples.
       </p>
@@ -244,9 +244,9 @@
         <!-- Screenshots -->
         <div class="mt-12 md:mt-0">
           <div class="grid grid-cols-1 gap-8 screenshots-grid">
-            <img src="screenshot1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
-            <img src="screenshot2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
-            <img src="screenshot3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
+            <img src="screen1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
+            <img src="Screen2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
+            <img src="screen3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
           </div>
         </div>
       </div>
@@ -479,7 +479,8 @@
       </p>
       <a href="mailto:contact@sheetpro.com" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
         Contact Us
       </a>
@@ -539,7 +540,7 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">Product</h3>
           <ul class="space-y-2">
-            <li><a href="#features-screenshots" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+            <li><a href="#feature-examples" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
             <li><a href="#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
             <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
             <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
@@ -583,3 +584,4 @@
   </script>
 </body>
 </html>
+
