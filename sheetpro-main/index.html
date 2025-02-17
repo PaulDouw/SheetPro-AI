@@ -49,21 +49,26 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
     }
-    /* Custom Table Styles */
+    /* Enhanced Table Styles */
     .custom-table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .custom-table thead {
+      background-color: #f9fafb;
     }
     .custom-table th,
     .custom-table td {
       padding: 1rem;
       border-bottom: 1px solid #e5e7eb;
-      vertical-align: top;
+      text-align: left;
     }
-    .custom-table th {
-      background-color: #f9fafb;
-      font-weight: 600;
+    .custom-table tbody tr:hover {
+      background-color: #f3f4f6;
     }
     /* FAQ */
     .faq-item {
@@ -94,6 +99,12 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
+    }
+    .screenshots-grid img {
+      transition: transform 0.3s ease-in-out;
+    }
+    .screenshots-grid img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -197,9 +208,9 @@
         See our extension in action with these screenshots.
       </p>
       <div class="screenshots-grid">
-        <img src="mainpicture.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
-        <img src="screen2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
-        <img src="screen3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
+        <img src="screenshot1.png" alt="Screenshot 1" class="w-full rounded-xl shadow-lg" />
+        <img src="screenshot2.png" alt="Screenshot 2" class="w-full rounded-xl shadow-lg" />
+        <img src="screenshot3.png" alt="Screenshot 3" class="w-full rounded-xl shadow-lg" />
       </div>
     </div>
   </section>
@@ -211,7 +222,7 @@
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
         SheetPro AI provides a comprehensive set of formulas to harness the power of AI directly in your Google Sheets.
       </p>
-      <!-- Basic Functions Table -->
+      <!-- Core Functions Table -->
       <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">Core Functions</h3>
       <table class="custom-table">
         <thead>
@@ -528,5 +539,3 @@
   </script>
 </body>
 </html>
-
-
