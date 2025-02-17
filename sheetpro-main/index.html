@@ -98,7 +98,7 @@
     }
     .screenshots-grid img {
       transition: transform 0.3s ease-in-out;
-      max-width: 350px; /* Adjust as desired */
+      max-width: 500px; /* Updated to 500px */
       margin: 0 auto;
     }
     .screenshots-grid img:hover {
@@ -247,17 +247,18 @@
                 Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
               </p>
             </div>
-            <!-- NEW Feature 4 -->
+            <!-- NEW Feature 4: Role Assignment -->
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                <!-- A user icon to represent role assignment -->
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2m2 0h6m-3 0v4" />
+                        d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Collaboration & Sharing</h3>
+              <h3 class="text-xl font-semibold mb-2">Role Assignment</h3>
               <p class="text-gray-600">
-                Effortlessly collaborate with teammates by sharing Sheets with built-in AI formulas. Everyone sees the same AI-generated insights without extra setup.
+                Assign a global role or persona to your entire sheet, ensuring all AI formulas follow consistent style and instructions. Perfect for maintaining a specific voice or domain expertise.
               </p>
             </div>
           </div>
@@ -605,3 +606,4 @@
   </script>
 </body>
 </html>
+
