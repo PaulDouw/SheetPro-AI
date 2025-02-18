@@ -98,7 +98,7 @@
     }
     .screenshots-grid img {
       transition: transform 0.3s ease-in-out;
-      max-width: 500px; /* Updated to 500px */
+      max-width: 500px;
       margin: 0 auto;
     }
     .screenshots-grid img:hover {
@@ -159,12 +159,6 @@
   </header>
 
   <!-- Hero Section -->
-  <!-- 
-    Principales modifications :
-    - On remplace justify-between par justify-center (sur grand écran) 
-    - On ajoute gap-8 pour espacer un peu plus
-    - On centre le texte dans la colonne de gauche (text-center) 
-  -->
   <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
     <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
       <!-- Left Column: Name, Text & Logos -->
@@ -326,39 +320,75 @@
             <td>Attempts to parse the response into a 2D table within Sheets.</td>
             <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
           </tr>
-          <!-- NEW: A.2 Basic AI prompt referencing a single cell -->
+          <!-- New formula referencing 1 cell -->
           <tr>
-            <td>
-              <strong>A.2</strong> Basic AI prompt with reference to a cell
-              <br>
-              <code>=AI("how many inhabitants in " & B13)</code>
-            </td>
-            <td>
-              Prompts the AI with a question referencing the value in <code>B13</code>.
-            </td>
-            <td>
-              <p><em>Example:</em> If <code>B13 = "Brazil"</code>, the result might be:</p>
-              <blockquote class="text-sm italic">
-                "Approximately 214 million people inhabit Brazil."
-              </blockquote>
-            </td>
+            <td><code>AI("Prompt" & [cell])</code></td>
+            <td>Prompt with reference to a cell</td>
+            <td><code>=AI("how many inhabitants in " & B13)</code></td>
           </tr>
-          <!-- NEW: A.3 Basic AI prompt referencing multiple cells -->
+          <!-- New formula referencing multiple cells -->
           <tr>
-            <td>
-              <strong>A.3</strong> Basic AI prompt with reference to several cells
-              <br>
-              <code>=AI("what is the country with the highest population between " & B23 & " and " & D23)</code>
-            </td>
-            <td>
-              Prompts the AI for a comparison referencing multiple cell values (<code>B23</code> and <code>D23</code>).
-            </td>
-            <td>
-              <p><em>Example:</em> If <code>B23 = "France"</code> and <code>D23 = "Germany"</code>, the result might be:</p>
-              <blockquote class="text-sm italic">
-                "Germany has the higher population."
-              </blockquote>
-            </td>
+            <td><code>AI("Prompt" & [cell] & " prompt " & [cell])</code></td>
+            <td>Prompt with reference to several cells</td>
+            <td><code>=AI("what is the country with the highest population between " & B23 & " and " & D23)</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Advanced Functions Table -->
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Functions</h3>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Formula</th>
+            <th>Provider / Model</th>
+            <th>Example Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>GPT_4O(prompt)</code></td>
+            <td>OpenAI – GPT-4o</td>
+            <td><code>=GPT_4O("Summarize this article:" & A1)</code></td>
+          </tr>
+          <tr>
+            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
+            <td>Google Gemini 2.0 Flash</td>
+            <td><code>=GEMINI_2_0_FLASH("Describe the differences between cats and dogs")</code></td>
+          </tr>
+          <tr>
+            <td><code>DEEPSEEK_CHAT(prompt)</code></td>
+            <td>DeepSeek – Chat</td>
+            <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
+          </tr>
+          <tr>
+            <td><code>SEARCH_WEB(prompt)</code></td>
+            <td>Perplexity – Web Search</td>
+            <td><code>=SEARCH_WEB("Who won the 2023 US Open Tennis?")</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Scraping Functions Table -->
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Scraping Functions</h3>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Formula</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>SCRAPE(url)</code></td>
+            <td>Extracts text from a webpage by removing HTML and scripts.</td>
+            <td><code>=SCRAPE("https://example.com/page")</code></td>
+          </tr>
+          <tr>
+            <td><code>ANALYZE_URL(url, instruction)</code></td>
+            <td>Combines SCRAPE and AI to summarize or analyze a webpage.</td>
+            <td><code>=ANALYZE_URL("https://example.com/article", "Summarize the key points")</code></td>
           </tr>
         </tbody>
       </table>
@@ -610,3 +640,4 @@
   </script>
 </body>
 </html>
+
