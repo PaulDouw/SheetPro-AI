@@ -159,10 +159,16 @@
   </header>
 
   <!-- Hero Section -->
+  <!-- 
+    Principales modifications :
+    - On remplace justify-between par justify-center (sur grand écran) 
+    - On ajoute gap-8 pour espacer un peu plus
+    - On centre le texte dans la colonne de gauche (text-center) 
+  -->
   <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 relative z-10">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
       <!-- Left Column: Name, Text & Logos -->
-      <div class="w-full md:w-1/2 mb-8 md:mb-0">
+      <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center text-center">
         <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn">
           SheetPro AI <span class="text-green-500 text-base">(Free)</span>
         </h1>
@@ -170,7 +176,7 @@
           Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
         </p>
         <!-- Logos (OpenAI, Gemini, DeepSeek) -->
-        <div class="flex items-center space-x-6 mb-8 animate__animated animate__fadeIn animate__delay-1s">
+        <div class="flex items-center justify-center space-x-6 mb-8 animate__animated animate__fadeIn animate__delay-1s">
           <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
@@ -302,76 +308,57 @@
           </tr>
         </thead>
         <tbody>
+          <!-- 1) AI(prompt) -->
           <tr>
             <td><code>AI(prompt)</code></td>
             <td>Uses your configured provider and model to process your prompt.</td>
             <td><code>=AI("Explain quantum physics in 3 bullet points")</code></td>
           </tr>
+          <!-- 2) AI_LIST(prompt) -->
           <tr>
             <td><code>AI_LIST(prompt)</code></td>
             <td>Returns the response as a vertical list (one item per row).</td>
             <td><code>=AI_LIST("Give me 5 marketing tips")</code></td>
           </tr>
+          <!-- 3) AI_TABLE(prompt) -->
           <tr>
             <td><code>AI_TABLE(prompt)</code></td>
             <td>Attempts to parse the response into a 2D table within Sheets.</td>
             <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
           </tr>
-        </tbody>
-      </table>
-      <!-- Advanced Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Functions</h3>
-      <table class="custom-table">
-        <thead>
+          <!-- NEW: A.2 Basic AI prompt referencing a single cell -->
           <tr>
-            <th>Formula</th>
-            <th>Provider / Model</th>
-            <th>Example Usage</th>
+            <td>
+              <strong>A.2</strong> Basic AI prompt with reference to a cell
+              <br>
+              <code>=AI("how many inhabitants in " & B13)</code>
+            </td>
+            <td>
+              Prompts the AI with a question referencing the value in <code>B13</code>.
+            </td>
+            <td>
+              <p><em>Example:</em> If <code>B13 = "Brazil"</code>, the result might be:</p>
+              <blockquote class="text-sm italic">
+                "Approximately 214 million people inhabit Brazil."
+              </blockquote>
+            </td>
           </tr>
-        </thead>
-        <tbody>
+          <!-- NEW: A.3 Basic AI prompt referencing multiple cells -->
           <tr>
-            <td><code>GPT_4O(prompt)</code></td>
-            <td>OpenAI – GPT-4o</td>
-            <td><code>=GPT_4O("Summarize this article:" & A1)</code></td>
-          </tr>
-          <tr>
-            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
-            <td>Google Gemini 2.0 Flash</td>
-            <td><code>=GEMINI_2_0_FLASH("Describe the differences between cats and dogs")</code></td>
-          </tr>
-          <tr>
-            <td><code>DEEPSEEK_CHAT(prompt)</code></td>
-            <td>DeepSeek – Chat</td>
-            <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
-          </tr>
-          <tr>
-            <td><code>SEARCH_WEB(prompt)</code></td>
-            <td>Perplexity – Web Search</td>
-            <td><code>=SEARCH_WEB("Who won the 2023 US Open Tennis?")</code></td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Scraping Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Scraping Functions</h3>
-      <table class="custom-table">
-        <thead>
-          <tr>
-            <th>Formula</th>
-            <th>Description</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>SCRAPE(url)</code></td>
-            <td>Extracts text from a webpage by removing HTML and scripts.</td>
-            <td><code>=SCRAPE("https://example.com/page")</code></td>
-          </tr>
-          <tr>
-            <td><code>ANALYZE_URL(url, instruction)</code></td>
-            <td>Combines SCRAPE and AI to summarize or analyze a webpage.</td>
-            <td><code>=ANALYZE_URL("https://example.com/article", "Summarize the key points")</code></td>
+            <td>
+              <strong>A.3</strong> Basic AI prompt with reference to several cells
+              <br>
+              <code>=AI("what is the country with the highest population between " & B23 & " and " & D23)</code>
+            </td>
+            <td>
+              Prompts the AI for a comparison referencing multiple cell values (<code>B23</code> and <code>D23</code>).
+            </td>
+            <td>
+              <p><em>Example:</em> If <code>B23 = "France"</code> and <code>D23 = "Germany"</code>, the result might be:</p>
+              <blockquote class="text-sm italic">
+                "Germany has the higher population."
+              </blockquote>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -520,49 +507,48 @@
 
   <!-- Privacy Policy Section -->
   <section id="privacy-policy" class="py-32 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Privacy Policy</h2>
-    <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
-      <p><strong>Last Updated:</strong> January 1, 2025</p>
-      <p>
-        At SheetPro AI, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our Google Sheets Add-on (the "Service").
-      </p>
-      <p>
-        <strong>1. Data Collection</strong><br>
-        We do not collect or store your spreadsheet data. All your inputs and AI-related activities are processed directly through the AI provider (OpenAI, Gemini, etc.). API keys are stored locally on your device and are never transferred or stored on our servers. Data is transmitted securely via HTTPS.
-      </p>
-      <p>
-        <strong>2. Use of Your Information</strong><br>
-        Your prompts and API keys are securely sent to your selected AI provider (OpenAI, Gemini, DeepSeek, etc.) for generating responses. We do not log or retain any user data or API keys. Any generated responses from the AI model are displayed in your Google Sheets and are not stored by SheetPro AI.
-      </p>
-      <p>
-        <strong>3. Data Security</strong><br>
-        All communication between your device, SheetPro AI, and the AI provider is secured with HTTPS (TLS). We do not store any of your data on our servers, and we take all reasonable measures to ensure the security of the information that you send and receive through the Service.
-      </p>
-      <p>
-        <strong>4. Third-Party Services</strong><br>
-        SheetPro AI integrates with third-party AI providers such as OpenAI, Google Gemini, and DeepSeek. These third-party services may have their own privacy policies, and we encourage you to review them. We are not responsible for the practices or policies of these third-party services.
-      </p>
-      <p>
-        <strong>5. Data Retention</strong><br>
-        As mentioned, we do not store any data on our servers. The API keys you provide are stored locally in your Google Sheets environment. The data remains within your device, and it is only processed on the fly through your interactions with the Service.
-      </p>
-      <p>
-        <strong>6. Children's Privacy</strong><br>
-        Our Service is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so that we can take appropriate action.
-      </p>
-      <p>
-        <strong>7. Changes to This Privacy Policy</strong><br>
-        SheetPro AI reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected by the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.
-      </p>
-      <p>
-        <strong>8. Contact Us</strong><br>
-        If you have any questions about this Privacy Policy or how your information is handled, please contact us at: <a href="mailto:sheetproai@gmail.com" class="text-emerald-500 font-semibold">sheetproai@gmail.com</a>.
-      </p>
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Privacy Policy</h2>
+      <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
+        <p><strong>Last Updated:</strong> January 1, 2025</p>
+        <p>
+          At SheetPro AI, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our Google Sheets Add-on (the "Service").
+        </p>
+        <p>
+          <strong>1. Data Collection</strong><br>
+          We do not collect or store your spreadsheet data. All your inputs and AI-related activities are processed directly through the AI provider (OpenAI, Gemini, etc.). API keys are stored locally on your device and are never transferred or stored on our servers. Data is transmitted securely via HTTPS.
+        </p>
+        <p>
+          <strong>2. Use of Your Information</strong><br>
+          Your prompts and API keys are securely sent to your selected AI provider (OpenAI, Gemini, DeepSeek, etc.) for generating responses. We do not log or retain any user data or API keys. Any generated responses from the AI model are displayed in your Google Sheets and are not stored by SheetPro AI.
+        </p>
+        <p>
+          <strong>3. Data Security</strong><br>
+          All communication between your device, SheetPro AI, and the AI provider is secured with HTTPS (TLS). We do not store any of your data on our servers, and we take all reasonable measures to ensure the security of the information that you send and receive through the Service.
+        </p>
+        <p>
+          <strong>4. Third-Party Services</strong><br>
+          SheetPro AI integrates with third-party AI providers such as OpenAI, Google Gemini, and DeepSeek. These third-party services may have their own privacy policies, and we encourage you to review them. We are not responsible for the practices or policies of these third-party services.
+        </p>
+        <p>
+          <strong>5. Data Retention</strong><br>
+          As mentioned, we do not store any data on our servers. The API keys you provide are stored locally in your Google Sheets environment. The data remains within your device, and it is only processed on the fly through your interactions with the Service.
+        </p>
+        <p>
+          <strong>6. Children's Privacy</strong><br>
+          Our Service is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so that we can take appropriate action.
+        </p>
+        <p>
+          <strong>7. Changes to This Privacy Policy</strong><br>
+          SheetPro AI reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected by the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.
+        </p>
+        <p>
+          <strong>8. Contact Us</strong><br>
+          If you have any questions about this Privacy Policy or how your information is handled, please contact us at: <a href="mailto:sheetproai@gmail.com" class="text-emerald-500 font-semibold">sheetproai@gmail.com</a>.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white py-16">
