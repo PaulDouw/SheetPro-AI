@@ -186,15 +186,15 @@
         </div>
         <!-- Social Icons (LinkedIn & X) -->
         <div class="mt-6 glass-effect inline-flex items-center gap-4 px-4 py-2 rounded-xl animate__animated animate__fadeIn animate__delay-3s">
-  <span class="text-gray-700 text-sm font-medium">Follow us on :</span>
-  <a href="https://www.linkedin.com" target="_blank" class="transition-transform transform hover:scale-110">
-    <img src="linkedin.png" alt="LinkedIn" class="h-8 w-auto" />
-  </a>
-  <a href="https://x.com" target="_blank" class="transition-transform transform hover:scale-110">
-    <img src="x.png" alt="X" class="h-8 w-auto" />
-  </a>
-</div>
-
+          <span class="text-gray-700 text-sm font-medium">Follow us on :</span>
+          <a href="https://www.linkedin.com" target="_blank" class="transition-transform transform hover:scale-110">
+            <img src="linkedin.png" alt="LinkedIn" class="h-10 w-auto" />
+          </a>
+          <a href="https://x.com" target="_blank" class="transition-transform transform hover:scale-110">
+            <img src="x.png" alt="X" class="h-10 w-auto" />
+          </a>
+        </div>
+      </div>
 
       <!-- Right Column: Video Embed -->
       <div class="w-full md:w-1/2 md:pl-8">
@@ -304,19 +304,19 @@
         <tbody>
           <!-- 1) AI(prompt) -->
           <tr>
-            <td><code>AI("prompt")</code></td>
+            <td><code>AI(prompt)</code></td>
             <td>Uses your configured provider and model to process your prompt.</td>
             <td><code>=AI("Explain quantum physics in 3 bullet points")</code></td>
           </tr>
           <!-- 2) AI_LIST(prompt) -->
           <tr>
-            <td><code>AI_LIST("prompt")</code></td>
+            <td><code>AI_LIST(prompt)</code></td>
             <td>Returns the response as a vertical list (one item per row).</td>
             <td><code>=AI_LIST("Give me 5 marketing tips")</code></td>
           </tr>
           <!-- 3) AI_TABLE(prompt) -->
           <tr>
-            <td><code>AI_TABLE("prompt")</code></td>
+            <td><code>AI_TABLE(prompt)</code></td>
             <td>Attempts to parse the response into a 2D table within Sheets.</td>
             <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
           </tr>
@@ -347,22 +347,22 @@
         </thead>
         <tbody>
           <tr>
-            <td><code>GPT_4O("prompt")</code></td>
+            <td><code>GPT_4O(prompt)</code></td>
             <td>OpenAI – GPT-4o</td>
             <td><code>=GPT_4O("Summarize this article:" & A1)</code></td>
           </tr>
           <tr>
-            <td><code>GEMINI_2_0_FLASH("prompt")</code></td>
+            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
             <td>Google Gemini 2.0 Flash</td>
             <td><code>=GEMINI_2_0_FLASH("Describe the differences between cats and dogs")</code></td>
           </tr>
           <tr>
-            <td><code>DEEPSEEK_CHAT("prompt")</code></td>
+            <td><code>DEEPSEEK_CHAT(prompt)</code></td>
             <td>DeepSeek – Chat</td>
             <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
           </tr>
           <tr>
-            <td><code>SEARCH_WEB("prompt")</code></td>
+            <td><code>SEARCH_WEB(prompt)</code></td>
             <td>Perplexity – Web Search</td>
             <td><code>=SEARCH_WEB("Who won the 2023 US Open Tennis?")</code></td>
           </tr>
@@ -381,12 +381,12 @@
         </thead>
         <tbody>
           <tr>
-            <td><code>SCRAPE("url")</code></td>
+            <td><code>SCRAPE(url)</code></td>
             <td>Extracts text from a webpage by removing HTML and scripts.</td>
             <td><code>=SCRAPE("https://example.com/page")</code></td>
           </tr>
           <tr>
-            <td><code>ANALYZE_URL("url", "instruction")</code></td>
+            <td><code>ANALYZE_URL(url, instruction)</code></td>
             <td>Combines SCRAPE and AI to summarize or analyze a webpage.</td>
             <td><code>=ANALYZE_URL("https://example.com/article", "Summarize the key points")</code></td>
           </tr>
@@ -640,4 +640,3 @@
   </script>
 </body>
 </html>
-
