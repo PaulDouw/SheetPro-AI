@@ -7,7 +7,7 @@
   <link rel="icon" href="logo.ico" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- (Animation CSS supprimée pour ne plus utiliser d'effets d'apparition) -->
   <style>
     /* Gradient & Glass Effects */
     .gradient {
@@ -89,7 +89,12 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-
+    /* Screenshots Grid (Desktop) */
+    .screenshots-grid {
+      display: grid;
+      gap: 1.5rem;
+      align-items: center;
+    }
     /* Hide scrollbar in mobile slider */
     .no-scrollbar::-webkit-scrollbar {
       display: none; /* Chrome/Safari */
@@ -161,35 +166,35 @@
     <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
       <!-- Left Column: Name, Text & Logos -->
       <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__fadeIn">
-          SheetPro AI <span class="text-green-500 text-base">(Free)</span>
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg animate__animated animate__fadeIn animate__delay-1s">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">SheetPro AI <span class="text-green-500 text-base">(Free)</span></h1>
+        <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
           Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
         </p>
         <!-- Logos (OpenAI, Gemini, DeepSeek) -->
-        <div class="flex items-center justify-center space-x-6 mb-8 animate__animated animate__fadeIn animate__delay-1s">
+        <div class="flex items-center justify-center mb-8">
           <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
         </div>
-        <!-- CTA Button (Removed Watch Demo) -->
-        <div class="flex gap-4 animate__animated animate__fadeIn animate__delay-2s">
+        <!-- CTA Button (Watch Demo retiré) -->
+        <div class="flex gap-4">
           <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
             Get Started
           </a>
         </div>
-        <!-- Social Icons: Unified Sizes -->
-        <div class="mt-14 flex flex-col items-center animate__animated animate__fadeIn animate__delay-3s">
+        <!-- Social Icons -->
+        <div class="mt-14 flex flex-col items-center">
           <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
-          <div class="flex space-x-4">
+          <div class="flex items-center">
+            <!-- Pas de marge pour LinkedIn et X -->
             <a href="https://www.linkedin.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
               <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8" />
             </a>
             <a href="https://x.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
               <img src="x.png" alt="X" class="w-8 h-8" />
             </a>
-            <a href="https://www.youtube.com/@SheetProAI" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+            <!-- Conserver une marge pour YouTube -->
+            <a href="https://www.youtube.com/@SheetProAI" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110 ml-4">
               <img src="youtube.png" alt="YouTube" class="w-8 h-8" />
             </a>
           </div>
@@ -199,11 +204,7 @@
       <!-- Right Column: Video Embed -->
       <div class="w-full md:w-1/2 md:pl-8">
         <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden">
-          <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6X4VrZcbfc" 
-                  title="YouTube video player" frameborder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
-          </iframe>
+          <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6X4VrZcbfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -225,11 +226,10 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Configuration & Settings</h3>
+              <h3 class="text-xl font-semibold mb-2">Configuration &amp; Settings</h3>
               <p class="text-gray-600">
                 Choose your preferred AI provider (OpenAI, Gemini, DeepSeek) and configure your API keys using our intuitive sidebar. Settings are automatically saved.
               </p>
@@ -238,8 +238,7 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        d="M3 10h2l1 2h13l1-2h2" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2l1 2h13l1-2h2" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Generic AI Functions</h3>
@@ -251,21 +250,19 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Specific & Web Functions</h3>
+              <h3 class="text-xl font-semibold mb-2">Specific &amp; Web Functions</h3>
               <p class="text-gray-600">
                 Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
               </p>
             </div>
-            <!-- NEW Feature 4: Role Assignment -->
+            <!-- Feature 4: Role Assignment -->
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                        d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Role Assignment</h3>
@@ -278,65 +275,47 @@
 
         <!-- Screenshots Section -->
         <div class="mt-12 md:mt-0">
-          <!-- Desktop Grid: Visible from md: and up -->
-          <div class="hidden md:grid grid-cols-3 gap-6">
-            <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg w-full" />
-            <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg w-full" />
-            <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg w-full" />
+          <!-- Desktop Grid: Visible from md: and up (affichage comme avant) -->
+          <div class="hidden md:block">
+            <div class="screenshots-grid">
+              <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
+              <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg" />
+              <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg" />
+            </div>
           </div>
 
-          <!-- Mobile Slider: Hidden on md: and up -->
+          <!-- Mobile Slider: Visible uniquement en dessous de md: -->
           <div class="block md:hidden relative mt-6">
             <!-- Left Arrow Button -->
             <button 
-              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 
-                     hover:scale-110 transition-transform"
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
               onclick="slideScreenshots('prev')"
               aria-label="Previous Slide"
             >
-              <!-- Left Arrow Icon -->
               <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M15 19l-7-7 7-7"
-                />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
             <!-- Right Arrow Button -->
             <button 
-              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10
-                     hover:scale-110 transition-transform"
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
               onclick="slideScreenshots('next')"
               aria-label="Next Slide"
             >
-              <!-- Right Arrow Icon -->
               <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path 
-                  stroke-linecap="round" 
-                  stroke-linejoin="round" 
-                  stroke-width="2" 
-                  d="M9 5l7 7-7 7"
-                />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
             <!-- Slider Container -->
-            <div 
-              id="mobile-slider" 
-              class="no-scrollbar scroll-smooth snap-x snap-mandatory overflow-x-auto flex gap-4"
-            >
-              <!-- Slide 1 -->
+            <div id="mobile-slider" class="no-scrollbar scroll-smooth snap-x snap-mandatory overflow-x-auto flex gap-4">
               <div class="snap-center flex-shrink-0 w-full px-4">
                 <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
               </div>
-              <!-- Slide 2 -->
               <div class="snap-center flex-shrink-0 w-full px-4">
                 <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
               </div>
-              <!-- Slide 3 -->
               <div class="snap-center flex-shrink-0 w-full px-4">
                 <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
               </div>
@@ -350,7 +329,7 @@
   <!-- Formulas & Commands Section -->
   <section id="formulas" class="py-32 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas & Commands</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
         SheetPro AI provides a comprehensive set of formulas to harness the power of AI directly in your Google Sheets.
       </p>
@@ -365,35 +344,30 @@
           </tr>
         </thead>
         <tbody>
-          <!-- 1) AI(prompt) -->
           <tr>
             <td><code>AI(prompt)</code></td>
             <td>Uses your configured provider and model to process your prompt.</td>
             <td><code>=AI("Explain quantum physics in 3 bullet points")</code></td>
           </tr>
-          <!-- 2) AI_LIST(prompt) -->
           <tr>
             <td><code>AI_LIST(prompt)</code></td>
             <td>Returns the response as a vertical list (one item per row).</td>
             <td><code>=AI_LIST("Give me 5 marketing tips")</code></td>
           </tr>
-          <!-- 3) AI_TABLE(prompt) -->
           <tr>
             <td><code>AI_TABLE(prompt)</code></td>
             <td>Attempts to parse the response into a 2D table within Sheets.</td>
             <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
           </tr>
-          <!-- New formula referencing 1 cell -->
           <tr>
-            <td><code>AI("Prompt" & [cell])</code></td>
+            <td><code>AI("Prompt" &amp; [cell])</code></td>
             <td>Prompt with reference to a cell</td>
-            <td><code>=AI("how many inhabitants in " & B13)</code></td>
+            <td><code>=AI("how many inhabitants in " &amp; B13)</code></td>
           </tr>
-          <!-- New formula referencing multiple cells -->
           <tr>
-            <td><code>AI("Prompt" & [cell] & " prompt " & [cell])</code></td>
+            <td><code>AI("Prompt" &amp; [cell] &amp; " prompt " &amp; [cell])</code></td>
             <td>Prompt with reference to several cells</td>
-            <td><code>=AI("what is the country with the highest population between " & B23 & " and " & D23)</code></td>
+            <td><code>=AI("what is the country with the highest population between " &amp; B23 &amp; " and " &amp; D23)</code></td>
           </tr>
         </tbody>
       </table>
@@ -412,7 +386,7 @@
           <tr>
             <td><code>GPT_4O(prompt)</code></td>
             <td>OpenAI – GPT-4o</td>
-            <td><code>=GPT_4O("Summarize this article:" & A1)</code></td>
+            <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
           </tr>
           <tr>
             <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
@@ -461,7 +435,7 @@
   <!-- Pricing Section -->
   <section id="pricing" class="py-32 bg-white hero-pattern">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Providers & Pricing</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Providers &amp; Pricing</h2>
       <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
         SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider.
       </p>
@@ -539,7 +513,7 @@
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
             <span class="text-lg font-medium">Do I need to supply my own API keys?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -553,7 +527,7 @@
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
             <span class="text-lg font-medium">Are there any usage limits?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -567,7 +541,7 @@
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
             <span class="text-lg font-medium">Are my data safe?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
@@ -583,15 +557,14 @@
 
   <!-- Contact Section -->
   <section id="contact" class="py-32 bg-gray-50 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto px-4 text-center relative z-10">
+    <div class="container mx-auto px-4 text-center">
       <h2 class="text-4xl font-bold mb-8 gradient-text">Need Assistance?</h2>
       <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
         Our team is here to help you get the most out of SheetPro AI.
       </p>
       <a href="mailto:sheetproai@gmail.com" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
         Contact Us
       </a>
@@ -700,11 +673,11 @@
       const faqItem = button.parentElement;
       faqItem.classList.toggle('active');
     }
-
+    
     // Slider Arrows for Mobile Screens
     function slideScreenshots(direction) {
       const container = document.getElementById('mobile-slider');
-      const scrollAmount = container.clientWidth; // scroll by one "screen" width
+      const scrollAmount = container.clientWidth;
       if (direction === 'next') {
         container.scrollLeft += scrollAmount;
       } else {
@@ -714,5 +687,6 @@
   </script>
 </body>
 </html>
+
 
 
