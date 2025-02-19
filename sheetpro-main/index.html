@@ -89,26 +89,18 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-    /* Screenshots Slider */
-    .slider-container {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      gap: 1rem;
+
+    /* Hide scrollbar in mobile slider */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none; /* Chrome/Safari */
     }
-    .slider-item {
-      scroll-snap-align: center;
-      flex-shrink: 0;
-      width: 100%;
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE/Edge */
+      scrollbar-width: none;     /* Firefox */
     }
-    .slider-item img {
-      max-width: 500px;
-      margin: 0 auto;
-      transition: transform 0.3s ease-in-out;
-    }
-    .slider-item img:hover {
-      transform: scale(1.05);
+    /* Smooth scrolling on mobile slider */
+    .scroll-smooth {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -224,7 +216,7 @@
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
         Discover how SheetPro AI (Free) enhances your Google Sheets with powerful features, and take a look at some real examples.
       </p>
-      <!-- Two-column layout: Left = Features, Right = Screenshots Slider -->
+      <!-- Two-column layout: Left = Features, Right = Screenshots -->
       <div class="md:grid md:grid-cols-2 md:gap-16">
         <!-- Key Features -->
         <div>
@@ -283,18 +275,71 @@
             </div>
           </div>
         </div>
-        <!-- Screenshots Slider (Removed fixed desktop screenshots) -->
+
+        <!-- Screenshots Section -->
         <div class="mt-12 md:mt-0">
-          <div class="slider-container">
-            <!-- Start with Screen2 as the default first slide -->
-            <div class="slider-item">
-              <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
-            </div>
-            <div class="slider-item">
-              <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
-            </div>
-            <div class="slider-item">
-              <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
+          <!-- Desktop Grid: Visible from md: and up -->
+          <div class="hidden md:grid grid-cols-3 gap-6">
+            <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg w-full" />
+            <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg w-full" />
+            <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg w-full" />
+          </div>
+
+          <!-- Mobile Slider: Hidden on md: and up -->
+          <div class="block md:hidden relative mt-6">
+            <!-- Left Arrow Button -->
+            <button 
+              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 
+                     hover:scale-110 transition-transform"
+              onclick="slideScreenshots('prev')"
+              aria-label="Previous Slide"
+            >
+              <!-- Left Arrow Icon -->
+              <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Right Arrow Button -->
+            <button 
+              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10
+                     hover:scale-110 transition-transform"
+              onclick="slideScreenshots('next')"
+              aria-label="Next Slide"
+            >
+              <!-- Right Arrow Icon -->
+              <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path 
+                  stroke-linecap="round" 
+                  stroke-linejoin="round" 
+                  stroke-width="2" 
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+
+            <!-- Slider Container -->
+            <div 
+              id="mobile-slider" 
+              class="no-scrollbar scroll-smooth snap-x snap-mandatory overflow-x-auto flex gap-4"
+            >
+              <!-- Slide 1 -->
+              <div class="snap-center flex-shrink-0 w-full px-4">
+                <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
+              </div>
+              <!-- Slide 2 -->
+              <div class="snap-center flex-shrink-0 w-full px-4">
+                <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
+              </div>
+              <!-- Slide 3 -->
+              <div class="snap-center flex-shrink-0 w-full px-4">
+                <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
+              </div>
             </div>
           </div>
         </div>
@@ -655,7 +700,19 @@
       const faqItem = button.parentElement;
       faqItem.classList.toggle('active');
     }
+
+    // Slider Arrows for Mobile Screens
+    function slideScreenshots(direction) {
+      const container = document.getElementById('mobile-slider');
+      const scrollAmount = container.clientWidth; // scroll by one "screen" width
+      if (direction === 'next') {
+        container.scrollLeft += scrollAmount;
+      } else {
+        container.scrollLeft -= scrollAmount;
+      }
+    }
   </script>
 </body>
 </html>
+
 
