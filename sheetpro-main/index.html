@@ -7,7 +7,7 @@
   <link rel="icon" href="logo.ico" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
-  <!-- (Animation CSS supprimée pour ne plus utiliser d'effets d'apparition) -->
+
   <style>
     /* Gradient & Glass Effects */
     .gradient {
@@ -89,12 +89,19 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-    /* Screenshots Grid (Desktop) */
+
+    /* Desktop Screenshots Grid */
     .screenshots-grid {
       display: grid;
       gap: 1.5rem;
       align-items: center;
     }
+    /* Limite la taille des images en desktop */
+    .screenshots-grid img {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
     /* Hide scrollbar in mobile slider */
     .no-scrollbar::-webkit-scrollbar {
       display: none; /* Chrome/Safari */
@@ -166,7 +173,9 @@
     <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
       <!-- Left Column: Name, Text & Logos -->
       <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">SheetPro AI <span class="text-green-500 text-base">(Free)</span></h1>
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">
+          SheetPro AI <span class="text-green-500 text-base">(Free)</span>
+        </h1>
         <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
           Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
         </p>
@@ -176,7 +185,7 @@
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
         </div>
-        <!-- CTA Button (Watch Demo retiré) -->
+        <!-- CTA Button -->
         <div class="flex gap-4">
           <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
             Get Started
@@ -186,15 +195,19 @@
         <div class="mt-14 flex flex-col items-center">
           <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
           <div class="flex items-center">
-            <!-- Pas de marge pour LinkedIn et X -->
-            <a href="https://www.linkedin.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
-              <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8" />
+            <!-- LinkedIn : icon plus grand pour moins de marge interne -->
+            <a href="https://www.linkedin.com" target="_blank"
+               class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+              <img src="linkedin.png" alt="LinkedIn" class="w-9 h-9" />
             </a>
-            <a href="https://x.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
-              <img src="x.png" alt="X" class="w-8 h-8" />
+            <!-- X : idem -->
+            <a href="https://x.com" target="_blank"
+               class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+              <img src="x.png" alt="X" class="w-9 h-9" />
             </a>
-            <!-- Conserver une marge pour YouTube -->
-            <a href="https://www.youtube.com/@SheetProAI" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110 ml-4">
+            <!-- YouTube : marge à gauche + icône légèrement plus petit -->
+            <a href="https://www.youtube.com/@SheetProAI" target="_blank"
+               class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110 ml-4">
               <img src="youtube.png" alt="YouTube" class="w-8 h-8" />
             </a>
           </div>
@@ -204,7 +217,13 @@
       <!-- Right Column: Video Embed -->
       <div class="w-full md:w-1/2 md:pl-8">
         <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden">
-          <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6X4VrZcbfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="w-full h-full rounded-xl"
+                  src="https://www.youtube.com/embed/o6X4VrZcbfc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
@@ -226,7 +245,8 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Configuration &amp; Settings</h3>
@@ -238,7 +258,8 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h2l1 2h13l1-2h2" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h2l1 2h13l1-2h2" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Generic AI Functions</h3>
@@ -250,7 +271,8 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Specific &amp; Web Functions</h3>
@@ -262,7 +284,8 @@
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
                 </svg>
               </div>
               <h3 class="text-xl font-semibold mb-2">Role Assignment</h3>
@@ -275,7 +298,7 @@
 
         <!-- Screenshots Section -->
         <div class="mt-12 md:mt-0">
-          <!-- Desktop Grid: Visible from md: and up (affichage comme avant) -->
+          <!-- Desktop Grid: Visible from md: and up -->
           <div class="hidden md:block">
             <div class="screenshots-grid">
               <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
@@ -284,7 +307,7 @@
             </div>
           </div>
 
-          <!-- Mobile Slider: Visible uniquement en dessous de md: -->
+          <!-- Mobile Slider: Hidden on md: and up -->
           <div class="block md:hidden relative mt-6">
             <!-- Left Arrow Button -->
             <button 
@@ -293,7 +316,8 @@
               aria-label="Previous Slide"
             >
               <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 19l-7-7 7-7" />
               </svg>
             </button>
 
@@ -304,7 +328,8 @@
               aria-label="Next Slide"
             >
               <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
@@ -564,7 +589,8 @@
       </p>
       <a href="mailto:sheetproai@gmail.com" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
         Contact Us
       </a>
@@ -667,13 +693,13 @@
       var menu = document.getElementById("mobile-menu");
       menu.classList.toggle("hidden");
     });
-    
+
     // FAQ Toggle Function
     function toggleFAQ(button) {
       const faqItem = button.parentElement;
       faqItem.classList.toggle('active');
     }
-    
+
     // Slider Arrows for Mobile Screens
     function slideScreenshots(direction) {
       const container = document.getElementById('mobile-slider');
@@ -687,6 +713,7 @@
   </script>
 </body>
 </html>
+
 
 
 
