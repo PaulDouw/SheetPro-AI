@@ -104,6 +104,17 @@
     .screenshots-grid img:hover {
       transform: scale(1.05);
     }
+    /* Mobile Slider Styles */
+    .slider-container {
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .slider-item {
+      scroll-snap-align: center;
+      flex-shrink: 0;
+      width: 100%;
+    }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -175,42 +186,29 @@
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
         </div>
-        <!-- CTA Buttons -->
+        <!-- CTA Button (Removed Watch Demo) -->
         <div class="flex gap-4 animate__animated animate__fadeIn animate__delay-2s">
           <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
             Get Started
           </a>
-          <a href="#demo" class="glass-effect text-emerald-600 px-6 py-3 rounded-xl text-lg font-semibold hover:bg-white/90 transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Watch Demo
-          </a>
         </div>
-        <!-- Social Icons (LinkedIn & X) -->
-        <div class="mt-14 glass-effect inline-flex items-center gap-2 px-2 py-1 
-            rounded-xl animate__animated animate__fadeIn animate__delay-3s overflow-visible">
-          <span class="text-gray-700 text-sm font-medium">Follow us on :</span>
-  
-  <!-- LinkedIn plus grand visuellement via transform -->
-        <a href="https://www.linkedin.com" target="_blank" 
-           class="transition-transform transform hover:scale-110 relative">
-        <img src="linkedin.png" alt="LinkedIn" 
-         class="h-14 w-auto" 
-         style="transform: scale(1.3); transform-origin: center left;" />
-        </a>
-  
-          <!-- X icon normal -->
-        <a href="https://x.com" target="_blank" 
-         class="transition-transform transform hover:scale-110 ml-4">
-        <img src="x.png" alt="X" class="h-6 w-auto" />
-        </a>
+        <!-- Social Icons -->
+        <div class="mt-14 flex flex-col items-center animate__animated animate__fadeIn animate__delay-3s">
+          <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+              <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="https://x.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+              <img src="x.png" alt="X" class="w-6 h-6" />
+            </a>
+            <a href="https://www.youtube.com/@SheetProAI" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
+              <img src="youtube.png" alt="YouTube" class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
 
-          <!-- X icon normal -->
-        <a href="https://www.youtube.com/@SheetProAI" target="_blank" 
-         class="transition-transform transform hover:scale-110 ml-1">
-        <img src="youtube.png" alt="X" class="h-10 w-auto" />
-        </a>
       </div>
-
-    </div>
 
       <!-- Right Column: Video Embed -->
       <div class="w-full md:w-1/2 md:pl-8">
@@ -275,7 +273,6 @@
             <!-- NEW Feature 4: Role Assignment -->
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <!-- A user icon to represent role assignment -->
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                         d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
@@ -290,7 +287,20 @@
         </div>
         <!-- Screenshots -->
         <div class="mt-12 md:mt-0">
-          <div class="screenshots-grid">
+          <!-- Mobile Slider: Only visible on mobile -->
+          <div class="md:hidden slider-container flex space-x-4">
+            <div class="slider-item">
+              <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
+            </div>
+            <div class="slider-item">
+              <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
+            </div>
+            <div class="slider-item">
+              <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
+            </div>
+          </div>
+          <!-- Desktop Grid: Only visible on md and up -->
+          <div class="hidden md:grid screenshots-grid">
             <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
             <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg" />
             <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg" />
