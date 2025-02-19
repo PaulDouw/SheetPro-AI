@@ -89,31 +89,26 @@
     .faq-item.active .faq-icon {
       transform: rotate(180deg);
     }
-    /* Screenshots */
-    .screenshots-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    .screenshots-grid img {
-      transition: transform 0.3s ease-in-out;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .screenshots-grid img:hover {
-      transform: scale(1.05);
-    }
-    /* Mobile Slider Styles */
+    /* Screenshots Slider */
     .slider-container {
+      display: flex;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
+      gap: 1rem;
     }
     .slider-item {
       scroll-snap-align: center;
       flex-shrink: 0;
       width: 100%;
+    }
+    .slider-item img {
+      max-width: 500px;
+      margin: 0 auto;
+      transition: transform 0.3s ease-in-out;
+    }
+    .slider-item img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -192,28 +187,31 @@
             Get Started
           </a>
         </div>
-        <!-- Social Icons -->
+        <!-- Social Icons: Unified Sizes -->
         <div class="mt-14 flex flex-col items-center animate__animated animate__fadeIn animate__delay-3s">
           <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
           <div class="flex space-x-4">
             <a href="https://www.linkedin.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
-              <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+              <img src="linkedin.png" alt="LinkedIn" class="w-8 h-8" />
             </a>
             <a href="https://x.com" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
-              <img src="x.png" alt="X" class="w-6 h-6" />
+              <img src="x.png" alt="X" class="w-8 h-8" />
             </a>
             <a href="https://www.youtube.com/@SheetProAI" target="_blank" class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110">
-              <img src="youtube.png" alt="YouTube" class="w-6 h-6" />
+              <img src="youtube.png" alt="YouTube" class="w-8 h-8" />
             </a>
           </div>
         </div>
-
       </div>
 
       <!-- Right Column: Video Embed -->
       <div class="w-full md:w-1/2 md:pl-8">
         <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden">
-          <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6X4VrZcbfc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/o6X4VrZcbfc" 
+                  title="YouTube video player" frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
@@ -226,7 +224,7 @@
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
         Discover how SheetPro AI (Free) enhances your Google Sheets with powerful features, and take a look at some real examples.
       </p>
-      <!-- Two-column layout: Left = Features, Right = Screenshots -->
+      <!-- Two-column layout: Left = Features, Right = Screenshots Slider -->
       <div class="md:grid md:grid-cols-2 md:gap-16">
         <!-- Key Features -->
         <div>
@@ -285,10 +283,10 @@
             </div>
           </div>
         </div>
-        <!-- Screenshots -->
+        <!-- Screenshots Slider (Removed fixed desktop screenshots) -->
         <div class="mt-12 md:mt-0">
-          <!-- Mobile Slider: Only visible on mobile -->
-          <div class="md:hidden slider-container flex space-x-4">
+          <div class="slider-container">
+            <!-- Start with Screen2 as the default first slide -->
             <div class="slider-item">
               <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
             </div>
@@ -298,12 +296,6 @@
             <div class="slider-item">
               <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
             </div>
-          </div>
-          <!-- Desktop Grid: Only visible on md and up -->
-          <div class="hidden md:grid screenshots-grid">
-            <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
-            <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg" />
-            <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg" />
           </div>
         </div>
       </div>
@@ -666,3 +658,4 @@
   </script>
 </body>
 </html>
+
