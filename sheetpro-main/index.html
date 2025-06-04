@@ -281,9 +281,9 @@
                         d="M3 10h2l1 2h13l1-2h2" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Smart Formula Generator</h3>
+              <h3 class="text-xl font-semibold mb-2">Direct Model Access</h3>
               <p class="text-gray-600">
-                Build perfect AI formulas without memorizing model names. Our integrated formula generator helps you create <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> functions with cell references and custom prompts.
+                Call any AI model directly by its name as a Google Sheets function. Use <code>GPT_4O()</code>, <code>GEMINI_2_5_FLASH_PREVIEW()</code>, <code>CLAUDE_OPUS_4()</code> and 12+ other models with simple prompts and cell references.
               </p>
             </div>
             <!-- Feature 4 -->
@@ -294,9 +294,9 @@
                         d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Model-Specific & Web Functions</h3>
+              <h3 class="text-xl font-semibold mb-2">Web Search & Real-Time Data</h3>
               <p class="text-gray-600">
-                Access 15+ specialized models directly (<code>O3</code>, <code>GPT_4O</code>, <code>GEMINI_2_5_FLASH_PREVIEW</code>, <code>CLAUDE_OPUS_4</code>, etc.) or retrieve live web content with <code>SCRAPE()</code> and <code>SEARCH_WEB()</code> functions.
+                Access live web content with Perplexity models: <code>SONAR_MEDIUM_ONLINE()</code>, <code>SONAR_SMALL_ONLINE()</code>, and <code>SEARCH_WEB()</code> functions for real-time information and current data.
               </p>
             </div>
             <!-- Feature 5: Role Assignment -->
@@ -375,49 +375,11 @@
     <div class="container mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
-        SheetPro AI provides a comprehensive set of formulas to harness the power of AI directly in your Google Sheets.
+        SheetPro AI provides direct access to AI models by their specific names. Each model can be called directly as a function in your Google Sheets.
       </p>
-      <!-- Core Functions Table -->
-      <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">Core Functions</h3>
-      <table class="custom-table">
-        <thead>
-          <tr>
-            <th>Formula</th>
-            <th>Description</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>AI(prompt)</code></td>
-            <td>Uses your configured provider and model to process your prompt.</td>
-            <td><code>=AI("Explain quantum physics in 3 bullet points")</code></td>
-          </tr>
-          <tr>
-            <td><code>AI_LIST(prompt)</code></td>
-            <td>Returns the response as a vertical list (one item per row).</td>
-            <td><code>=AI_LIST("Give me 5 marketing tips")</code></td>
-          </tr>
-          <tr>
-            <td><code>AI_TABLE(prompt)</code></td>
-            <td>Attempts to parse the response into a 2D table within Sheets.</td>
-            <td><code>=AI_TABLE("List the top 5 most populous cities")</code></td>
-          </tr>
-          <tr>
-            <td><code>AI("Prompt" &amp; [cell])</code></td>
-            <td>Prompt with reference to a cell</td>
-            <td><code>=AI("how many inhabitants in " &amp; B13)</code></td>
-          </tr>
-          <tr>
-            <td><code>AI("Prompt" &amp; [cell] &amp; " prompt " &amp; [cell])</code></td>
-            <td>Prompt with reference to several cells</td>
-            <td><code>=AI("what is the country with the highest population between " &amp; B23 &amp; " and " &amp; D23)</code></td>
-          </tr>
-        </tbody>
-      </table>
 
-      <!-- Advanced Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Model-Specific Functions (by Intelligence)</h3>
+      <!-- Model-Specific Functions Table -->
+      <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">AI Model Functions (by Intelligence)</h3>
       <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
       <table class="custom-table">
         <thead>
@@ -584,30 +546,6 @@
             <td><strong>Custom Transformation</strong></td>
             <td>Apply any custom AI instruction</td>
             <td>"Convert each product code to its category name"</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Scraping Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Web Scraping Functions</h3>
-      <table class="custom-table">
-        <thead>
-          <tr>
-            <th>Formula</th>
-            <th>Description</th>
-            <th>Example</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>SCRAPE(url)</code></td>
-            <td>Extracts text from a webpage by removing HTML and scripts.</td>
-            <td><code>=SCRAPE("https://example.com/page")</code></td>
-          </tr>
-          <tr>
-            <td><code>ANALYZE_URL(url, instruction)</code></td>
-            <td>Combines SCRAPE and AI to summarize or analyze a webpage.</td>
-            <td><code>=ANALYZE_URL("https://example.com/article", "Summarize the key points")</code></td>
           </tr>
         </tbody>
       </table>
@@ -924,14 +862,14 @@
         <!-- FAQ Item 8 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">What's the difference between AI(), AI_LIST(), and AI_TABLE()?</span>
+            <span class="text-lg font-medium">How do I use the AI model functions in my sheets?</span>
             <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
             </svg>
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              AI() returns text in a single cell. AI_LIST() splits the response into multiple rows (perfect for bullet points). AI_TABLE() creates a 2D array with rows and columns (ideal for structured data). All have model-specific variants like GPT_4O_LIST().
+              Simply call any model directly by its function name. For example: <code>=GPT_4O("Analyze this data")</code>, <code>=GEMINI_2_5_FLASH_PREVIEW("Translate to French: " &amp; A1)</code>, or <code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; B1:B10)</code>. You can reference cells and ranges in your prompts.
             </p>
           </div>
         </div>
