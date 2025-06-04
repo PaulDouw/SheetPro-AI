@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SheetPro AI (Free) – The Free AI Assistant for Google Sheets</title>
+  <title>SheetPro AI (Free) – Multi-Provider AI Assistant for Google Sheets with Transform & 15+ Models</title>
   <link rel="icon" href="logo.ico" type="image/x-icon" />
   <!-- Tailwind CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
@@ -177,13 +177,15 @@
           SheetPro AI <span class="text-green-500 text-base">(Free)</span>
         </h1>
         <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
-          Revolutionize your spreadsheets with integrated AI solutions for insights, automation, and more.
+          Revolutionize your spreadsheets with integrated AI solutions from 5 major providers. Create formulas, transform data, and unlock insights with the latest AI models.
         </p>
-        <!-- Logos (OpenAI, Gemini, DeepSeek) -->
-        <div class="flex items-center justify-center mb-8">
+        <!-- Logos (OpenAI, Gemini, DeepSeek, Claude, Perplexity) -->
+        <div class="flex items-center justify-center gap-4 mb-8 flex-wrap">
           <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
+          <img src="claude.png" alt="Claude Logo" class="h-8 w-auto" />
+          <img src="perplexity.png" alt="Perplexity Logo" class="h-8 w-auto" />
         </div>
         <!-- CTA Button -->
         <div class="flex gap-4">
@@ -253,9 +255,9 @@
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Configuration &amp; Settings</h3>
+              <h3 class="text-xl font-semibold mb-2">Multi-Provider AI Configuration</h3>
               <p class="text-gray-600">
-                Choose your preferred AI provider (OpenAI, Gemini, DeepSeek) and configure your API keys using our intuitive sidebar. Settings are automatically saved.
+                Choose from 5 major AI providers (OpenAI, Google Gemini, Claude, DeepSeek, Perplexity) with 15+ advanced models. Configure your API keys using our intuitive sidebar and switch between providers seamlessly.
               </p>
             </div>
             <!-- Feature 2 -->
@@ -263,12 +265,12 @@
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 10h2l1 2h13l1-2h2" />
+                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Generic AI Functions</h3>
+              <h3 class="text-xl font-semibold mb-2">🆕 AI Cell Transformations</h3>
               <p class="text-gray-600">
-                Use <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> to process your prompts and receive responses as plain text, lists, or tables directly in Sheets.
+                Transform existing data with AI. Translate text, clean data, expand abbreviations, or apply custom transformations to selected cell ranges. Choose to replace original data or create new outputs.
               </p>
             </div>
             <!-- Feature 3 -->
@@ -276,15 +278,28 @@
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h2l1 2h13l1-2h2" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Smart Formula Generator</h3>
+              <p class="text-gray-600">
+                Build perfect AI formulas without memorizing model names. Our integrated formula generator helps you create <code>AI()</code>, <code>AI_LIST()</code>, or <code>AI_TABLE()</code> functions with cell references and custom prompts.
+              </p>
+            </div>
+            <!-- Feature 4 -->
+            <div class="glass-effect p-6 rounded-2xl card-hover">
+              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Specific &amp; Web Functions</h3>
+              <h3 class="text-xl font-semibold mb-2">Model-Specific & Web Functions</h3>
               <p class="text-gray-600">
-                Directly call model-specific functions (<code>GPT_4O</code>, <code>GEMINI_2_0_FLASH</code>, etc.) or retrieve web content with <code>SCRAPE()</code> and <code>ANALYZE_URL()</code>.
+                Access 15+ specialized models directly (<code>O3</code>, <code>GPT_4O</code>, <code>GEMINI_2_5_FLASH_PREVIEW</code>, <code>CLAUDE_OPUS_4</code>, etc.) or retrieve live web content with <code>SCRAPE()</code> and <code>SEARCH_WEB()</code> functions.
               </p>
             </div>
-            <!-- Feature 4: Role Assignment -->
+            <!-- Feature 5: Role Assignment -->
             <div class="glass-effect p-6 rounded-2xl card-hover">
               <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -292,9 +307,9 @@
                         d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
                 </svg>
               </div>
-              <h3 class="text-xl font-semibold mb-2">Role Assignment</h3>
+              <h3 class="text-xl font-semibold mb-2">Optimized for Spreadsheets</h3>
               <p class="text-gray-600">
-                Assign a global role or persona to your entire sheet, ensuring all AI formulas follow consistent style and instructions. Perfect for maintaining a specific voice or domain expertise.
+                All AI responses are automatically optimized for Google Sheets with intelligent system prompts. Ensures clean, structured outputs that work seamlessly with spreadsheet formulas and formatting.
               </p>
             </div>
           </div>
@@ -402,41 +417,179 @@
       </table>
 
       <!-- Advanced Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Functions</h3>
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Advanced Model-Specific Functions (by Intelligence)</h3>
+      <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
       <table class="custom-table">
         <thead>
           <tr>
             <th>Formula</th>
             <th>Provider / Model</th>
+            <th>Best For</th>
             <th>Example Usage</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- OpenAI Models -->
+          <tr class="bg-blue-50">
+            <td><code>O3(prompt)</code></td>
+            <td>OpenAI – o3 (Most Advanced)</td>
+            <td>Complex reasoning, research</td>
+            <td><code>=O3("Analyze the market implications of " &amp; A1)</code></td>
+          </tr>
+          <tr class="bg-blue-50">
+            <td><code>GPT_4_1(prompt)</code></td>
+            <td>OpenAI – GPT-4.1</td>
+            <td>Enhanced capabilities</td>
+            <td><code>=GPT_4_1("Write a professional email for " &amp; B1)</code></td>
+          </tr>
+          <tr class="bg-blue-50">
             <td><code>GPT_4O(prompt)</code></td>
             <td>OpenAI – GPT-4o</td>
+            <td>General high-intelligence tasks</td>
             <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
           </tr>
-          <tr>
-            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
-            <td>Google Gemini 2.0 Flash</td>
-            <td><code>=GEMINI_2_0_FLASH("Describe the differences between cats and dogs")</code></td>
+          <tr class="bg-blue-50">
+            <td><code>O4_MINI(prompt)</code></td>
+            <td>OpenAI – o4-mini</td>
+            <td>Efficient reasoning</td>
+            <td><code>=O4_MINI("Quick analysis of " &amp; C1)</code></td>
           </tr>
-          <tr>
+          <tr class="bg-blue-50">
+            <td><code>GPT_4_1_NANO(prompt)</code></td>
+            <td>OpenAI – GPT-4.1-nano</td>
+            <td>Basic tasks, cost-effective</td>
+            <td><code>=GPT_4_1_NANO("Simple format check: " &amp; D1)</code></td>
+          </tr>
+          
+          <!-- Google Gemini Models (FREE) -->
+          <tr class="bg-green-50">
+            <td><code>GEMINI_2_5_PRO_PREVIEW(prompt)</code></td>
+            <td>Google – Gemini 2.5 Pro (FREE)</td>
+            <td>Complex problems, state-of-the-art</td>
+            <td><code>=GEMINI_2_5_PRO_PREVIEW("Deep analysis of " &amp; A1)</code></td>
+          </tr>
+          <tr class="bg-green-50">
+            <td><code>GEMINI_2_5_FLASH_PREVIEW(prompt)</code></td>
+            <td>Google – Gemini 2.5 Flash (FREE)</td>
+            <td>Best price-performance ratio</td>
+            <td><code>=GEMINI_2_5_FLASH_PREVIEW("Optimize this content: " &amp; B1)</code></td>
+          </tr>
+          <tr class="bg-green-50">
+            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
+            <td>Google – Gemini 2.0 Flash (FREE)</td>
+            <td>Next-gen features, speed</td>
+            <td><code>=GEMINI_2_0_FLASH("Process this data: " &amp; C1)</code></td>
+          </tr>
+          <tr class="bg-green-50">
+            <td><code>GEMMA_3_27B(prompt)</code></td>
+            <td>Google – Gemma 3 27B (FREE)</td>
+            <td>Open source, multimodal</td>
+            <td><code>=GEMMA_3_27B("Explain the concept: " &amp; D1)</code></td>
+          </tr>
+          <tr class="bg-green-50">
+            <td><code>GEMINI_2_0_FLASH_LITE(prompt)</code></td>
+            <td>Google – Gemini 2.0 Flash-Lite (FREE)</td>
+            <td>Low latency, cost optimization</td>
+            <td><code>=GEMINI_2_0_FLASH_LITE("Quick summary: " &amp; E1)</code></td>
+          </tr>
+          
+          <!-- DeepSeek Models -->
+          <tr class="bg-purple-50">
+            <td><code>DEEPSEEK_REASONER(prompt)</code></td>
+            <td>DeepSeek – Reasoner</td>
+            <td>Advanced logical reasoning</td>
+            <td><code>=DEEPSEEK_REASONER("Logical analysis of " &amp; A1)</code></td>
+          </tr>
+          <tr class="bg-purple-50">
             <td><code>DEEPSEEK_CHAT(prompt)</code></td>
             <td>DeepSeek – Chat</td>
+            <td>Conversation, general tasks</td>
             <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
           </tr>
-          <tr>
+          
+          <!-- Claude Models -->
+          <tr class="bg-orange-50">
+            <td><code>CLAUDE_OPUS_4(prompt)</code></td>
+            <td>Anthropic – Claude Opus 4</td>
+            <td>Superior reasoning, complex analysis</td>
+            <td><code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; A1)</code></td>
+          </tr>
+          <tr class="bg-orange-50">
+            <td><code>CLAUDE_SONNET_4(prompt)</code></td>
+            <td>Anthropic – Claude Sonnet 4</td>
+            <td>Balanced performance</td>
+            <td><code>=CLAUDE_SONNET_4("Professional content for " &amp; B1)</code></td>
+          </tr>
+          
+          <!-- Perplexity Models -->
+          <tr class="bg-teal-50">
+            <td><code>SONAR_MEDIUM_ONLINE(prompt)</code></td>
+            <td>Perplexity – Sonar Medium (Web Search)</td>
+            <td>Real-time information, research</td>
+            <td><code>=SONAR_MEDIUM_ONLINE("Latest news about " &amp; A1)</code></td>
+          </tr>
+          <tr class="bg-teal-50">
+            <td><code>SONAR_SMALL_ONLINE(prompt)</code></td>
+            <td>Perplexity – Sonar Small (Web Search)</td>
+            <td>Quick web queries</td>
+            <td><code>=SONAR_SMALL_ONLINE("Current price of " &amp; B1)</code></td>
+          </tr>
+          <tr class="bg-teal-50">
             <td><code>SEARCH_WEB(prompt)</code></td>
-            <td>Perplexity – Web Search</td>
-            <td><code>=SEARCH_WEB("Who won the 2023 US Open Tennis?")</code></td>
+            <td>Perplexity – General Web Search</td>
+            <td>Live web data access</td>
+            <td><code>=SEARCH_WEB("Who won the 2024 Olympics " &amp; C1)</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Transform Functions Table -->
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">🆕 Transform Functions</h3>
+      <p class="text-gray-600 mb-4">Use the Transform feature in the sidebar to apply AI transformations to existing cell ranges:</p>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th>Transformation Type</th>
+            <th>Description</th>
+            <th>Example Use Case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Translate</strong></td>
+            <td>Convert text to different languages</td>
+            <td>Transform French product names to English</td>
+          </tr>
+          <tr>
+            <td><strong>Format Data</strong></td>
+            <td>Standardize dates, currency, formatting</td>
+            <td>Convert various date formats to MM/DD/YYYY</td>
+          </tr>
+          <tr>
+            <td><strong>Expand Abbreviations</strong></td>
+            <td>Convert shortcuts to full text</td>
+            <td>Turn "Mon, Tue, Wed" into "Monday, Tuesday, Wednesday"</td>
+          </tr>
+          <tr>
+            <td><strong>Clean Text</strong></td>
+            <td>Fix spacing, capitalization, spelling</td>
+            <td>Clean messy imported customer data</td>
+          </tr>
+          <tr>
+            <td><strong>Extract Information</strong></td>
+            <td>Pull specific data from text</td>
+            <td>Extract phone numbers from contact descriptions</td>
+          </tr>
+          <tr>
+            <td><strong>Custom Transformation</strong></td>
+            <td>Apply any custom AI instruction</td>
+            <td>"Convert each product code to its category name"</td>
           </tr>
         </tbody>
       </table>
 
       <!-- Scraping Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Scraping Functions</h3>
+      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">Web Scraping Functions</h3>
       <table class="custom-table">
         <thead>
           <tr>
@@ -464,72 +617,197 @@
   <!-- Pricing Section -->
   <section id="pricing" class="py-32 bg-white hero-pattern">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Providers &amp; Pricing</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Providers &amp; Pricing</h2>
       <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
-        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider.
+        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider. Models are listed by intelligence level.
       </p>
-      <table class="custom-table mx-auto max-w-4xl">
-        <thead>
-          <tr>
-            <th>Provider</th>
-            <th>Supported Models</th>
-            <th>Typical Pricing</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>OpenAI</td>
-            <td>
-              <ul class="list-disc ml-4">
-                <li>GPT-4o</li>
-                <li>GPT-4o-mini</li>
-              </ul>
-            </td>
-            <td class="text-gray-600">
-              Example: $2.50 / 1M tokens (input) <br> $10.00 / 1M tokens (output)
-            </td>
-          </tr>
-          <tr>
-            <td>Google Gemini</td>
-            <td>
-              <ul class="list-disc ml-4">
-                <li>gemini-2.0-flash-001</li>
-                <li>gemini-2.0-flash-lite</li>
-                <li>gemini-1.5-pro</li>
-              </ul>
-            </td>
-            <td class="text-gray-600">
-              Free &amp; Recommended
-            </td>
-          </tr>
-          <tr>
-            <td>DeepSeek</td>
-            <td>
-              <ul class="list-disc ml-4">
-                <li>deepseek-chat</li>
-                <li>deepseek-reasoner</li>
-              </ul>
-            </td>
-            <td class="text-gray-600">
-              Example: $0.014 / 1M tokens (input) <br> $0.28 / 1M tokens (output)
-            </td>
-          </tr>
-          <tr>
-            <td>Perplexity</td>
-            <td>
-              <ul class="list-disc ml-4">
-                <li>sonar-pro</li>
-              </ul>
-            </td>
-            <td class="text-gray-600">
-              See <a href="https://api.perplexity.ai/docs" class="text-emerald-500" target="_blank">documentation</a>.
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="text-gray-600 text-center mt-8">
-        <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
-      </p>
+      
+      <!-- OpenAI Pricing -->
+      <div class="max-w-6xl mx-auto mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">🧠 OpenAI (Most Advanced)</h3>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Intelligence Level</th>
+              <th>Input Price (1M tokens)</th>
+              <th>Output Price (1M tokens)</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-blue-50">
+              <td><strong>o3</strong></td>
+              <td>🔥 Highest</td>
+              <td>$5.00</td>
+              <td>$20.00</td>
+              <td>Complex reasoning, research</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4.1</strong></td>
+              <td>🔥 Very High</td>
+              <td>$2.50</td>
+              <td>$10.00</td>
+              <td>Enhanced capabilities</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4o</strong></td>
+              <td>🔥 Very High</td>
+              <td>$2.50</td>
+              <td>$10.00</td>
+              <td>General high-intelligence</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>o4-mini</strong></td>
+              <td>⚡ High</td>
+              <td>$0.15</td>
+              <td>$0.60</td>
+              <td>Efficient reasoning</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4.1-nano</strong></td>
+              <td>💰 Economical</td>
+              <td>$0.05</td>
+              <td>$0.20</td>
+              <td>Basic tasks</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Google Gemini Pricing -->
+      <div class="max-w-6xl mx-auto mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">🆓 Google Gemini (ALL FREE)</h3>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Intelligence Level</th>
+              <th>Free Tier Limits</th>
+              <th>Paid After Limits</th>
+              <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-green-50">
+              <td><strong>Gemini 2.5 Pro Preview</strong></td>
+              <td>🔥 Highest</td>
+              <td>Free (limited requests)</td>
+              <td>$1.25-$2.50 / $10-$15</td>
+              <td>Complex problems</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><strong>Gemini 2.5 Flash Preview</strong></td>
+              <td>🔥 Very High</td>
+              <td>500 req/day + 250k tokens/min</td>
+              <td>$0.15 / $0.60</td>
+              <td>Best price-performance</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><strong>Gemini 2.0 Flash</strong></td>
+              <td>⚡ High</td>
+              <td>1500 req/day + 1M tokens/min</td>
+              <td>$0.075 / $0.30</td>
+              <td>Next-gen features</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><strong>Gemma 3 27B</strong></td>
+              <td>⚡ High</td>
+              <td>Completely FREE</td>
+              <td>Always FREE</td>
+              <td>Open source multimodal</td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><strong>Gemini 2.0 Flash-Lite</strong></td>
+              <td>💰 Economical</td>
+              <td>1500 req/day + 1M tokens/min</td>
+              <td>$0.075 / $0.30</td>
+              <td>Low latency</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Other Providers -->
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- DeepSeek -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-purple-600 text-center">DeepSeek</h3>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Price (1M tokens)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-purple-50">
+                <td><strong>Reasoner</strong></td>
+                <td>$0.14 / $2.19</td>
+              </tr>
+              <tr class="bg-purple-50">
+                <td><strong>Chat</strong></td>
+                <td>$0.014 / $0.28</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Claude -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-orange-600 text-center">Anthropic Claude</h3>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Price (1M tokens)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-orange-50">
+                <td><strong>Opus 4</strong></td>
+                <td>$5.00 / $25.00</td>
+              </tr>
+              <tr class="bg-orange-50">
+                <td><strong>Sonnet 4</strong></td>
+                <td>$3.00 / $15.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Perplexity -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Perplexity (Web Search)</h3>
+          <table class="custom-table">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th>Price (1M tokens)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-teal-50">
+                <td><strong>Sonar Medium</strong></td>
+                <td>$5.00 / $5.00</td>
+              </tr>
+              <tr class="bg-teal-50">
+                <td><strong>Sonar Small</strong></td>
+                <td>$5.00 / $5.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <p class="text-gray-600 mb-4">
+          <strong>💡 Pro Tip:</strong> Start with Google Gemini models (free) for testing, then choose paid models based on your needs.
+        </p>
+        <p class="text-gray-600">
+          <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -548,11 +826,57 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Yes. SheetPro AI is free, but you must provide your API keys for OpenAI, Gemini, DeepSeek, or Perplexity.
+              Yes. SheetPro AI is free, but you must provide your API keys for at least one of the 5 supported providers: OpenAI, Google Gemini, Claude, DeepSeek, or Perplexity. We recommend starting with Google Gemini as it's completely free.
             </p>
           </div>
         </div>
+        
         <!-- FAQ Item 2 -->
+        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+            <span class="text-lg font-medium">What's the Transform feature and how does it work?</span>
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6 pb-4">
+            <p class="text-gray-600">
+              Transform lets you apply AI to existing data in your sheets. Select a range of cells, choose a transformation (translate, clean data, expand abbreviations, etc.), and AI will process each cell. You can replace the original data or create new output in adjacent cells or a new sheet.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+            <span class="text-lg font-medium">Which AI models are free to use?</span>
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6 pb-4">
+            <p class="text-gray-600">
+              All Google Gemini models are free with generous usage limits. Gemma 3 27B is completely free with no limits. Other providers (OpenAI, Claude, DeepSeek, Perplexity) charge based on usage, but offer powerful capabilities.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+            <span class="text-lg font-medium">How do I choose the right AI model for my task?</span>
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6 pb-4">
+            <p class="text-gray-600">
+              Models are organized by intelligence level. For complex analysis, use o3 or Claude Opus 4. For general tasks, try GPT-4o or Gemini 2.5 Flash Preview. For simple operations, use the economical options like GPT-4.1-nano. Start with free Gemini models for testing.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
             <span class="text-lg font-medium">Are there any usage limits?</span>
@@ -562,11 +886,27 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              SheetPro AI does not impose additional limits beyond those set by your provider.
+              SheetPro AI doesn't impose additional limits beyond those set by your provider. Google Gemini has generous free tiers (500-1500 requests/day). Paid providers charge per token used.
             </p>
           </div>
         </div>
-        <!-- FAQ Item 3 -->
+        
+        <!-- FAQ Item 6 -->
+        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+            <span class="text-lg font-medium">Can I use multiple AI providers at once?</span>
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6 pb-4">
+            <p class="text-gray-600">
+              Yes! You can configure API keys for all 5 providers and use model-specific functions like =GPT_4O(), =GEMINI_2_5_FLASH_PREVIEW(), =CLAUDE_OPUS_4() in the same spreadsheet. Each function calls its specific provider.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 7 -->
         <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
           <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
             <span class="text-lg font-medium">Are my data safe?</span>
@@ -576,7 +916,22 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              No, we do not store your data. Your requests are transmitted directly and securely to the provider.
+              Yes. We do not store your data or API keys. Your requests are transmitted directly and securely via HTTPS to your chosen AI provider. All processing happens in real-time without data retention.
+            </p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 8 -->
+        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+            <span class="text-lg font-medium">What's the difference between AI(), AI_LIST(), and AI_TABLE()?</span>
+            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="faq-answer px-6 pb-4">
+            <p class="text-gray-600">
+              AI() returns text in a single cell. AI_LIST() splits the response into multiple rows (perfect for bullet points). AI_TABLE() creates a 2D array with rows and columns (ideal for structured data). All have model-specific variants like GPT_4O_LIST().
             </p>
           </div>
         </div>
@@ -717,7 +1072,3 @@
   </script>
 </body>
 </html>
-
-
-
-
