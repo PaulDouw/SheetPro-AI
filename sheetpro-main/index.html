@@ -179,10 +179,10 @@
         <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
           Revolutionize your spreadsheets with integrated AI solutions from 5 major providers. Create formulas, transform data, and unlock insights with the latest AI models.
         </p>
-        <!-- Logos (OpenAI, Gemini, DeepSeek, Claude, Perplexity) -->
+        <!-- Logos (Gemini, OpenAI, DeepSeek, Claude, Perplexity) -->
         <div class="flex items-center justify-center gap-4 mb-8 flex-wrap">
-          <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
+          <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
           <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
           <img src="claude.png" alt="Claude Logo" class="h-8 w-auto" />
           <img src="perplexity.png" alt="Perplexity Logo" class="h-8 w-auto" />
@@ -257,7 +257,7 @@
               </div>
               <h3 class="text-xl font-semibold mb-2">Multi-Provider AI Configuration</h3>
               <p class="text-gray-600">
-                Choose from 5 major AI providers (OpenAI, Google Gemini, Claude, DeepSeek, Perplexity) with 15+ advanced models. Configure your API keys using our intuitive sidebar and switch between providers seamlessly.
+                Choose from 5 major AI providers (Google Gemini, OpenAI, Claude, DeepSeek, Perplexity) with 15+ advanced models. We recommend starting with Google Gemini (free), then configure additional API keys using our intuitive sidebar to switch between providers seamlessly.
               </p>
             </div>
             <!-- Feature 2 -->
@@ -557,65 +557,12 @@
     <div class="container mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Providers &amp; Pricing</h2>
       <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
-        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider. Models are listed by intelligence level.
+        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider. We recommend starting with Google Gemini (free models), then exploring other providers based on your needs.
       </p>
       
-      <!-- OpenAI Pricing -->
-      <div class="max-w-6xl mx-auto mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">🧠 OpenAI (Most Advanced)</h3>
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Intelligence Level</th>
-              <th>Input Price (1M tokens)</th>
-              <th>Output Price (1M tokens)</th>
-              <th>Best For</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-blue-50">
-              <td><strong>o3</strong></td>
-              <td>🔥 Highest</td>
-              <td>$5.00</td>
-              <td>$20.00</td>
-              <td>Complex reasoning, research</td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><strong>GPT-4.1</strong></td>
-              <td>🔥 Very High</td>
-              <td>$2.50</td>
-              <td>$10.00</td>
-              <td>Enhanced capabilities</td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><strong>GPT-4o</strong></td>
-              <td>🔥 Very High</td>
-              <td>$2.50</td>
-              <td>$10.00</td>
-              <td>General high-intelligence</td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><strong>o4-mini</strong></td>
-              <td>⚡ High</td>
-              <td>$0.15</td>
-              <td>$0.60</td>
-              <td>Efficient reasoning</td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><strong>GPT-4.1-nano</strong></td>
-              <td>💰 Economical</td>
-              <td>$0.05</td>
-              <td>$0.20</td>
-              <td>Basic tasks</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <!-- Google Gemini Pricing -->
       <div class="max-w-6xl mx-auto mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">🆓 Google Gemini (ALL FREE)</h3>
+        <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">🆓 Google Gemini (Recommended)</h3>
         <table class="custom-table">
           <thead>
             <tr>
@@ -661,6 +608,59 @@
               <td>1500 req/day + 1M tokens/min</td>
               <td>$0.075 / $0.30</td>
               <td>Low latency</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- OpenAI Pricing -->
+      <div class="max-w-6xl mx-auto mb-12">
+        <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">🧠 OpenAI</h3>
+        <table class="custom-table">
+        <thead>
+          <tr>
+              <th>Model</th>
+              <th>Intelligence Level</th>
+              <th>Input Price (1M tokens)</th>
+              <th>Output Price (1M tokens)</th>
+              <th>Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-blue-50">
+              <td><strong>o3</strong></td>
+              <td>🔥 Highest</td>
+              <td>$5.00</td>
+              <td>$20.00</td>
+              <td>Complex reasoning, research</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4.1</strong></td>
+              <td>🔥 Very High</td>
+              <td>$2.50</td>
+              <td>$10.00</td>
+              <td>Enhanced capabilities</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4o</strong></td>
+              <td>🔥 Very High</td>
+              <td>$2.50</td>
+              <td>$10.00</td>
+              <td>General high-intelligence</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>o4-mini</strong></td>
+              <td>⚡ High</td>
+              <td>$0.15</td>
+              <td>$0.60</td>
+              <td>Efficient reasoning</td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><strong>GPT-4.1-nano</strong></td>
+              <td>💰 Economical</td>
+              <td>$0.05</td>
+              <td>$0.20</td>
+              <td>Basic tasks</td>
             </tr>
           </tbody>
         </table>
@@ -743,8 +743,8 @@
           <strong>💡 Pro Tip:</strong> Start with Google Gemini models (free) for testing, then choose paid models based on your needs.
         </p>
         <p class="text-gray-600">
-          <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
-        </p>
+        <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
+      </p>
       </div>
     </div>
   </section>
@@ -764,7 +764,7 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Yes. SheetPro AI is free, but you must provide your API keys for at least one of the 5 supported providers: OpenAI, Google Gemini, Claude, DeepSeek, or Perplexity. We recommend starting with Google Gemini as it's completely free.
+              Yes. SheetPro AI is free, but you must provide your API keys for at least one of the 5 supported providers: Google Gemini, OpenAI, Claude, DeepSeek, or Perplexity. We recommend starting with Google Gemini as it's completely free.
             </p>
           </div>
         </div>
@@ -809,7 +809,7 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Models are organized by intelligence level. For complex analysis, use o3 or Claude Opus 4. For general tasks, try GPT-4o or Gemini 2.5 Flash Preview. For simple operations, use the economical options like GPT-4.1-nano. Start with free Gemini models for testing.
+              Models are organized by intelligence level. For complex analysis, use Gemini 2.5 Pro Preview (free), o3 or Claude Opus 4. For general tasks, try Gemini 2.5 Flash Preview (free) or GPT-4o. For simple operations, use economical options like Gemini 2.0 Flash-Lite (free). Start with free Gemini models for testing.
             </p>
           </div>
         </div>
@@ -839,7 +839,7 @@
           </button>
           <div class="faq-answer px-6 pb-4">
             <p class="text-gray-600">
-              Yes! You can configure API keys for all 5 providers and use model-specific functions like =GPT_4O(), =GEMINI_2_5_FLASH_PREVIEW(), =CLAUDE_OPUS_4() in the same spreadsheet. Each function calls its specific provider.
+              Yes! You can configure API keys for all 5 providers and use model-specific functions like =GEMINI_2_5_FLASH_PREVIEW(), =GPT_4O(), =CLAUDE_OPUS_4() in the same spreadsheet. Each function calls its specific provider.
             </p>
           </div>
         </div>
