@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Technical Documentation - SheetPro AI</title>
+  <link rel="icon" href="logo.ico" type="image/x-icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+
+  <style>
+    .gradient {
+      background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+    }
+    .gradient-hover {
+      background: linear-gradient(135deg, #047857 0%, #065f46 50%, #064e3b 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header-blur {
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .hero-pattern {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 50%);
+    }
+    .code-block {
+      background: #1e293b;
+      color: #e2e8f0;
+      border-radius: 12px;
+      padding: 1rem;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+    .nav-link {
+      color: #6b7280;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover, .nav-link.active {
+      color: #059669;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header -->
+  <header class="fixed w-full z-50 header-blur bg-white/90">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img src="logo.svg" alt="SheetPro Logo" class="w-10 h-10" />
+        <span class="text-2xl font-bold gradient-text">
+          SheetPro AI <span class="text-green-500 text-sm">(Free)</span>
+        </span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-600 hover:text-emerald-600 transition-colors">Home</a>
+        <a href="index.html#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
+        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
+        <a href="documentation.html" class="text-emerald-600 font-semibold">Documentation</a>
+        <a href="index.html" class="gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+          Install Extension
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-12 px-4 hero-pattern relative overflow-hidden">
+    <div class="container mx-auto text-center px-4 relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Technical Documentation</h1>
+      <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        Complete installation guide and usage instructions for SheetPro AI
+      </p>
+    </div>
+  </section>
+
+  <!-- Table of Contents -->
+  <section class="py-8 bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-2xl font-bold mb-6 text-center">Table of Contents</h2>
+        <div class="grid md:grid-cols-3 gap-4 text-center">
+          <a href="#installation" class="nav-link block p-4 rounded-lg hover:bg-emerald-50">
+            <h3 class="font-semibold">1. Installation Guide</h3>
+            <p class="text-sm text-gray-500">Step-by-step installation</p>
+          </a>
+          <a href="#configuration" class="nav-link block p-4 rounded-lg hover:bg-emerald-50">
+            <h3 class="font-semibold">2. Configuration</h3>
+            <p class="text-sm text-gray-500">API keys and settings</p>
+          </a>
+          <a href="#usage" class="nav-link block p-4 rounded-lg hover:bg-emerald-50">
+            <h3 class="font-semibold">3. Usage Guide</h3>
+            <p class="text-sm text-gray-500">Functions and examples</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Guide -->
+  <section id="installation" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 gradient-text">Installation Guide</h2>
+        
+        <!-- Prerequisites -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm mb-8">
+          <h3 class="text-2xl font-semibold mb-6">Prerequisites</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <span class="gradient w-6 h-6 rounded-full flex items-center justify-center text-white text-sm mr-3 mt-0.5">✓</span>
+              <span>A Google™ account with access to Google Sheets™</span>
+            </li>
+            <li class="flex items-start">
+              <span class="gradient w-6 h-6 rounded-full flex items-center justify-center text-white text-sm mr-3 mt-0.5">✓</span>
+              <span>API keys from at least one AI provider (Google Gemini™ recommended for free usage)</span>
+            </li>
+            <li class="flex items-start">
+              <span class="gradient w-6 h-6 rounded-full flex items-center justify-center text-white text-sm mr-3 mt-0.5">✓</span>
+              <span>Modern web browser (Chrome, Firefox, Safari, Edge)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Step-by-Step Installation -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm mb-8">
+          <h3 class="text-2xl font-semibold mb-6">Step-by-Step Installation</h3>
+          
+          <!-- Step 1 -->
+          <div class="mb-8">
+            <div class="flex items-center mb-4">
+              <span class="gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-4">1</span>
+              <h4 class="text-xl font-semibold">Access Google Workspace™ Marketplace</h4>
+            </div>
+            <div class="ml-12">
+              <p class="text-gray-600 mb-4">Open any Google Sheets™ document and follow these steps:</p>
+              <div class="code-block mb-4">1. In Google Sheets™, click on "Extensions" in the menu bar
+2. Select "Add-ons" → "Get add-ons"
+3. Search for "SheetPro AI" in the marketplace
+4. Click on the SheetPro AI extension</div>
+              <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                <p class="text-blue-800"><strong>Alternative:</strong> Visit the Google Workspace™ Marketplace directly and search for "SheetPro AI"</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="mb-8">
+            <div class="flex items-center mb-4">
+              <span class="gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-4">2</span>
+              <h4 class="text-xl font-semibold">Install the Extension</h4>
+            </div>
+            <div class="ml-12">
+              <p class="text-gray-600 mb-4">Complete the installation process:</p>
+              <div class="code-block mb-4">1. Click "Install" button on the SheetPro AI page
+2. Review the permissions requested
+3. Click "Continue" to proceed
+4. Select your Google™ account
+5. Click "Allow" to grant necessary permissions</div>
+              <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                <p class="text-yellow-800"><strong>Permissions Required:</strong> SheetPro AI needs access to your Google Sheets™ to provide AI functionality and make external API calls to AI providers.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="mb-8">
+            <div class="flex items-center mb-4">
+              <span class="gradient w-8 h-8 rounded-full flex items-center justify-center text-white font-bold mr-4">3</span>
+              <h4 class="text-xl font-semibold">Post-Installation Setup</h4>
+            </div>
+            <div class="ml-12">
+              <p class="text-gray-600 mb-4">After installation, configure your AI providers:</p>
+              <div class="code-block mb-4">1. In any Google Sheets™ document, click "Extensions"
+2. Select "SheetPro AI" → "Settings"
+3. Add your API keys for desired AI providers
+4. Test the connection with a simple function like =GEMINI_2_5_FLASH_PREVIEW("Hello")
+5. Start using AI functions in your spreadsheets!</div>
+              <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                <p class="text-green-800"><strong>Success:</strong> You can now use AI functions directly in your Google Sheets™!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Configuration -->
+  <section id="configuration" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 gradient-text">Configuration & API Setup</h2>
+        
+        <!-- API Keys Setup -->
+        <div class="bg-gray-50 p-8 rounded-2xl mb-8">
+          <h3 class="text-2xl font-semibold mb-6">API Keys Configuration</h3>
+          
+          <!-- Google Gemini (Free) -->
+          <div class="bg-white p-6 rounded-xl mb-6 border border-green-200">
+            <h4 class="text-xl font-semibold mb-4 text-green-600">🆓 Google Gemini™ (Recommended - Free)</h4>
+            <div class="space-y-3">
+              <p class="text-gray-600">Get your free Google Gemini™ API key:</p>
+              <div class="code-block">1. Visit: https://aistudio.google.com/apikey
+2. Sign in with your Google™ account
+3. Click "Create API Key"
+4. Copy the generated key
+5. Paste it in SheetPro AI Settings → Google Gemini™ API Key</div>
+              <div class="bg-green-50 p-3 rounded-lg">
+                <p class="text-green-700 text-sm"><strong>Free Tier:</strong> 500-1500 requests per day, no cost</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Providers -->
+          <div class="space-y-4">
+            <h4 class="text-lg font-semibold">Optional: Additional AI Providers</h4>
+            
+            <!-- OpenAI -->
+            <div class="bg-white p-4 rounded-lg border">
+              <h5 class="font-semibold mb-2">OpenAI (GPT-4o, GPT-4o mini)</h5>
+              <p class="text-sm text-gray-600 mb-2">Get API key: <a href="https://platform.openai.com/settings/organization/billing/overview" class="text-blue-600 hover:underline">OpenAI Platform</a></p>
+              <p class="text-xs text-gray-500">Pay-per-use pricing</p>
+            </div>
+
+            <!-- Claude -->
+            <div class="bg-white p-4 rounded-lg border">
+              <h5 class="font-semibold mb-2">Claude (Anthropic)</h5>
+              <p class="text-sm text-gray-600 mb-2">Get API key: <a href="https://console.anthropic.com/dashboard" class="text-blue-600 hover:underline">Anthropic Console</a></p>
+              <p class="text-xs text-gray-500">Pay-per-use pricing</p>
+            </div>
+
+            <!-- DeepSeek -->
+            <div class="bg-white p-4 rounded-lg border">
+              <h5 class="font-semibold mb-2">DeepSeek</h5>
+              <p class="text-sm text-gray-600 mb-2">Get API key: <a href="https://platform.deepseek.com/usage" class="text-blue-600 hover:underline">DeepSeek Platform</a></p>
+              <p class="text-xs text-gray-500">Very affordable pricing</p>
+            </div>
+
+            <!-- Perplexity -->
+            <div class="bg-white p-4 rounded-lg border">
+              <h5 class="font-semibold mb-2">Perplexity</h5>
+              <p class="text-sm text-gray-600 mb-2">Get API key: <a href="https://www.perplexity.ai/account/api/billing" class="text-blue-600 hover:underline">Perplexity Account</a></p>
+              <p class="text-xs text-gray-500">Web search enabled AI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Usage Guide -->
+  <section id="usage" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 gradient-text">Complete Usage Guide</h2>
+        
+        <!-- Basic Functions -->
+        <div class="bg-white p-8 rounded-2xl mb-8">
+          <h3 class="text-2xl font-semibold mb-6">Basic AI Functions</h3>
+          
+          <div class="space-y-6">
+            <!-- Google Gemini Functions -->
+            <div>
+              <h4 class="text-xl font-semibold mb-4 text-green-600">Google Gemini™ Functions (Free)</h4>
+              <div class="space-y-3">
+                <div class="code-block">=GEMINI_2_5_FLASH_PREVIEW("Analyze this data and provide insights")
+=GEMINI_2_5_PRO_PREVIEW("Translate to French: " & A1)
+=GEMINI_2_0_FLASH("Summarize the key points from " & B1:B10)
+=GEMMA_3_27B("Generate a creative story about AI")</div>
+              </div>
+            </div>
+
+            <!-- OpenAI Functions -->
+            <div>
+              <h4 class="text-xl font-semibold mb-4">OpenAI Functions</h4>
+              <div class="code-block">=GPT_4O("Analyze market trends for " & A1)
+=GPT_4O_MINI("Quick summary: " & B1)
+=GPT_4O_SEARCH_PREVIEW("Latest news about " & C1)
+=GPT_4O_MINI_SEARCH_PREVIEW("Current price of " & D1)</div>
+            </div>
+
+            <!-- Claude Functions -->
+            <div>
+              <h4 class="text-xl font-semibold mb-4">Claude Functions</h4>
+              <div class="code-block">=CLAUDE_OPUS_4("Strategic analysis of " & A1:A10)
+=CLAUDE_SONNET_4("Creative writing task: " & B1)
+=CLAUDE_HAIKU_4("Quick analysis: " & C1)</div>
+            </div>
+
+            <!-- List and Table Functions -->
+            <div>
+              <h4 class="text-xl font-semibold mb-4">Structured Output Functions</h4>
+              <div class="code-block">=GEMINI_2_5_FLASH_PREVIEW_LIST("Top 10 benefits of " & A1)
+=GPT_4O_TABLE("Create comparison table for " & B1 & " vs " & C1)
+=CLAUDE_SONNET_4_LIST("List steps to implement " & D1)</div>
+              <p class="text-gray-600 mt-2">Use _LIST suffix for bullet points, _TABLE suffix for structured tables</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Advanced Examples -->
+        <div class="bg-white p-8 rounded-2xl mb-8">
+          <h3 class="text-2xl font-semibold mb-6">Advanced Usage Examples</h3>
+          
+          <div class="space-y-6">
+            <!-- Data Analysis -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Data Analysis</h4>
+              <div class="code-block mb-3">=GEMINI_2_5_PRO_PREVIEW("Analyze this sales data and identify trends: " & A1:D20)</div>
+              <p class="text-gray-600">Analyzes a range of sales data and provides insights</p>
+            </div>
+
+            <!-- Content Generation -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Content Generation</h4>
+              <div class="code-block mb-3">=GPT_4O("Write a product description for: " & A1 & " with features: " & B1:B5)</div>
+              <p class="text-gray-600">Generates marketing content based on product information</p>
+            </div>
+
+            <!-- Combining with Google Sheets Functions -->
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Combining with Google Sheets™ Functions</h4>
+              <div class="code-block mb-3">=IF(A1>100, GPT_4O("High value analysis: " & A1), GEMINI_2_5_FLASH_PREVIEW("Standard analysis: " & A1))</div>
+              <p class="text-gray-600">Uses conditional logic to choose different AI models based on data values</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart Generation -->
+        <div class="bg-white p-8 rounded-2xl mb-8">
+          <h3 class="text-2xl font-semibold mb-6">AI Chart Generation</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="text-lg font-semibold mb-3">Using the Sidebar</h4>
+              <div class="space-y-2">
+                <p class="text-gray-600">1. Open the SheetPro AI sidebar: <span class="code-block inline">Extensions → SheetPro AI → Charts</span></p>
+                <p class="text-gray-600">2. Select your data range</p>
+                <p class="text-gray-600">3. Choose an AI model</p>
+                <p class="text-gray-600">4. Describe what kind of chart you want</p>
+                <p class="text-gray-600">5. Click "Generate Chart"</p>
+              </div>
+            </div>
+
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h5 class="font-semibold text-blue-800 mb-2">Example Chart Requests:</h5>
+              <ul class="text-blue-700 text-sm space-y-1">
+                <li>• "Create a bar chart showing sales by month"</li>
+                <li>• "Generate a pie chart of expense categories"</li>
+                <li>• "Make a line chart showing growth trends"</li>
+                <li>• "Create a scatter plot with trend line"</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="bg-red-50 p-8 rounded-2xl border border-red-200">
+          <h3 class="text-2xl font-semibold mb-6 text-red-700">Troubleshooting</h3>
+          
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-semibold text-red-700">Common Issues & Solutions</h4>
+              <ul class="space-y-2 text-red-600">
+                <li><strong>"Loading..." error:</strong> Check your API key is correctly entered</li>
+                <li><strong>"Unknown function" error:</strong> Ensure the extension is properly installed</li>
+                <li><strong>"API limit exceeded":</strong> You've reached your provider's usage limit</li>
+                <li><strong>"Network error":</strong> Check your internet connection</li>
+                <li><strong>"Invalid API key":</strong> Verify your API key is active and correct</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Getting Help</h4>
+              <p class="text-gray-600">If you need assistance:</p>
+              <ul class="text-gray-600 mt-2 space-y-1">
+                <li>• Check the <a href="index.html#faq" class="text-blue-600 hover:underline">FAQ section</a></li>
+                <li>• Contact support: <a href="mailto:Sheetproai@gmail.com" class="text-blue-600 hover:underline">Sheetproai@gmail.com</a></li>
+                <li>• Visit our <a href="contact.html" class="text-blue-600 hover:underline">Contact page</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trademark Notice -->
+  <section class="py-8 bg-white border-t border-gray-200">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-sm text-gray-600">
+        <strong>Trademark Notice:</strong> Google™, Google Sheets™, Google Workspace™, Google APIs™, Google Gemini™, and Google API Services™ are trademarks of Google LLC. 
+        SheetPro AI is not affiliated with Google LLC.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 gradient rounded-xl flex items-center justify-center">
+              <span class="text-white font-bold text-xl">SP</span>
+            </div>
+            <span class="text-2xl font-bold">SheetPro AI</span>
+          </div>
+          <p class="text-gray-400">Empowering your spreadsheets with free AI.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Product</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#feature-examples" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+            <li><a href="index.html#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
+            <li><a href="index.html#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#faq" class="text-gray-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+            <li><a href="documentation.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#privacy-policy" class="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">© 2025 SheetPro AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html> 
