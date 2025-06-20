@@ -1,1129 +1,1129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SheetPro AI (Free) – Multi-Provider AI Assistant for Google Sheets™ with Transform & 15+ Models</title>
-  <link rel="icon" href="logo.ico" type="image/x-icon" />
-  <!-- Tailwind CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SheetPro AI (Free) – Multi-Provider AI Assistant for Google Sheets™ with Transform & 15+ Models</title>
+    <link rel="icon" href="logo.ico" type="image/x-icon" />
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
 
-  <style>
-    /* Gradient & Glass Effects */
-    .gradient {
-      background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
-    }
-    .gradient-hover {
-      background: linear-gradient(135deg, #047857 0%, #065f46 50%, #064e3b 100%);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .header-blur {
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-    }
-    .hero-pattern {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-    }
-    .card-hover {
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .card-hover:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-    }
-    .glass-effect {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-    /* Enhanced Table Styles */
-    .custom-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-    .custom-table thead {
-      background-color: #f9fafb;
-    }
-    .custom-table th,
-    .custom-table td {
-      padding: 1rem;
-      border-bottom: 1px solid #e5e7eb;
-      text-align: left;
-    }
-    .custom-table tbody tr:hover {
-      background-color: #f3f4f6;
-    }
-    /* FAQ */
-    .faq-item {
-      transition: all 0.3s ease;
-    }
-    .faq-item:hover {
-      transform: translateX(10px);
-    }
-    .faq-answer {
-      max-height: 0;
-      opacity: 0;
-      transition: all 0.3s ease-out;
-      overflow: hidden;
-    }
-    .faq-item.active .faq-answer {
-      max-height: 200px;
-      opacity: 1;
-      padding: 1rem;
-    }
-    .faq-icon {
-      transition: transform 0.3s ease;
-    }
-    .faq-item.active .faq-icon {
-      transform: rotate(180deg);
-    }
+    <style>
+      /* Gradient & Glass Effects */
+      .gradient {
+        background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+      }
+      .gradient-hover {
+        background: linear-gradient(135deg, #047857 0%, #065f46 50%, #064e3b 100%);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .header-blur {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .hero-pattern {
+        background:
+          radial-gradient(circle at 20% 20%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.05) 0%, transparent 50%),
+          radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+      }
+      .card-hover {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .card-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .glass-effect {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+      /* Enhanced Table Styles */
+      .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .custom-table thead {
+        background-color: #f9fafb;
+      }
+      .custom-table th,
+      .custom-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #e5e7eb;
+        text-align: left;
+      }
+      .custom-table tbody tr:hover {
+        background-color: #f3f4f6;
+      }
+      /* FAQ */
+      .faq-item {
+        transition: all 0.3s ease;
+      }
+      .faq-item:hover {
+        transform: translateX(10px);
+      }
+      .faq-answer {
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+      }
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+        opacity: 1;
+        padding: 1rem;
+      }
+      .faq-icon {
+        transition: transform 0.3s ease;
+      }
+      .faq-item.active .faq-icon {
+        transform: rotate(180deg);
+      }
 
-    /* Desktop Screenshots Grid */
-    .screenshots-grid {
-      display: grid;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    /* Limite la taille des images en desktop */
-    .screenshots-grid img {
-      max-width: 500px;
-      margin: 0 auto;
-    }
+      /* Desktop Screenshots Grid */
+      .screenshots-grid {
+        display: grid;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      /* Limite la taille des images en desktop */
+      .screenshots-grid img {
+        max-width: 500px;
+        margin: 0 auto;
+      }
 
-    /* Hide scrollbar in mobile slider */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none; /* Chrome/Safari */
-    }
-    .no-scrollbar {
-      -ms-overflow-style: none;  /* IE/Edge */
-      scrollbar-width: none;     /* Firefox */
-    }
-    /* Smooth scrolling on mobile slider */
-    .scroll-smooth {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body class="bg-gray-50">
-  <!-- Header -->
-  <header class="fixed w-full z-50 header-blur bg-white/90">
-    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo & Brand -->
-      <div class="flex items-center space-x-3">
-        <img src="logo.svg" alt="SheetPro Logo" class="w-10 h-10" />
-        <span class="text-2xl font-bold gradient-text">
-          SheetPro AI <span class="text-green-500 text-sm">(Free)</span>
-        </span>
+      /* Hide scrollbar in mobile slider */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none; /* Chrome/Safari */
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;  /* IE/Edge */
+        scrollbar-width: none;     /* Firefox */
+      }
+      /* Smooth scrolling on mobile slider */
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full z-50 header-blur bg-white/90">
+      <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+        <!-- Logo & Brand -->
+        <div class="flex items-center space-x-3">
+          <img src="logo.svg" alt="SheetPro Logo" class="w-10 h-10" />
+          <span class="text-2xl font-bold gradient-text">
+            SheetPro AI <span class="text-green-500 text-sm">(Free)</span>
+          </span>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#feature-examples" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
+          <a href="#formulas" class="text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
+          <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
+          <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
+          <a href="contact.html" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
+          <a href="#privacy-policy" class="text-gray-600 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+          <a href="https://workspace.google.com/marketplace/app/sheetpro_ai/729462520858?flow_type=2" target="_blank" class="gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+            Install for Free
+          </a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="md:hidden hidden">
+        <div class="px-6 pt-2 pb-4 space-y-1 bg-white">
+          <a href="#feature-examples" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
+          <a href="#formulas" class="block text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
+          <a href="#pricing" class="block text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
+          <a href="#faq" class="block text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
+          <a href="contact.html" class="block text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
+          <a href="#privacy-policy" class="block text-gray-600 hover:text-emerald-600 transition-colors">Privacy Policy</a>
+          <a href="https://workspace.google.com/marketplace/app/sheetpro_ai/729462520858?flow_type=2" target="_blank" class="block gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 text-center">
+            Install for Free
+          </a>
+        </div>
       </div>
+    </header>
 
-      <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-gray-600 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
+      <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
+        <!-- Left Column: Name, Text & Logos -->
+        <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4">
+            SheetPro AI <span class="text-green-500 text-base">(Free)</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
+            Revolutionize your spreadsheets with integrated AI solutions from 5 major providers. Create formulas, transform data, and unlock insights with the latest AI models.
+          </p>
+          <!-- Logos (Gemini, OpenAI, DeepSeek, Claude, Perplexity) -->
+          <div class="flex items-center justify-center gap-4 mb-8 flex-wrap">
+            <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
+            <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
+            <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
+            <img src="claude.png" alt="Claude Logo" class="h-8 w-auto" />
+            <img src="perplexity.png" alt="Perplexity Logo" class="h-8 w-auto" />
+          </div>
+          <!-- CTA Button -->
+          <div class="flex gap-4">
+            <a href="https://workspace.google.com/marketplace/app/sheetpro_ai/729462520858?flow_type=2" target="_blank" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
+              Get Started
+            </a>
+          </div>
+          <!-- Social Icons -->
+          <div class="mt-14 flex flex-col items-center">
+            <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
+            <div class="flex items-center">
+              <!-- LinkedIn sans contour -->
+            <a href="https://www.linkedin.com" target="_blank"
+            class="transition-transform transform hover:scale-110">
+              <img src="linkedin.png" alt="LinkedIn" class="w-16 h-16" />
+            </a>
+    
+            <!-- X sans contour -->
+            <a href="https://x.com" target="_blank"
+            class="transition-transform transform hover:scale-110 ml-4">
+            <img src="x.png" alt="X" class="w-12 h-12" />
+              </a>
+    
+              <!-- YouTube avec cercle + ombre -->
+              <a href="https://www.youtube.com/@SheetProAI" target="_blank"
+              class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110 ml-4">
+              <img src="youtube.png" alt="YouTube" class="w-8 h-8" />
+
+
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Video Embed -->
+        <div class="w-full md:w-1/2 md:pl-8">
+          <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden">
+            <iframe class="w-full h-full rounded-xl"
+                    src="https://www.youtube.com/embed/qvOtxnlHZso?hd=1&vq=hd1080&quality=hd1080"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+            </iframe>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <!-- Desktop Menu -->
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#feature-examples" class="text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
-        <a href="#formulas" class="text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
-        <a href="#pricing" class="text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
-        <a href="#faq" class="text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
-        <a href="contact.html" class="text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
-        <a href="#privacy-policy" class="text-gray-600 hover:text-emerald-600 transition-colors">Privacy Policy</a>
-        <a href="#" class="gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
-          Install for Free
-        </a>
-      </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden">
-      <div class="px-6 pt-2 pb-4 space-y-1 bg-white">
-        <a href="#feature-examples" class="block text-gray-600 hover:text-emerald-600 transition-colors">Features</a>
-        <a href="#formulas" class="block text-gray-600 hover:text-emerald-600 transition-colors">Formulas</a>
-        <a href="#pricing" class="block text-gray-600 hover:text-emerald-600 transition-colors">Pricing</a>
-        <a href="#faq" class="block text-gray-600 hover:text-emerald-600 transition-colors">FAQ</a>
-        <a href="contact.html" class="block text-gray-600 hover:text-emerald-600 transition-colors">Contact</a>
-        <a href="#privacy-policy" class="block text-gray-600 hover:text-emerald-600 transition-colors">Privacy Policy</a>
-        <a href="#" class="block gradient hover:gradient-hover text-white px-6 py-2 rounded-xl transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 text-center">
-          Install for Free
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-4 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto flex flex-col md:flex-row items-center md:justify-center md:gap-8 px-4 relative z-10">
-      <!-- Left Column: Name, Text & Logos -->
-      <div class="w-full md:w-1/2 mb-8 md:mb-0 flex flex-col items-center text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4">
-          SheetPro AI <span class="text-green-500 text-base">(Free)</span>
-        </h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-4 max-w-lg">
-          Revolutionize your spreadsheets with integrated AI solutions from 5 major providers. Create formulas, transform data, and unlock insights with the latest AI models.
+    <!-- Feature Examples Section -->
+    <section id="feature-examples" class="py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Feature Examples</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
+          Discover how SheetPro AI (Free) enhances your Google Sheets™ with powerful features, and take a look at some real examples.
         </p>
-        <!-- Logos (Gemini, OpenAI, DeepSeek, Claude, Perplexity) -->
-        <div class="flex items-center justify-center gap-4 mb-8 flex-wrap">
-          <img src="gemini.png" alt="Gemini Logo" class="h-8 w-auto" />
-          <img src="openai.png" alt="OpenAI Logo" class="h-8 w-auto" />
-          <img src="deepseek.png" alt="DeepSeek Logo" class="h-8 w-auto" />
-          <img src="claude.png" alt="Claude Logo" class="h-8 w-auto" />
-          <img src="perplexity.png" alt="Perplexity Logo" class="h-8 w-auto" />
-        </div>
-        <!-- CTA Button -->
-        <div class="flex gap-4">
-          <a href="#" class="gradient hover:gradient-hover text-white px-6 py-3 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 hover:scale-105">
-            Get Started
-          </a>
-        </div>
-        <!-- Social Icons -->
-        <div class="mt-14 flex flex-col items-center">
-          <span class="text-gray-700 text-sm font-medium mb-2">Follow us:</span>
-          <div class="flex items-center">
-            <!-- LinkedIn sans contour -->
-          <a href="https://www.linkedin.com" target="_blank"
-           class="transition-transform transform hover:scale-110">
-            <img src="linkedin.png" alt="LinkedIn" class="w-16 h-16" />
-          </a>
-  
-          <!-- X sans contour -->
-          <a href="https://x.com" target="_blank"
-           class="transition-transform transform hover:scale-110 ml-4">
-          <img src="x.png" alt="X" class="w-12 h-12" />
-            </a>
-  
-            <!-- YouTube avec cercle + ombre -->
-            <a href="https://www.youtube.com/@SheetProAI" target="_blank"
-             class="flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md transition-transform transform hover:scale-110 ml-4">
-            <img src="youtube.png" alt="YouTube" class="w-8 h-8" />
+        <!-- Two-column layout: Left = Features, Right = Screenshots -->
+        <div class="md:grid md:grid-cols-2 md:gap-16">
+          <!-- Key Features -->
+          <div>
+            <div class="space-y-8">
+              <!-- Feature 1 -->
+              <div class="glass-effect p-6 rounded-2xl card-hover">
+                <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Multi-Provider AI Configuration</h3>
+                <p class="text-gray-600">
+                  Choose from 5 major AI providers (Google Gemini™, OpenAI, Claude, DeepSeek, Perplexity) with 15+ advanced models. We recommend starting with Google Gemini™ (free), then configure additional API keys using our intuitive sidebar to switch between providers seamlessly.
+                </p>
+              </div>
+              <!-- Feature 2 -->
+              <div class="glass-effect p-6 rounded-2xl card-hover">
+                <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">🆕 AI Cell Transformations</h3>
+                <p class="text-gray-600">
+                  Transform existing data with AI. Translate text, clean data, expand abbreviations, or apply custom transformations to selected cell ranges. Choose to replace original data or create new outputs.
+                </p>
+              </div>
+              <!-- Feature 3 -->
+              <div class="glass-effect p-6 rounded-2xl card-hover">
+                <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 10h2l1 2h13l1-2h2" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Direct Model Access</h3>
+                <p class="text-gray-600">
+                  Call any AI model directly by its name as a Google Sheets™ function. Use <code>GPT_4O()</code>, <code>GEMINI_2_5_FLASH_PREVIEW()</code>, <code>CLAUDE_OPUS_4()</code> and 12+ other models with simple prompts and cell references.
+                </p>
+              </div>
+              <!-- Feature 4 -->
+              <div class="glass-effect p-6 rounded-2xl card-hover">
+                <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Web Search & Real-Time Data</h3>
+                <p class="text-gray-600">
+                  Access live web content with Perplexity models: <code>SONAR_MEDIUM_ONLINE()</code>, <code>SONAR_SMALL_ONLINE()</code>, and <code>SEARCH_WEB()</code> functions for real-time information and current data.
+                </p>
+              </div>
+              <!-- Feature 5: Role Assignment -->
+              <div class="glass-effect p-6 rounded-2xl card-hover">
+                <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
+                  <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
+                  </svg>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Optimized for Spreadsheets</h3>
+                <p class="text-gray-600">
+                  All AI responses are automatically optimized for Google Sheets™ with intelligent system prompts. Ensures clean, structured outputs that work seamlessly with spreadsheet formulas and formatting.
+                </p>
+              </div>
+            </div>
+          </div>
 
+          <!-- Screenshots Section -->
+          <div class="mt-12 md:mt-0">
+            <!-- Desktop Grid: Visible from md: and up -->
+            <div class="hidden md:block">
+              <div class="screenshots-grid">
+                <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
+                <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg" />
+                <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg" />
+              </div>
+            </div>
 
-            </a>
+            <!-- Mobile Slider: Hidden on md: and up -->
+            <div class="block md:hidden relative mt-6">
+              <!-- Left Arrow Button -->
+              <button 
+                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
+                onclick="slideScreenshots('prev')"
+                aria-label="Previous Slide"
+              >
+                <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <!-- Right Arrow Button -->
+              <button 
+                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
+                onclick="slideScreenshots('next')"
+                aria-label="Next Slide"
+              >
+                <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <!-- Slider Container -->
+              <div id="mobile-slider" class="no-scrollbar scroll-smooth snap-x snap-mandatory overflow-x-auto flex gap-4">
+                <div class="snap-center flex-shrink-0 w-full px-4">
+                  <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
+                </div>
+                <div class="snap-center flex-shrink-0 w-full px-4">
+                  <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
+                </div>
+                <div class="snap-center flex-shrink-0 w-full px-4">
+                  <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Right Column: Video Embed -->
-      <div class="w-full md:w-1/2 md:pl-8">
-        <div class="w-full h-64 md:h-96 bg-gray-200 rounded-xl shadow-lg overflow-hidden">
-          <iframe class="w-full h-full rounded-xl"
-                  src="https://www.youtube.com/embed/W5mKLk8QHV0?hd=1&vq=hd1080&quality=hd1080"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Examples Section -->
-  <section id="feature-examples" class="py-32 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-5xl font-bold text-center mb-12 gradient-text">Feature Examples</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-16">
-        Discover how SheetPro AI (Free) enhances your Google Sheets™ with powerful features, and take a look at some real examples.
-      </p>
-      <!-- Two-column layout: Left = Features, Right = Screenshots -->
-      <div class="md:grid md:grid-cols-2 md:gap-16">
-        <!-- Key Features -->
-        <div>
-          <div class="space-y-8">
-            <!-- Feature 1 -->
-            <div class="glass-effect p-6 rounded-2xl card-hover">
-              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Multi-Provider AI Configuration</h3>
-              <p class="text-gray-600">
-                Choose from 5 major AI providers (Google Gemini™, OpenAI, Claude, DeepSeek, Perplexity) with 15+ advanced models. We recommend starting with Google Gemini™ (free), then configure additional API keys using our intuitive sidebar to switch between providers seamlessly.
-              </p>
-            </div>
-            <!-- Feature 2 -->
-            <div class="glass-effect p-6 rounded-2xl card-hover">
-              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">🆕 AI Cell Transformations</h3>
-              <p class="text-gray-600">
-                Transform existing data with AI. Translate text, clean data, expand abbreviations, or apply custom transformations to selected cell ranges. Choose to replace original data or create new outputs.
-              </p>
-            </div>
-            <!-- Feature 3 -->
-            <div class="glass-effect p-6 rounded-2xl card-hover">
-              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 10h2l1 2h13l1-2h2" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Direct Model Access</h3>
-              <p class="text-gray-600">
-                Call any AI model directly by its name as a Google Sheets™ function. Use <code>GPT_4O()</code>, <code>GEMINI_2_5_FLASH_PREVIEW()</code>, <code>CLAUDE_OPUS_4()</code> and 12+ other models with simple prompts and cell references.
-              </p>
-            </div>
-            <!-- Feature 4 -->
-            <div class="glass-effect p-6 rounded-2xl card-hover">
-              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M3 4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1H4a1 1 0 01-1-1V4z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Web Search & Real-Time Data</h3>
-              <p class="text-gray-600">
-                Access live web content with Perplexity models: <code>SONAR_MEDIUM_ONLINE()</code>, <code>SONAR_SMALL_ONLINE()</code>, and <code>SEARCH_WEB()</code> functions for real-time information and current data.
-              </p>
-            </div>
-            <!-- Feature 5: Role Assignment -->
-            <div class="glass-effect p-6 rounded-2xl card-hover">
-              <div class="w-14 h-14 gradient rounded-full flex items-center justify-center mb-4">
-                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5.121 17.804A5.002 5.002 0 0110 15h4a5.002 5.002 0 014.879 2.804M12 11a3 3 0 110-6 3 3 0 010 6z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Optimized for Spreadsheets</h3>
-              <p class="text-gray-600">
-                All AI responses are automatically optimized for Google Sheets™ with intelligent system prompts. Ensures clean, structured outputs that work seamlessly with spreadsheet formulas and formatting.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Screenshots Section -->
-        <div class="mt-12 md:mt-0">
-          <!-- Desktop Grid: Visible from md: and up -->
-          <div class="hidden md:block">
-            <div class="screenshots-grid">
-              <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg" />
-              <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg" />
-              <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg" />
-            </div>
-          </div>
-
-          <!-- Mobile Slider: Hidden on md: and up -->
-          <div class="block md:hidden relative mt-6">
-            <!-- Left Arrow Button -->
-            <button 
-              class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
-              onclick="slideScreenshots('prev')"
-              aria-label="Previous Slide"
-            >
-              <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <!-- Documentation CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-emerald-50 to-green-50 border-t border-emerald-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="flex items-center justify-center mb-6">
+            <div class="gradient w-16 h-16 rounded-full flex items-center justify-center mr-4">
+              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M15 19l-7-7 7-7" />
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
               </svg>
-            </button>
-
-            <!-- Right Arrow Button -->
-            <button 
-              class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full shadow p-2 z-10 hover:scale-110 transition-transform"
-              onclick="slideScreenshots('next')"
-              aria-label="Next Slide"
-            >
-              <svg class="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <!-- Slider Container -->
-            <div id="mobile-slider" class="no-scrollbar scroll-smooth snap-x snap-mandatory overflow-x-auto flex gap-4">
-              <div class="snap-center flex-shrink-0 w-full px-4">
-                <img src="Screen1.png" alt="Screen 1" class="rounded-xl shadow-lg mx-auto" />
-              </div>
-              <div class="snap-center flex-shrink-0 w-full px-4">
-                <img src="Screen2.png" alt="Screen 2" class="rounded-xl shadow-lg mx-auto" />
-              </div>
-              <div class="snap-center flex-shrink-0 w-full px-4">
-                <img src="Screen3.png" alt="Screen 3" class="rounded-xl shadow-lg mx-auto" />
-              </div>
+            </div>
+            <div>
+              <h2 class="text-3xl font-bold gradient-text">Need Detailed Instructions?</h2>
+              <p class="text-lg text-gray-600 mt-2">Complete technical documentation with step-by-step guides</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Documentation CTA Section -->
-  <section class="py-16 bg-gradient-to-r from-emerald-50 to-green-50 border-t border-emerald-100">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="flex items-center justify-center mb-6">
-          <div class="gradient w-16 h-16 rounded-full flex items-center justify-center mr-4">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          
+          <div class="grid md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+              <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Installation Guide</h3>
+              <p class="text-gray-600 text-sm">Step-by-step installation from Google Workspace™ Marketplace</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+              <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">API Configuration</h3>
+              <p class="text-gray-600 text-sm">Configure Google Gemini™, OpenAI, Claude, and other AI providers</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
+              <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Usage Examples</h3>
+              <p class="text-gray-600 text-sm">Comprehensive function reference with real-world examples</p>
+            </div>
+          </div>
+          
+          <a href="documentation.html" 
+            class="gradient hover:gradient-hover text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
             </svg>
-          </div>
-          <div>
-            <h2 class="text-3xl font-bold gradient-text">Need Detailed Instructions?</h2>
-            <p class="text-lg text-gray-600 mt-2">Complete technical documentation with step-by-step guides</p>
-          </div>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-6 mb-8">
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
-            <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
-              </svg>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Installation Guide</h3>
-            <p class="text-gray-600 text-sm">Step-by-step installation from Google Workspace™ Marketplace</p>
-          </div>
+            View Complete Documentation
+          </a>
           
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
-            <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-              </svg>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">API Configuration</h3>
-            <p class="text-gray-600 text-sm">Configure Google Gemini™, OpenAI, Claude, and other AI providers</p>
+          <div class="mt-6">
+            <p class="text-sm text-gray-500">
+              Includes installation, configuration, usage examples, troubleshooting, and more
+            </p>
           </div>
-          
-          <div class="bg-white p-6 rounded-xl shadow-sm border border-emerald-100">
-            <div class="gradient w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-              </svg>
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Usage Examples</h3>
-            <p class="text-gray-600 text-sm">Comprehensive function reference with real-world examples</p>
-          </div>
-        </div>
-        
-        <a href="documentation.html" 
-           class="gradient hover:gradient-hover text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-          </svg>
-          View Complete Documentation
-        </a>
-        
-        <div class="mt-6">
-          <p class="text-sm text-gray-500">
-            Includes installation, configuration, usage examples, troubleshooting, and more
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Formulas & Commands Section -->
-  <section id="formulas" class="py-32 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
-        SheetPro AI provides direct access to AI models by their specific names. Each model can be called directly as a function in your Google Sheets.
-      </p>
+    <!-- Formulas & Commands Section -->
+    <section id="formulas" class="py-32 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
+          SheetPro AI provides direct access to AI models by their specific names. Each model can be called directly as a function in your Google Sheets.
+        </p>
 
-      <!-- Model-Specific Functions Table -->
-      <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">AI Model Functions (by Intelligence)</h3>
-      <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
-      <table class="custom-table">
-        <thead>
-          <tr>
-            <th>Formula</th>
-            <th>Provider / Model</th>
-            <th>Best For</th>
-            <th>Example Usage</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- OpenAI Models -->
-          <tr class="bg-blue-50">
-            <td><code>O3(prompt)</code></td>
-            <td>OpenAI – o3 (Most Advanced)</td>
-            <td>Complex reasoning, research</td>
-            <td><code>=O3("Analyze the market implications of " &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-blue-50">
-            <td><code>GPT_4_1(prompt)</code></td>
-            <td>OpenAI – GPT-4.1</td>
-            <td>Enhanced capabilities</td>
-            <td><code>=GPT_4_1("Write a professional email for " &amp; B1)</code></td>
-          </tr>
-          <tr class="bg-blue-50">
-            <td><code>GPT_4O(prompt)</code></td>
-            <td>OpenAI – GPT-4o</td>
-            <td>General high-intelligence tasks</td>
-            <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-blue-50">
-            <td><code>O4_MINI(prompt)</code></td>
-            <td>OpenAI – o4-mini</td>
-            <td>Efficient reasoning</td>
-            <td><code>=O4_MINI("Quick analysis of " &amp; C1)</code></td>
-          </tr>
-          <tr class="bg-blue-50">
-            <td><code>GPT_4_1_NANO(prompt)</code></td>
-            <td>OpenAI – GPT-4.1-nano</td>
-            <td>Basic tasks, cost-effective</td>
-            <td><code>=GPT_4_1_NANO("Simple format check: " &amp; D1)</code></td>
-          </tr>
-
-          <!-- Google Gemini Models (FREE) -->
-          <tr class="bg-green-50">
-            <td><code>GEMINI_2_5_PRO_PREVIEW(prompt)</code></td>
-            <td>Google – Gemini 2.5 Pro (FREE)</td>
-            <td>Complex problems, state-of-the-art</td>
-            <td><code>=GEMINI_2_5_PRO_PREVIEW("Deep analysis of " &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-green-50">
-            <td><code>GEMINI_2_5_FLASH_PREVIEW(prompt)</code></td>
-            <td>Google – Gemini 2.5 Flash (FREE)</td>
-            <td>Best price-performance ratio</td>
-            <td><code>=GEMINI_2_5_FLASH_PREVIEW("Optimize this content: " &amp; B1)</code></td>
-          </tr>
-          <tr class="bg-green-50">
-            <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
-            <td>Google – Gemini 2.0 Flash (FREE)</td>
-            <td>Next-gen features, speed</td>
-            <td><code>=GEMINI_2_0_FLASH("Process this data: " &amp; C1)</code></td>
-          </tr>
-          <tr class="bg-green-50">
-            <td><code>GEMMA_3_27B(prompt)</code></td>
-            <td>Google – Gemma 3 27B (FREE)</td>
-            <td>Open source, multimodal</td>
-            <td><code>=GEMMA_3_27B("Explain the concept: " &amp; D1)</code></td>
-          </tr>
-          <tr class="bg-green-50">
-            <td><code>GEMINI_2_0_FLASH_LITE(prompt)</code></td>
-            <td>Google – Gemini 2.0 Flash-Lite (FREE)</td>
-            <td>Low latency, cost optimization</td>
-            <td><code>=GEMINI_2_0_FLASH_LITE("Quick summary: " &amp; E1)</code></td>
-          </tr>
-          
-          <!-- DeepSeek Models -->
-          <tr class="bg-purple-50">
-            <td><code>DEEPSEEK_REASONER(prompt)</code></td>
-            <td>DeepSeek – Reasoner</td>
-            <td>Advanced logical reasoning</td>
-            <td><code>=DEEPSEEK_REASONER("Logical analysis of " &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-purple-50">
-            <td><code>DEEPSEEK_CHAT(prompt)</code></td>
-            <td>DeepSeek – Chat</td>
-            <td>Conversation, general tasks</td>
-            <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
-          </tr>
-          
-          <!-- Claude Models -->
-          <tr class="bg-orange-50">
-            <td><code>CLAUDE_OPUS_4(prompt)</code></td>
-            <td>Anthropic – Claude Opus 4</td>
-            <td>Superior reasoning, complex analysis</td>
-            <td><code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-orange-50">
-            <td><code>CLAUDE_SONNET_4(prompt)</code></td>
-            <td>Anthropic – Claude Sonnet 4</td>
-            <td>Balanced performance</td>
-            <td><code>=CLAUDE_SONNET_4("Professional content for " &amp; B1)</code></td>
-          </tr>
-          
-          <!-- Perplexity Models -->
-          <tr class="bg-teal-50">
-            <td><code>SONAR_MEDIUM_ONLINE(prompt)</code></td>
-            <td>Perplexity – Sonar Medium (Web Search)</td>
-            <td>Real-time information, research</td>
-            <td><code>=SONAR_MEDIUM_ONLINE("Latest news about " &amp; A1)</code></td>
-          </tr>
-          <tr class="bg-teal-50">
-            <td><code>SONAR_SMALL_ONLINE(prompt)</code></td>
-            <td>Perplexity – Sonar Small (Web Search)</td>
-            <td>Quick web queries</td>
-            <td><code>=SONAR_SMALL_ONLINE("Current price of " &amp; B1)</code></td>
-          </tr>
-          <tr class="bg-teal-50">
-            <td><code>SEARCH_WEB(prompt)</code></td>
-            <td>Perplexity – General Web Search</td>
-            <td>Live web data access</td>
-            <td><code>=SEARCH_WEB("Who won the 2024 Olympics " &amp; C1)</code></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- Transform Functions Table -->
-      <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">🆕 Transform Functions</h3>
-      <p class="text-gray-600 mb-4">Use the Transform feature in the sidebar to apply AI transformations to existing cell ranges:</p>
-      <table class="custom-table">
-        <thead>
-          <tr>
-            <th>Transformation Type</th>
-            <th>Description</th>
-            <th>Example Use Case</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Translate</strong></td>
-            <td>Convert text to different languages</td>
-            <td>Transform French product names to English</td>
-          </tr>
-          <tr>
-            <td><strong>Format Data</strong></td>
-            <td>Standardize dates, currency, formatting</td>
-            <td>Convert various date formats to MM/DD/YYYY</td>
-          </tr>
-          <tr>
-            <td><strong>Expand Abbreviations</strong></td>
-            <td>Convert shortcuts to full text</td>
-            <td>Turn "Mon, Tue, Wed" into "Monday, Tuesday, Wednesday"</td>
-          </tr>
-          <tr>
-            <td><strong>Clean Text</strong></td>
-            <td>Fix spacing, capitalization, spelling</td>
-            <td>Clean messy imported customer data</td>
-          </tr>
-          <tr>
-            <td><strong>Extract Information</strong></td>
-            <td>Pull specific data from text</td>
-            <td>Extract phone numbers from contact descriptions</td>
-          </tr>
-          <tr>
-            <td><strong>Custom Transformation</strong></td>
-            <td>Apply any custom AI instruction</td>
-            <td>"Convert each product code to its category name"</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Pricing Section -->
-  <section id="pricing" class="py-32 bg-white hero-pattern">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Providers &amp; Pricing</h2>
-      <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
-        SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider. We recommend starting with Google Gemini (free models), then exploring other providers based on your needs.
-      </p>
-      
-      <!-- Google Gemini Pricing -->
-      <div class="max-w-6xl mx-auto mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">🆓 Google Gemini (Recommended)</h3>
+        <!-- Model-Specific Functions Table -->
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">AI Model Functions (by Intelligence)</h3>
+        <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
         <table class="custom-table">
-        <thead>
-          <tr>
-              <th>Model</th>
-              <th>Intelligence Level</th>
-              <th>Free Tier Limits</th>
-              <th>Paid After Limits</th>
+          <thead>
+            <tr>
+              <th>Formula</th>
+              <th>Provider / Model</th>
               <th>Best For</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr class="bg-green-50">
-              <td><strong>Gemini 2.5 Pro Preview</strong></td>
-              <td>🔥 Highest</td>
-              <td>Free (limited requests)</td>
-              <td>$1.25-$2.50 / $10-$15</td>
-              <td>Complex problems</td>
+              <th>Example Usage</th>
             </tr>
-            <tr class="bg-green-50">
-              <td><strong>Gemini 2.5 Flash Preview</strong></td>
-              <td>🔥 Very High</td>
-              <td>500 req/day + 250k tokens/min</td>
-              <td>$0.15 / $0.60</td>
-              <td>Best price-performance</td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><strong>Gemini 2.0 Flash</strong></td>
-              <td>⚡ High</td>
-              <td>1500 req/day + 1M tokens/min</td>
-              <td>$0.075 / $0.30</td>
-              <td>Next-gen features</td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><strong>Gemma 3 27B</strong></td>
-              <td>⚡ High</td>
-              <td>Completely FREE</td>
-              <td>Always FREE</td>
-              <td>Open source multimodal</td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><strong>Gemini 2.0 Flash-Lite</strong></td>
-              <td>💰 Economical</td>
-              <td>1500 req/day + 1M tokens/min</td>
-              <td>$0.075 / $0.30</td>
-              <td>Low latency</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- OpenAI Pricing -->
-      <div class="max-w-6xl mx-auto mb-12">
-        <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">🧠 OpenAI</h3>
-        <table class="custom-table">
-        <thead>
-          <tr>
-              <th>Model</th>
-              <th>Intelligence Level</th>
-              <th>Input Price (1M tokens)</th>
-              <th>Output Price (1M tokens)</th>
-              <th>Best For</th>
-          </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
+            <!-- OpenAI Models -->
             <tr class="bg-blue-50">
-              <td><strong>o3</strong></td>
-              <td>🔥 Highest</td>
-              <td>$5.00</td>
-              <td>$20.00</td>
+              <td><code>O3(prompt)</code></td>
+              <td>OpenAI – o3 (Most Advanced)</td>
               <td>Complex reasoning, research</td>
+              <td><code>=O3("Analyze the market implications of " &amp; A1)</code></td>
             </tr>
             <tr class="bg-blue-50">
-              <td><strong>GPT-4.1</strong></td>
-              <td>🔥 Very High</td>
-              <td>$2.50</td>
-              <td>$10.00</td>
+              <td><code>GPT_4_1(prompt)</code></td>
+              <td>OpenAI – GPT-4.1</td>
               <td>Enhanced capabilities</td>
+              <td><code>=GPT_4_1("Write a professional email for " &amp; B1)</code></td>
             </tr>
             <tr class="bg-blue-50">
-              <td><strong>GPT-4o</strong></td>
-              <td>🔥 Very High</td>
-              <td>$2.50</td>
-              <td>$10.00</td>
-              <td>General high-intelligence</td>
+              <td><code>GPT_4O(prompt)</code></td>
+              <td>OpenAI – GPT-4o</td>
+              <td>General high-intelligence tasks</td>
+              <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
             </tr>
             <tr class="bg-blue-50">
-              <td><strong>o4-mini</strong></td>
-              <td>⚡ High</td>
-              <td>$0.15</td>
-              <td>$0.60</td>
+              <td><code>O4_MINI(prompt)</code></td>
+              <td>OpenAI – o4-mini</td>
               <td>Efficient reasoning</td>
+              <td><code>=O4_MINI("Quick analysis of " &amp; C1)</code></td>
             </tr>
             <tr class="bg-blue-50">
-              <td><strong>GPT-4.1-nano</strong></td>
-              <td>💰 Economical</td>
-              <td>$0.05</td>
-              <td>$0.20</td>
-              <td>Basic tasks</td>
+              <td><code>GPT_4_1_NANO(prompt)</code></td>
+              <td>OpenAI – GPT-4.1-nano</td>
+              <td>Basic tasks, cost-effective</td>
+              <td><code>=GPT_4_1_NANO("Simple format check: " &amp; D1)</code></td>
+            </tr>
+
+            <!-- Google Gemini Models (FREE) -->
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_5_PRO_PREVIEW(prompt)</code></td>
+              <td>Google – Gemini 2.5 Pro (FREE)</td>
+              <td>Complex problems, state-of-the-art</td>
+              <td><code>=GEMINI_2_5_PRO_PREVIEW("Deep analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_5_FLASH_PREVIEW(prompt)</code></td>
+              <td>Google – Gemini 2.5 Flash (FREE)</td>
+              <td>Best price-performance ratio</td>
+              <td><code>=GEMINI_2_5_FLASH_PREVIEW("Optimize this content: " &amp; B1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
+              <td>Google – Gemini 2.0 Flash (FREE)</td>
+              <td>Next-gen features, speed</td>
+              <td><code>=GEMINI_2_0_FLASH("Process this data: " &amp; C1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMMA_3_27B(prompt)</code></td>
+              <td>Google – Gemma 3 27B (FREE)</td>
+              <td>Open source, multimodal</td>
+              <td><code>=GEMMA_3_27B("Explain the concept: " &amp; D1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_0_FLASH_LITE(prompt)</code></td>
+              <td>Google – Gemini 2.0 Flash-Lite (FREE)</td>
+              <td>Low latency, cost optimization</td>
+              <td><code>=GEMINI_2_0_FLASH_LITE("Quick summary: " &amp; E1)</code></td>
+            </tr>
+            
+            <!-- DeepSeek Models -->
+            <tr class="bg-purple-50">
+              <td><code>DEEPSEEK_REASONER(prompt)</code></td>
+              <td>DeepSeek – Reasoner</td>
+              <td>Advanced logical reasoning</td>
+              <td><code>=DEEPSEEK_REASONER("Logical analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-purple-50">
+              <td><code>DEEPSEEK_CHAT(prompt)</code></td>
+              <td>DeepSeek – Chat</td>
+              <td>Conversation, general tasks</td>
+              <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
+            </tr>
+            
+            <!-- Claude Models -->
+            <tr class="bg-orange-50">
+              <td><code>CLAUDE_OPUS_4(prompt)</code></td>
+              <td>Anthropic – Claude Opus 4</td>
+              <td>Superior reasoning, complex analysis</td>
+              <td><code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-orange-50">
+              <td><code>CLAUDE_SONNET_4(prompt)</code></td>
+              <td>Anthropic – Claude Sonnet 4</td>
+              <td>Balanced performance</td>
+              <td><code>=CLAUDE_SONNET_4("Professional content for " &amp; B1)</code></td>
+            </tr>
+            
+            <!-- Perplexity Models -->
+            <tr class="bg-teal-50">
+              <td><code>SONAR_MEDIUM_ONLINE(prompt)</code></td>
+              <td>Perplexity – Sonar Medium (Web Search)</td>
+              <td>Real-time information, research</td>
+              <td><code>=SONAR_MEDIUM_ONLINE("Latest news about " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-teal-50">
+              <td><code>SONAR_SMALL_ONLINE(prompt)</code></td>
+              <td>Perplexity – Sonar Small (Web Search)</td>
+              <td>Quick web queries</td>
+              <td><code>=SONAR_SMALL_ONLINE("Current price of " &amp; B1)</code></td>
+            </tr>
+            <tr class="bg-teal-50">
+              <td><code>SEARCH_WEB(prompt)</code></td>
+              <td>Perplexity – General Web Search</td>
+              <td>Live web data access</td>
+              <td><code>=SEARCH_WEB("Who won the 2024 Olympics " &amp; C1)</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Transform Functions Table -->
+        <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">🆕 Transform Functions</h3>
+        <p class="text-gray-600 mb-4">Use the Transform feature in the sidebar to apply AI transformations to existing cell ranges:</p>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Transformation Type</th>
+              <th>Description</th>
+              <th>Example Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Translate</strong></td>
+              <td>Convert text to different languages</td>
+              <td>Transform French product names to English</td>
+            </tr>
+            <tr>
+              <td><strong>Format Data</strong></td>
+              <td>Standardize dates, currency, formatting</td>
+              <td>Convert various date formats to MM/DD/YYYY</td>
+            </tr>
+            <tr>
+              <td><strong>Expand Abbreviations</strong></td>
+              <td>Convert shortcuts to full text</td>
+              <td>Turn "Mon, Tue, Wed" into "Monday, Tuesday, Wednesday"</td>
+            </tr>
+            <tr>
+              <td><strong>Clean Text</strong></td>
+              <td>Fix spacing, capitalization, spelling</td>
+              <td>Clean messy imported customer data</td>
+            </tr>
+            <tr>
+              <td><strong>Extract Information</strong></td>
+              <td>Pull specific data from text</td>
+              <td>Extract phone numbers from contact descriptions</td>
+            </tr>
+            <tr>
+              <td><strong>Custom Transformation</strong></td>
+              <td>Apply any custom AI instruction</td>
+              <td>"Convert each product code to its category name"</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </section>
 
-      <!-- Other Providers -->
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <!-- DeepSeek -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-purple-600 text-center">DeepSeek</h3>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 bg-white hero-pattern">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Providers &amp; Pricing</h2>
+        <p class="text-lg text-gray-600 mb-8 text-center max-w-2xl mx-auto">
+          SheetPro AI is completely free. You supply your own API keys and only pay for usage by your provider. We recommend starting with Google Gemini (free models), then exploring other providers based on your needs.
+        </p>
+        
+        <!-- Google Gemini Pricing -->
+        <div class="max-w-6xl mx-auto mb-12">
+          <h3 class="text-2xl font-bold mb-6 text-green-600 text-center">🆓 Google Gemini (Recommended)</h3>
           <table class="custom-table">
-            <thead>
-              <tr>
+          <thead>
+            <tr>
                 <th>Model</th>
-                <th>Price (1M tokens)</th>
-          </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-purple-50">
-                <td><strong>Reasoner</strong></td>
-                <td>$0.14 / $2.19</td>
+                <th>Intelligence Level</th>
+                <th>Free Tier Limits</th>
+                <th>Paid After Limits</th>
+                <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class="bg-green-50">
+                <td><strong>Gemini 2.5 Pro Preview</strong></td>
+                <td>🔥 Highest</td>
+                <td>Free (limited requests)</td>
+                <td>$1.25-$2.50 / $10-$15</td>
+                <td>Complex problems</td>
               </tr>
-              <tr class="bg-purple-50">
-                <td><strong>Chat</strong></td>
-                <td>$0.014 / $0.28</td>
+              <tr class="bg-green-50">
+                <td><strong>Gemini 2.5 Flash Preview</strong></td>
+                <td>🔥 Very High</td>
+                <td>500 req/day + 250k tokens/min</td>
+                <td>$0.15 / $0.60</td>
+                <td>Best price-performance</td>
+              </tr>
+              <tr class="bg-green-50">
+                <td><strong>Gemini 2.0 Flash</strong></td>
+                <td>⚡ High</td>
+                <td>1500 req/day + 1M tokens/min</td>
+                <td>$0.075 / $0.30</td>
+                <td>Next-gen features</td>
+              </tr>
+              <tr class="bg-green-50">
+                <td><strong>Gemma 3 27B</strong></td>
+                <td>⚡ High</td>
+                <td>Completely FREE</td>
+                <td>Always FREE</td>
+                <td>Open source multimodal</td>
+              </tr>
+              <tr class="bg-green-50">
+                <td><strong>Gemini 2.0 Flash-Lite</strong></td>
+                <td>💰 Economical</td>
+                <td>1500 req/day + 1M tokens/min</td>
+                <td>$0.075 / $0.30</td>
+                <td>Low latency</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Claude -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-orange-600 text-center">Anthropic Claude</h3>
+        <!-- OpenAI Pricing -->
+        <div class="max-w-6xl mx-auto mb-12">
+          <h3 class="text-2xl font-bold mb-6 text-blue-600 text-center">🧠 OpenAI</h3>
           <table class="custom-table">
-            <thead>
-              <tr>
+          <thead>
+            <tr>
                 <th>Model</th>
-                <th>Price (1M tokens)</th>
-          </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-orange-50">
-                <td><strong>Opus 4</strong></td>
-                <td>$5.00 / $25.00</td>
+                <th>Intelligence Level</th>
+                <th>Input Price (1M tokens)</th>
+                <th>Output Price (1M tokens)</th>
+                <th>Best For</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr class="bg-blue-50">
+                <td><strong>o3</strong></td>
+                <td>🔥 Highest</td>
+                <td>$5.00</td>
+                <td>$20.00</td>
+                <td>Complex reasoning, research</td>
               </tr>
-              <tr class="bg-orange-50">
-                <td><strong>Sonnet 4</strong></td>
-                <td>$3.00 / $15.00</td>
+              <tr class="bg-blue-50">
+                <td><strong>GPT-4.1</strong></td>
+                <td>🔥 Very High</td>
+                <td>$2.50</td>
+                <td>$10.00</td>
+                <td>Enhanced capabilities</td>
+              </tr>
+              <tr class="bg-blue-50">
+                <td><strong>GPT-4o</strong></td>
+                <td>🔥 Very High</td>
+                <td>$2.50</td>
+                <td>$10.00</td>
+                <td>General high-intelligence</td>
+              </tr>
+              <tr class="bg-blue-50">
+                <td><strong>o4-mini</strong></td>
+                <td>⚡ High</td>
+                <td>$0.15</td>
+                <td>$0.60</td>
+                <td>Efficient reasoning</td>
+              </tr>
+              <tr class="bg-blue-50">
+                <td><strong>GPT-4.1-nano</strong></td>
+                <td>💰 Economical</td>
+                <td>$0.05</td>
+                <td>$0.20</td>
+                <td>Basic tasks</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <!-- Perplexity -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Perplexity (Web Search)</h3>
-          <table class="custom-table">
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>Price (1M tokens)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-teal-50">
-                <td><strong>Sonar Medium</strong></td>
-                <td>$5.00 / $5.00</td>
-              </tr>
-              <tr class="bg-teal-50">
-                <td><strong>Sonar Small</strong></td>
-                <td>$5.00 / $5.00</td>
-          </tr>
-        </tbody>
-      </table>
-        </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <p class="text-gray-600 mb-4">
-          <strong>💡 Pro Tip:</strong> Start with Google Gemini models (free) for testing, then choose paid models based on your needs.
-        </p>
-        <p class="text-gray-600">
-        <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
-      </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Frequently Asked Questions</h2>
-      <div class="max-w-2xl mx-auto space-y-6">
-        <!-- FAQ Item 1 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Do I need to supply my own API keys?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Yes. SheetPro AI is free, but you must provide your API keys for at least one of the 5 supported providers: Google Gemini, OpenAI, Claude, DeepSeek, or Perplexity. We recommend starting with Google Gemini as it's completely free.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 2 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">What's the Transform feature and how does it work?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Transform lets you apply AI to existing data in your sheets. Select a range of cells, choose a transformation (translate, clean data, expand abbreviations, etc.), and AI will process each cell. You can replace the original data or create new output in adjacent cells or a new sheet.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 3 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Which AI models are free to use?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              All Google Gemini models are free with generous usage limits. Gemma 3 27B is completely free with no limits. Other providers (OpenAI, Claude, DeepSeek, Perplexity) charge based on usage, but offer powerful capabilities.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 4 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">How do I choose the right AI model for my task?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Models are organized by intelligence level. For complex analysis, use Gemini 2.5 Pro Preview (free), o3 or Claude Opus 4. For general tasks, try Gemini 2.5 Flash Preview (free) or GPT-4o. For simple operations, use economical options like Gemini 2.0 Flash-Lite (free). Start with free Gemini models for testing.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 5 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Are there any usage limits?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              SheetPro AI doesn't impose additional limits beyond those set by your provider. Google Gemini has generous free tiers (500-1500 requests/day). Paid providers charge per token used.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 6 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Can I use multiple AI providers at once?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Yes! You can configure API keys for all 5 providers and use model-specific functions like =GEMINI_2_5_FLASH_PREVIEW(), =GPT_4O(), =CLAUDE_OPUS_4() in the same spreadsheet. Each function calls its specific provider.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 7 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">Are my data safe?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Yes. We do not store your data or API keys. Your requests are transmitted directly and securely via HTTPS to your chosen AI provider. All processing happens in real-time without data retention.
-            </p>
-          </div>
-        </div>
-        
-        <!-- FAQ Item 8 -->
-        <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
-          <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
-            <span class="text-lg font-medium">How do I use the AI model functions in my sheets?</span>
-            <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-answer px-6 pb-4">
-            <p class="text-gray-600">
-              Simply call any model directly by its function name. For example: <code>=GPT_4O("Analyze this data")</code>, <code>=GEMINI_2_5_FLASH_PREVIEW("Translate to French: " &amp; A1)</code>, or <code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; B1:B10)</code>. You can reference cells and ranges in your prompts.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Google Limited Use Compliance -->
-  <section id="google-limited-use-compliance" class="py-16 bg-white border-t border-gray-200">
-    <div class="container mx-auto px-4">
-              <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Google™ Limited Use Compliance</h2>
-      <div class="max-w-4xl mx-auto bg-blue-50 border border-blue-200 rounded-xl p-8">
-        <h3 class="text-xl font-semibold mb-4 text-blue-900">Limited Use Disclosure</h3>
-        <p class="text-gray-700 leading-relaxed mb-4">
-          <strong>SheetPro AI's use and transfer of information received from Google APIs™ to any other app will adhere to 
-          <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" 
-             target="_blank" class="text-blue-600 hover:text-blue-800 underline">Google API Services™ User Data Policy</a>, 
-          including the Limited Use requirements.</strong>
-        </p>
-        
-        <div class="space-y-4 text-gray-700">
+        <!-- Other Providers -->
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- DeepSeek -->
           <div>
-            <h4 class="font-semibold text-blue-900 mb-2">Data Usage Commitment:</h4>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>We only access Google Sheets™ data to provide AI-powered analysis and generation features</li>
-              <li>User data is transmitted securely to AI providers (OpenAI, Google Gemini™, DeepSeek, Claude, Perplexity) solely for processing user requests</li>
-              <li>We do not store, cache, or retain any user data beyond what is necessary for real-time processing</li>
-              <li>We do not sell or share user data with third parties for advertising or marketing purposes</li>
-              <li>Data is used exclusively to fulfill the functionality described in our application</li>
-            </ul>
+            <h3 class="text-xl font-bold mb-4 text-purple-600 text-center">DeepSeek</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Price (1M tokens)</th>
+            </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-purple-50">
+                  <td><strong>Reasoner</strong></td>
+                  <td>$0.14 / $2.19</td>
+                </tr>
+                <tr class="bg-purple-50">
+                  <td><strong>Chat</strong></td>
+                  <td>$0.014 / $0.28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Claude -->
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-orange-600 text-center">Anthropic Claude</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Price (1M tokens)</th>
+            </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-orange-50">
+                  <td><strong>Opus 4</strong></td>
+                  <td>$5.00 / $25.00</td>
+                </tr>
+                <tr class="bg-orange-50">
+                  <td><strong>Sonnet 4</strong></td>
+                  <td>$3.00 / $15.00</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Perplexity -->
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-teal-600 text-center">Perplexity (Web Search)</h3>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Model</th>
+                  <th>Price (1M tokens)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-teal-50">
+                  <td><strong>Sonar Medium</strong></td>
+                  <td>$5.00 / $5.00</td>
+                </tr>
+                <tr class="bg-teal-50">
+                  <td><strong>Sonar Small</strong></td>
+                  <td>$5.00 / $5.00</td>
+            </tr>
+          </tbody>
+        </table>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <p class="text-gray-600 mb-4">
+            <strong>💡 Pro Tip:</strong> Start with Google Gemini models (free) for testing, then choose paid models based on your needs.
+          </p>
+          <p class="text-gray-600">
+          <strong>Note:</strong> Enter your API keys in the SheetPro AI sidebar. You only pay the usage fees charged by your provider.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-20 gradient-text">Frequently Asked Questions</h2>
+        <div class="max-w-2xl mx-auto space-y-6">
+          <!-- FAQ Item 1 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">Do I need to supply my own API keys?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Yes. SheetPro AI is free, but you must provide your API keys for at least one of the 5 supported providers: Google Gemini, OpenAI, Claude, DeepSeek, or Perplexity. We recommend starting with Google Gemini as it's completely free.
+              </p>
+            </div>
           </div>
           
-          <div>
-            <h4 class="font-semibold text-blue-900 mb-2">Security Measures:</h4>
-            <ul class="list-disc list-inside space-y-2 ml-4">
-              <li>All data transmission is secured with HTTPS/TLS encryption</li>
-              <li>API keys are stored locally in user's Google™ environment, never on our servers</li>
-              <li>We implement industry-standard security practices to protect user information</li>
-            </ul>
+          <!-- FAQ Item 2 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">What's the Transform feature and how does it work?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Transform lets you apply AI to existing data in your sheets. Select a range of cells, choose a transformation (translate, clean data, expand abbreviations, etc.), and AI will process each cell. You can replace the original data or create new output in adjacent cells or a new sheet.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 3 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">Which AI models are free to use?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                All Google Gemini models are free with generous usage limits. Gemma 3 27B is completely free with no limits. Other providers (OpenAI, Claude, DeepSeek, Perplexity) charge based on usage, but offer powerful capabilities.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 4 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">How do I choose the right AI model for my task?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Models are organized by intelligence level. For complex analysis, use Gemini 2.5 Pro Preview (free), o3 or Claude Opus 4. For general tasks, try Gemini 2.5 Flash Preview (free) or GPT-4o. For simple operations, use economical options like Gemini 2.0 Flash-Lite (free). Start with free Gemini models for testing.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 5 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">Are there any usage limits?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                SheetPro AI doesn't impose additional limits beyond those set by your provider. Google Gemini has generous free tiers (500-1500 requests/day). Paid providers charge per token used.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 6 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">Can I use multiple AI providers at once?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Yes! You can configure API keys for all 5 providers and use model-specific functions like =GEMINI_2_5_FLASH_PREVIEW(), =GPT_4O(), =CLAUDE_OPUS_4() in the same spreadsheet. Each function calls its specific provider.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 7 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">Are my data safe?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Yes. We do not store your data or API keys. Your requests are transmitted directly and securely via HTTPS to your chosen AI provider. All processing happens in real-time without data retention.
+              </p>
+            </div>
+          </div>
+          
+          <!-- FAQ Item 8 -->
+          <div class="faq-item bg-white rounded-xl shadow-sm border border-gray-100">
+            <button onclick="toggleFAQ(this)" class="w-full px-6 py-4 text-left flex items-center justify-between focus:outline-none">
+              <span class="text-lg font-medium">How do I use the AI model functions in my sheets?</span>
+              <svg class="faq-icon w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="faq-answer px-6 pb-4">
+              <p class="text-gray-600">
+                Simply call any model directly by its function name. For example: <code>=GPT_4O("Analyze this data")</code>, <code>=GEMINI_2_5_FLASH_PREVIEW("Translate to French: " &amp; A1)</code>, or <code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; B1:B10)</code>. You can reference cells and ranges in your prompts.
+              </p>
+            </div>
           </div>
         </div>
-        
-        <p class="text-sm text-gray-600 mt-6 italic">
-          Last updated: January 15, 2025
+      </div>
+    </section>
+
+    <!-- Google Limited Use Compliance -->
+    <section id="google-limited-use-compliance" class="py-16 bg-white border-t border-gray-200">
+      <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-8 gradient-text">Google™ Limited Use Compliance</h2>
+        <div class="max-w-4xl mx-auto bg-blue-50 border border-blue-200 rounded-xl p-8">
+          <h3 class="text-xl font-semibold mb-4 text-blue-900">Limited Use Disclosure</h3>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            <strong>SheetPro AI's use and transfer of information received from Google APIs™ to any other app will adhere to 
+            <a href="https://developers.google.com/terms/api-services-user-data-policy#additional_requirements_for_specific_api_scopes" 
+              target="_blank" class="text-blue-600 hover:text-blue-800 underline">Google API Services™ User Data Policy</a>, 
+            including the Limited Use requirements.</strong>
+          </p>
+          
+          <div class="space-y-4 text-gray-700">
+            <div>
+              <h4 class="font-semibold text-blue-900 mb-2">Data Usage Commitment:</h4>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li>We only access Google Sheets™ data to provide AI-powered analysis and generation features</li>
+                <li>User data is transmitted securely to AI providers (OpenAI, Google Gemini™, DeepSeek, Claude, Perplexity) solely for processing user requests</li>
+                <li>We do not store, cache, or retain any user data beyond what is necessary for real-time processing</li>
+                <li>We do not sell or share user data with third parties for advertising or marketing purposes</li>
+                <li>Data is used exclusively to fulfill the functionality described in our application</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-blue-900 mb-2">Security Measures:</h4>
+              <ul class="list-disc list-inside space-y-2 ml-4">
+                <li>All data transmission is secured with HTTPS/TLS encryption</li>
+                <li>API keys are stored locally in user's Google™ environment, never on our servers</li>
+                <li>We implement industry-standard security practices to protect user information</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p class="text-sm text-gray-600 mt-6 italic">
+            Last updated: January 15, 2025
+          </p>
+          
+          <div class="mt-8 pt-6 border-t border-blue-200">
+            <p class="text-xs text-gray-500 text-center">
+              <strong>Trademark Notice:</strong> Google™, Google Sheets™, Google Workspace™, Google APIs™, Google Gemini™, and Google API Services™ are trademarks of Google LLC. 
+              SheetPro AI is not affiliated with Google LLC.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gray-50 hero-pattern relative overflow-hidden">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-8 gradient-text">Need Assistance?</h2>
+        <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+          Our team is here to help you get the most out of SheetPro AI.
         </p>
-        
-        <div class="mt-8 pt-6 border-t border-blue-200">
-          <p class="text-xs text-gray-500 text-center">
-            <strong>Trademark Notice:</strong> Google™, Google Sheets™, Google Workspace™, Google APIs™, Google Gemini™, and Google API Services™ are trademarks of Google LLC. 
-            SheetPro AI is not affiliated with Google LLC.
+        <a href="contact.html" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Contact Us
+        </a>
+      </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy-policy" class="py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Privacy Policy</h2>
+        <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
+          <p><strong>Last Updated:</strong> January 1, 2025</p>
+          <p>
+            At SheetPro AI, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our Google Sheets Add-on (the "Service").
+          </p>
+          <p>
+            <strong>1. Data Collection</strong><br>
+            We do not collect or store your spreadsheet data. All your inputs and AI-related activities are processed directly through the AI provider (OpenAI, Gemini, etc.). API keys are stored locally on your device and are never transferred or stored on our servers. Data is transmitted securely via HTTPS.
+          </p>
+          <p>
+            <strong>2. Use of Your Information</strong><br>
+            Your prompts and API keys are securely sent to your selected AI provider (OpenAI, Gemini, DeepSeek, etc.) for generating responses. We do not log or retain any user data or API keys. Any generated responses from the AI model are displayed in your Google Sheets and are not stored by SheetPro AI.
+          </p>
+          <p>
+            <strong>3. Data Security</strong><br>
+            All communication between your device, SheetPro AI, and the AI provider is secured with HTTPS (TLS). We do not store any of your data on our servers, and we take all reasonable measures to ensure the security of the information that you send and receive through the Service.
+          </p>
+          <p>
+            <strong>4. Third-Party Services</strong><br>
+            SheetPro AI integrates with third-party AI providers such as OpenAI, Google Gemini, and DeepSeek. These third-party services may have their own privacy policies, and we encourage you to review them. We are not responsible for the practices or policies of these third-party services.
+          </p>
+          <p>
+            <strong>5. Data Retention</strong><br>
+            As mentioned, we do not store any data on our servers. The API keys you provide are stored locally in your Google Sheets environment. The data remains within your device, and it is only processed on the fly through your interactions with the Service.
+          </p>
+          <p>
+            <strong>6. Children's Privacy</strong><br>
+            Our Service is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so that we can take appropriate action.
+          </p>
+          <p>
+            <strong>7. Changes to This Privacy Policy</strong><br>
+            SheetPro AI reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected by the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.
+          </p>
+          <p>
+            <strong>8. Contact Us</strong><br>
+            If you have any questions about this Privacy Policy or how your information is handled, please contact us at: <a href="mailto:sheetproai@gmail.com" class="text-emerald-500 font-semibold">sheetproai@gmail.com</a>.
           </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-32 bg-gray-50 hero-pattern relative overflow-hidden">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-8 gradient-text">Need Assistance?</h2>
-      <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-        Our team is here to help you get the most out of SheetPro AI.
-      </p>
-      <a href="contact.html" class="gradient hover:gradient-hover text-white px-12 py-5 rounded-xl text-xl font-semibold transition-all duration-500 hover:shadow-xl transform hover:-translate-y-1 inline-flex items-center gap-3">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-        </svg>
-        Contact Us
-      </a>
-    </div>
-  </section>
-
-  <!-- Privacy Policy Section -->
-  <section id="privacy-policy" class="py-32 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-10 gradient-text">Privacy Policy</h2>
-      <div class="max-w-4xl mx-auto text-gray-600 leading-relaxed space-y-6">
-        <p><strong>Last Updated:</strong> January 1, 2025</p>
-        <p>
-          At SheetPro AI, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you use our Google Sheets Add-on (the "Service").
-        </p>
-        <p>
-          <strong>1. Data Collection</strong><br>
-          We do not collect or store your spreadsheet data. All your inputs and AI-related activities are processed directly through the AI provider (OpenAI, Gemini, etc.). API keys are stored locally on your device and are never transferred or stored on our servers. Data is transmitted securely via HTTPS.
-        </p>
-        <p>
-          <strong>2. Use of Your Information</strong><br>
-          Your prompts and API keys are securely sent to your selected AI provider (OpenAI, Gemini, DeepSeek, etc.) for generating responses. We do not log or retain any user data or API keys. Any generated responses from the AI model are displayed in your Google Sheets and are not stored by SheetPro AI.
-        </p>
-        <p>
-          <strong>3. Data Security</strong><br>
-          All communication between your device, SheetPro AI, and the AI provider is secured with HTTPS (TLS). We do not store any of your data on our servers, and we take all reasonable measures to ensure the security of the information that you send and receive through the Service.
-        </p>
-        <p>
-          <strong>4. Third-Party Services</strong><br>
-          SheetPro AI integrates with third-party AI providers such as OpenAI, Google Gemini, and DeepSeek. These third-party services may have their own privacy policies, and we encourage you to review them. We are not responsible for the practices or policies of these third-party services.
-        </p>
-        <p>
-          <strong>5. Data Retention</strong><br>
-          As mentioned, we do not store any data on our servers. The API keys you provide are stored locally in your Google Sheets environment. The data remains within your device, and it is only processed on the fly through your interactions with the Service.
-        </p>
-        <p>
-          <strong>6. Children's Privacy</strong><br>
-          Our Service is not intended for individuals under the age of 13. We do not knowingly collect personal information from children under the age of 13. If you are a parent or guardian and believe your child has provided us with personal data, please contact us so that we can take appropriate action.
-        </p>
-        <p>
-          <strong>7. Changes to This Privacy Policy</strong><br>
-          SheetPro AI reserves the right to update or modify this Privacy Policy at any time. Any changes will be reflected by the "Last Updated" date at the top of this page. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.
-        </p>
-        <p>
-          <strong>8. Contact Us</strong><br>
-          If you have any questions about this Privacy Policy or how your information is handled, please contact us at: <a href="mailto:sheetproai@gmail.com" class="text-emerald-500 font-semibold">sheetproai@gmail.com</a>.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-16">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-12">
-        <div>
-          <div class="flex items-center space-x-3 mb-6">
-            <div class="w-10 h-10 gradient rounded-xl flex items-center justify-center">
-              <span class="text-white font-bold text-xl">SP</span>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-12">
+          <div>
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-10 h-10 gradient rounded-xl flex items-center justify-center">
+                <span class="text-white font-bold text-xl">SP</span>
+              </div>
+              <span class="text-2xl font-bold">SheetPro AI</span>
             </div>
-            <span class="text-2xl font-bold">SheetPro AI</span>
+            <p class="text-gray-400">Empowering your spreadsheets with free AI.</p>
           </div>
-          <p class="text-gray-400">Empowering your spreadsheets with free AI.</p>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Product</h3>
+            <ul class="space-y-2">
+              <li><a href="#feature-examples" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
+              <li><a href="#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
+              <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
+              <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2">
+              <li><a href="#faq" class="text-gray-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
+              <li><a href="contact.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
+              <li><a href="documentation.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Documentation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li><a href="#privacy-policy" class="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="terms-of-service.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+              <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookie Policy</a></li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Product</h3>
-          <ul class="space-y-2">
-            <li><a href="#feature-examples" class="text-gray-400 hover:text-emerald-400 transition-colors">Features</a></li>
-            <li><a href="#formulas" class="text-gray-400 hover:text-emerald-400 transition-colors">Formulas</a></li>
-            <li><a href="#pricing" class="text-gray-400 hover:text-emerald-400 transition-colors">Pricing</a></li>
-            <li><a href="#demo" class="text-gray-400 hover:text-emerald-400 transition-colors">Demo</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Support</h3>
-          <ul class="space-y-2">
-            <li><a href="#faq" class="text-gray-400 hover:text-emerald-400 transition-colors">FAQ</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Contact</a></li>
-            <li><a href="documentation.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Documentation</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold mb-4">Legal</h3>
-          <ul class="space-y-2">
-            <li><a href="#privacy-policy" class="text-gray-400 hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
-            <li><a href="terms-of-service.html" class="text-gray-400 hover:text-emerald-400 transition-colors">Terms of Service</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-emerald-400 transition-colors">Cookie Policy</a></li>
-          </ul>
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+          <p class="text-gray-400">© 2025 SheetPro AI. All rights reserved.</p>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p class="text-gray-400">© 2025 SheetPro AI. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script>
-    // Mobile Menu Toggle
-    document.getElementById("mobile-menu-button").addEventListener("click", function(){
-      var menu = document.getElementById("mobile-menu");
-      menu.classList.toggle("hidden");
-    });
+    <script>
+      // Mobile Menu Toggle
+      document.getElementById("mobile-menu-button").addEventListener("click", function(){
+        var menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+      });
 
-    // FAQ Toggle Function
-    function toggleFAQ(button) {
-      const faqItem = button.parentElement;
-      faqItem.classList.toggle('active');
-    }
-
-    // Slider Arrows for Mobile Screens
-    function slideScreenshots(direction) {
-      const container = document.getElementById('mobile-slider');
-      const scrollAmount = container.clientWidth;
-      if (direction === 'next') {
-        container.scrollLeft += scrollAmount;
-      } else {
-        container.scrollLeft -= scrollAmount;
+      // FAQ Toggle Function
+      function toggleFAQ(button) {
+        const faqItem = button.parentElement;
+        faqItem.classList.toggle('active');
       }
-    }
-  </script>
-</body>
-</html>
+
+      // Slider Arrows for Mobile Screens
+      function slideScreenshots(direction) {
+        const container = document.getElementById('mobile-slider');
+        const scrollAmount = container.clientWidth;
+        if (direction === 'next') {
+          container.scrollLeft += scrollAmount;
+        } else {
+          container.scrollLeft -= scrollAmount;
+        }
+      }
+    </script>
+  </body>
+  </html>
