@@ -235,6 +235,182 @@
       </div>
     </section>
 
+    <!-- Formulas & Commands Section -->
+    <section id="formulas" class="py-32 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
+          SheetPro AI provides direct access to AI models by their specific names. Each model can be called directly as a function in your Google Sheets. Choose the model adapted to your needs based on whether your task is simple or complex.
+        </p>
+
+        <!-- Model-Specific Functions Table -->
+        <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">AI Model Functions (by Intelligence)</h3>
+        <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Example Usage</th>
+              <th>Provider / Model</th>
+              <th>Best For</th>
+              <th>Example Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Google Gemini Models (FREE) -->
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_5_PRO(prompt)</code></td>
+              <td>Google – Gemini 2.5 Pro (FREE)</td>
+              <td>Complex problems, state-of-the-art</td>
+              <td><code>=GEMINI_2_5_PRO("Deep analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_5_FLASH(prompt)</code></td>
+              <td>Google – Gemini 2.5 Flash (FREE)</td>
+              <td>Best price-performance ratio</td>
+              <td><code>=GEMINI_2_5_FLASH("Optimize this content: " &amp; B1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMINI_2_5_FLASH_LITE(prompt)</code></td>
+              <td>Google – Gemini 2.5 Flash-Lite (FREE)</td>
+              <td>Low latency, cost optimization</td>
+              <td><code>=GEMINI_2_5_FLASH_LITE("Quick summary: " &amp; E1)</code></td>
+            </tr>
+            <tr class="bg-green-50">
+              <td><code>GEMMA_3_27B(prompt)</code></td>
+              <td>Google – Gemma 3 27B (FREE)</td>
+              <td>Open source, multimodal</td>
+              <td><code>=GEMMA_3_27B("Explain the concept: " &amp; D1)</code></td>
+            </tr>
+
+            <!-- OpenAI Models -->
+            <tr class="bg-blue-50">
+              <td><code>O3(prompt)</code></td>
+              <td>OpenAI – o3 (Most Advanced)</td>
+              <td>Complex reasoning, research</td>
+              <td><code>=O3("Analyze the market implications of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><code>GPT_4_1(prompt)</code></td>
+              <td>OpenAI – GPT-4.1</td>
+              <td>Enhanced capabilities</td>
+              <td><code>=GPT_4_1("Write a professional email for " &amp; B1)</code></td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><code>GPT_4O(prompt)</code></td>
+              <td>OpenAI – GPT-4o</td>
+              <td>General high-intelligence tasks</td>
+              <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><code>O4_MINI(prompt)</code></td>
+              <td>OpenAI – o4-mini</td>
+              <td>Efficient reasoning</td>
+              <td><code>=O4_MINI("Quick analysis of " &amp; C1)</code></td>
+            </tr>
+            <tr class="bg-blue-50">
+              <td><code>GPT_4_1_NANO(prompt)</code></td>
+              <td>OpenAI – GPT-4.1-nano</td>
+              <td>Basic tasks, cost-effective</td>
+              <td><code>=GPT_4_1_NANO("Simple format check: " &amp; D1)</code></td>
+            </tr>
+            
+            <!-- DeepSeek Models -->
+            <tr class="bg-purple-50">
+              <td><code>DEEPSEEK_REASONER(prompt)</code></td>
+              <td>DeepSeek – Reasoner</td>
+              <td>Advanced logical reasoning</td>
+              <td><code>=DEEPSEEK_REASONER("Logical analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-purple-50">
+              <td><code>DEEPSEEK_CHAT(prompt)</code></td>
+              <td>DeepSeek – Chat</td>
+              <td>Conversation, general tasks</td>
+              <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
+            </tr>
+            
+            <!-- Claude Models -->
+            <tr class="bg-orange-50">
+              <td><code>CLAUDE_OPUS_4(prompt)</code></td>
+              <td>Anthropic – Claude Opus 4</td>
+              <td>Superior reasoning, complex analysis</td>
+              <td><code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-orange-50">
+              <td><code>CLAUDE_SONNET_4(prompt)</code></td>
+              <td>Anthropic – Claude Sonnet 4</td>
+              <td>Balanced performance</td>
+              <td><code>=CLAUDE_SONNET_4("Professional content for " &amp; B1)</code></td>
+            </tr>
+            
+            <!-- Perplexity Models -->
+            <tr class="bg-teal-50">
+              <td><code>SONAR_MEDIUM_ONLINE(prompt)</code></td>
+              <td>Perplexity – Sonar Medium (Web Search)</td>
+              <td>Real-time information, research</td>
+              <td><code>=SONAR_MEDIUM_ONLINE("Latest news about " &amp; A1)</code></td>
+            </tr>
+            <tr class="bg-teal-50">
+              <td><code>SONAR_SMALL_ONLINE(prompt)</code></td>
+              <td>Perplexity – Sonar Small (Web Search)</td>
+              <td>Quick web queries</td>
+              <td><code>=SONAR_SMALL_ONLINE("Current price of " &amp; B1)</code></td>
+            </tr>
+            <tr class="bg-teal-50">
+              <td><code>SEARCH_WEB(prompt)</code></td>
+              <td>Perplexity – General Web Search</td>
+              <td>Live web data access</td>
+              <td><code>=SEARCH_WEB("Who won the 2024 Olympics " &amp; C1)</code></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Transform Functions Table -->
+        <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">🆕 Transform Functions</h3>
+        <p class="text-gray-600 mb-4">Use the Transform feature in the sidebar to apply AI transformations to existing cell ranges:</p>
+        <table class="custom-table">
+          <thead>
+            <tr>
+              <th>Transformation Type</th>
+              <th>Description</th>
+              <th>Example Use Case</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Translate</strong></td>
+              <td>Convert text to different languages</td>
+              <td>Transform French product names to English</td>
+            </tr>
+            <tr>
+              <td><strong>Format Data</strong></td>
+              <td>Standardize dates, currency, formatting</td>
+              <td>Convert various date formats to MM/DD/YYYY</td>
+            </tr>
+            <tr>
+              <td><strong>Expand Abbreviations</strong></td>
+              <td>Convert shortcuts to full text</td>
+              <td>Turn "Mon, Tue, Wed" into "Monday, Tuesday, Wednesday"</td>
+            </tr>
+            <tr>
+              <td><strong>Clean Text</strong></td>
+              <td>Fix spacing, capitalization, spelling</td>
+              <td>Clean messy imported customer data</td>
+            </tr>
+            <tr>
+              <td><strong>Extract Information</strong></td>
+              <td>Pull specific data from text</td>
+              <td>Extract phone numbers from contact descriptions</td>
+            </tr>
+            <tr>
+              <td><strong>Custom Transformation</strong></td>
+              <td>Apply any custom AI instruction</td>
+              <td>"Convert each product code to its category name"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
     <!-- Feature Examples Section -->
     <section id="feature-examples" class="py-32 bg-white">
       <div class="container mx-auto px-4">
@@ -435,188 +611,6 @@
             </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Formulas & Commands Section -->
-    <section id="formulas" class="py-32 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 gradient-text">Formulas &amp; Commands</h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto text-center mb-8">
-          SheetPro AI provides direct access to AI models by their specific names. Each model can be called directly as a function in your Google Sheets.
-        </p>
-
-        <!-- Model-Specific Functions Table -->
-        <h3 class="text-2xl font-bold mt-10 mb-4 text-emerald-600">AI Model Functions (by Intelligence)</h3>
-        <p class="text-gray-600 mb-4">Access cutting-edge AI models directly. Listed from most intelligent (and typically most expensive) to most economical:</p>
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>Formula</th>
-              <th>Provider / Model</th>
-              <th>Best For</th>
-              <th>Example Usage</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- OpenAI Models -->
-            <tr class="bg-blue-50">
-              <td><code>O3(prompt)</code></td>
-              <td>OpenAI – o3 (Most Advanced)</td>
-              <td>Complex reasoning, research</td>
-              <td><code>=O3("Analyze the market implications of " &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><code>GPT_4_1(prompt)</code></td>
-              <td>OpenAI – GPT-4.1</td>
-              <td>Enhanced capabilities</td>
-              <td><code>=GPT_4_1("Write a professional email for " &amp; B1)</code></td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><code>GPT_4O(prompt)</code></td>
-              <td>OpenAI – GPT-4o</td>
-              <td>General high-intelligence tasks</td>
-              <td><code>=GPT_4O("Summarize this article:" &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><code>O4_MINI(prompt)</code></td>
-              <td>OpenAI – o4-mini</td>
-              <td>Efficient reasoning</td>
-              <td><code>=O4_MINI("Quick analysis of " &amp; C1)</code></td>
-            </tr>
-            <tr class="bg-blue-50">
-              <td><code>GPT_4_1_NANO(prompt)</code></td>
-              <td>OpenAI – GPT-4.1-nano</td>
-              <td>Basic tasks, cost-effective</td>
-              <td><code>=GPT_4_1_NANO("Simple format check: " &amp; D1)</code></td>
-            </tr>
-
-            <!-- Google Gemini Models (FREE) -->
-            <tr class="bg-green-50">
-              <td><code>GEMINI_2_5_PRO_PREVIEW(prompt)</code></td>
-              <td>Google – Gemini 2.5 Pro (FREE)</td>
-              <td>Complex problems, state-of-the-art</td>
-              <td><code>=GEMINI_2_5_PRO_PREVIEW("Deep analysis of " &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><code>GEMINI_2_5_FLASH_PREVIEW(prompt)</code></td>
-              <td>Google – Gemini 2.5 Flash (FREE)</td>
-              <td>Best price-performance ratio</td>
-              <td><code>=GEMINI_2_5_FLASH_PREVIEW("Optimize this content: " &amp; B1)</code></td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><code>GEMINI_2_0_FLASH(prompt)</code></td>
-              <td>Google – Gemini 2.0 Flash (FREE)</td>
-              <td>Next-gen features, speed</td>
-              <td><code>=GEMINI_2_0_FLASH("Process this data: " &amp; C1)</code></td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><code>GEMMA_3_27B(prompt)</code></td>
-              <td>Google – Gemma 3 27B (FREE)</td>
-              <td>Open source, multimodal</td>
-              <td><code>=GEMMA_3_27B("Explain the concept: " &amp; D1)</code></td>
-            </tr>
-            <tr class="bg-green-50">
-              <td><code>GEMINI_2_0_FLASH_LITE(prompt)</code></td>
-              <td>Google – Gemini 2.0 Flash-Lite (FREE)</td>
-              <td>Low latency, cost optimization</td>
-              <td><code>=GEMINI_2_0_FLASH_LITE("Quick summary: " &amp; E1)</code></td>
-            </tr>
-            
-            <!-- DeepSeek Models -->
-            <tr class="bg-purple-50">
-              <td><code>DEEPSEEK_REASONER(prompt)</code></td>
-              <td>DeepSeek – Reasoner</td>
-              <td>Advanced logical reasoning</td>
-              <td><code>=DEEPSEEK_REASONER("Logical analysis of " &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-purple-50">
-              <td><code>DEEPSEEK_CHAT(prompt)</code></td>
-              <td>DeepSeek – Chat</td>
-              <td>Conversation, general tasks</td>
-              <td><code>=DEEPSEEK_CHAT("Explain blockchain in simple terms")</code></td>
-            </tr>
-            
-            <!-- Claude Models -->
-            <tr class="bg-orange-50">
-              <td><code>CLAUDE_OPUS_4(prompt)</code></td>
-              <td>Anthropic – Claude Opus 4</td>
-              <td>Superior reasoning, complex analysis</td>
-              <td><code>=CLAUDE_OPUS_4("Strategic analysis of " &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-orange-50">
-              <td><code>CLAUDE_SONNET_4(prompt)</code></td>
-              <td>Anthropic – Claude Sonnet 4</td>
-              <td>Balanced performance</td>
-              <td><code>=CLAUDE_SONNET_4("Professional content for " &amp; B1)</code></td>
-            </tr>
-            
-            <!-- Perplexity Models -->
-            <tr class="bg-teal-50">
-              <td><code>SONAR_MEDIUM_ONLINE(prompt)</code></td>
-              <td>Perplexity – Sonar Medium (Web Search)</td>
-              <td>Real-time information, research</td>
-              <td><code>=SONAR_MEDIUM_ONLINE("Latest news about " &amp; A1)</code></td>
-            </tr>
-            <tr class="bg-teal-50">
-              <td><code>SONAR_SMALL_ONLINE(prompt)</code></td>
-              <td>Perplexity – Sonar Small (Web Search)</td>
-              <td>Quick web queries</td>
-              <td><code>=SONAR_SMALL_ONLINE("Current price of " &amp; B1)</code></td>
-            </tr>
-            <tr class="bg-teal-50">
-              <td><code>SEARCH_WEB(prompt)</code></td>
-              <td>Perplexity – General Web Search</td>
-              <td>Live web data access</td>
-              <td><code>=SEARCH_WEB("Who won the 2024 Olympics " &amp; C1)</code></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- Transform Functions Table -->
-        <h3 class="text-2xl font-bold mt-16 mb-4 text-emerald-600">🆕 Transform Functions</h3>
-        <p class="text-gray-600 mb-4">Use the Transform feature in the sidebar to apply AI transformations to existing cell ranges:</p>
-        <table class="custom-table">
-          <thead>
-            <tr>
-              <th>Transformation Type</th>
-              <th>Description</th>
-              <th>Example Use Case</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Translate</strong></td>
-              <td>Convert text to different languages</td>
-              <td>Transform French product names to English</td>
-            </tr>
-            <tr>
-              <td><strong>Format Data</strong></td>
-              <td>Standardize dates, currency, formatting</td>
-              <td>Convert various date formats to MM/DD/YYYY</td>
-            </tr>
-            <tr>
-              <td><strong>Expand Abbreviations</strong></td>
-              <td>Convert shortcuts to full text</td>
-              <td>Turn "Mon, Tue, Wed" into "Monday, Tuesday, Wednesday"</td>
-            </tr>
-            <tr>
-              <td><strong>Clean Text</strong></td>
-              <td>Fix spacing, capitalization, spelling</td>
-              <td>Clean messy imported customer data</td>
-            </tr>
-            <tr>
-              <td><strong>Extract Information</strong></td>
-              <td>Pull specific data from text</td>
-              <td>Extract phone numbers from contact descriptions</td>
-            </tr>
-            <tr>
-              <td><strong>Custom Transformation</strong></td>
-              <td>Apply any custom AI instruction</td>
-              <td>"Convert each product code to its category name"</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </section>
 
